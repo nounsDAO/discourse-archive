@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Proposal: Add Index Coop&rsquo;s icETH to the Nouns treasury</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Proposal: Add Index Coop&rsquo;s icETH to the Nouns treasury</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">asira</div>
+          <div class="post_content">
+<p><strong>Author/Co-Authors:</strong></p>
+<p><span class="mention">@asira</span> <span class="mention">@funkmasterflex</span> <span class="mention">@Matthew_Graham</span></p>
+<p>We appreciate the help and insights from <span class="mention">@willprice</span> and <span class="mention">@wag</span> as well as the entire Nouns community</p>
+<p><strong>Basic Summary</strong></p>
+<p>We are requesting feedback from the NounsDAO regarding Index Coop’s Interest Compounding ETH Index (icETH) and propose investing a percentage of Nouns’ treasury. icETH gives token holders amplified exposure to the staking yield on Ethereum through a leveraged liquid staking strategy.</p>
+<p><strong>Motivation</strong></p>
+<p>Nouns DAO could benefit from holding icETH by activating a portion of the ETH based treasury to earn an additional 9.24% interest rate (5.28% increase vs. stETH yield). Live stats can be found here: <a class="inline-onebox" href="https://dune.com/indexcoop/icETH" rel="noopener nofollow ugc">Dune</a></p>
+<p>Considering the Nouns DAO’s ideological alignment to the Ethereum Ecosystem and the treasury’s significant holdings of both ETH and stETH, icETH is the perfect asset to grow the Nouns Treasury over the long term.</p>
+<p><strong>Methodology</strong></p>
+<p>Within Aave, icETH deposits Lido’s liquid staked Ethereum token—stETH—as collateral and borrows ETH, which is then swapped for more stETH. That stETH is then deposited as additional collateral in Aave, allowing for more ETH to be borrowed and subsequently swapped for additional stETH. As a result, token holders have spot exposure to ETH and more than twice the yield compared to simply holding stETH.</p>
+<p><strong>Risk Assessment</strong></p>
+<p>There are a few key factors to note when performing a risk assessment of icETH. While the leverage within icETH may seem risky, the auomtated nature of the token ensures that the leverage ratio is always optimal. In addittion, the tokenized strategy makes the product highly liquid on secondary markets (icETH/ETH Uni V3) as well as plugging into the most liquid markets in DeFi using exchange issuance.</p>
+<p>Liquidation Risk</p>
+<p>As with any use of leverage, there is liquidation risk if the health of the collateralized debt position were to fall below liquidation thresholds. Though the target leverage ratio is 3.1x, the actual ratio can float within a safe range of 3.0x to 3.3x. An automated keeper system constantly monitors the real leverage ratio of the index and will trigger a hard rebalance if the leverage ratio moves outside of the safe range. For example, if the price of stETH were to suddenly de-peg from ETH and render the real leverage ratio to be 3.4x, the index would recenter to the target leverage ratio of 3.1x. In the case of icETH, the underlying Aave positions would be liquidated if the index’s leverage ratio were to reach 4.0x.</p>
+<p>In addition to the primary keeper system, there is a secondary safety mechanism in place called ripcord. If the real leverage ratio were to exceed 3.5x and the primary keeper systems were to fail, the ripcord function could be called to aggressively recenter the index back to the target leverage ratio. This function is publicly callable and incentivized with 1 ETH, adding another layer of permissionless defense against liquidation.</p>
+<p>The high correlation between the collateral asset (stETH) and the debt asset (ETH) also significantly lowers liquidation risk. Because their prices move in tandem, there is a more persistent leverage ratio compared to uncorrelated collateral and debt assets like ETH and USDC (the composition of ETH2x-FLI). The inherent price volatility of ETH compared to USDC requires daily rebalancing of ETH2x-FLI to maintain a healthy loan-to-value (LTV) ratio. For icETH, the LTV ratio is more stable and only requires rebalancing every few months. The result is lower liquidation risk and less volatility decay for icETH, enhancing fund safety and preserving NAV.</p>
+<p>Interest Rate Risk</p>
+<p>A second risk to consider is interest rate risk related to the staking rate for stETH and the borrow rate for ETH. Simply stated, incremental yield can only be generated if the stETH staking rate exceeds the ETH borrow rate. These two factors can change favorably and unfavorably. For stETH, the staking rate can fall as more ETH is deposited into the ETH 2.0 staking contract; this would lead to lower yields on icETH. Post-merge, the staking rate for stETH can also increase, which would increase the effective yield on icETH. For ETH, the variable borrow rate within Aave can increase as ETH utilization increases, compressing the yield on icETH as the borrow rate approaches the stETH staking rate. Conversely, if ETH utilization decreases, the yield on icETH will increase. In the event that the borrow rate were to reach parity with the staking rate, icETH can be deleveraged to 1.0x so that the floor yield is simply the staking rate on stETH. Favorably, Aave recently optimized the rate curve for ETH which will allow for better borrowing conditions over time and a higher potential TVL for this holistic strategy.</p>
+<p>Protocol Risk</p>
+<p>Set Protocol V2 was audited by <a href="https://blog.openzeppelin.com/set-protocol-audit/" rel="noopener nofollow ugc">OpenZeppelin</a> in September of 2020, launched in early October 2020. Additionally, audits from <a href="https://www.setprotocol.com/pdf/chain_security_set_protocol_report.pdf?source=post_page---------------------------" rel="noopener nofollow ugc">Chainsecurity</a> and <a href="https://www.setprotocol.com/pdf/trail_of_bits_set_protocol_report.pdf?source=post_page---------------------------" rel="noopener nofollow ugc">Trail of Bits</a> were completed on Set Protocol V1. icETH is built on the same battle-tested infrastructure used to launch over 12 Index Coop products. icETH has been live for nearly three weeks and has over $15M in AUM.</p>
+<p><strong>Implementation</strong></p>
+<p>The Nouns community can utilize exchange issuance directly through the Index Coop website for large buys. This can be done without slippage, accessing the largest ETH pools in DeFi for no fee. If the treasury wanted to get out of the position, NounsDAO can opt to redeem the icETH for a fee of 25 bps. This fee is to ensure the deepest liquidity possible. This redeem fee, however, is not the only route Nouns can take if wanting to offload the position. Using the Uni V3 icETH/ETH pool, icETH holders can offload around ~$1M at a time with minimal slippage and no additional fee.</p>
+<p><strong>Temperature Check</strong></p>
+<p>We would like to gather feedback from the community about this post and invite Nouns holders to discuss how a treasury diversification could benefit the DAO</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1107_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Clubnotaro.eth</div>
+          <div class="post_content">
+<p>I love it, if the funds are safe and the APY higher than on Lido’s. It seems like a good move (coming from a guy who doesn’t own a noun).<br/>
+<a class="onebox" href="https://twitter.com/Club_Notaro" rel="noopener nofollow ugc" target="_blank">https://twitter.com/Club_Notaro</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">willprice</div>
+          <div class="post_content">
+<p>I don’t think icETH is a good fit for Nouns at this time because of:</p>
+<ul>
+<li>non-zero redemption fees (we can’t TWAP on Uniswap into thin liquidity as a DAO)</li>
+<li>the difficulty of getting out in a timely manner if necessary due to governance/timelock</li>
+<li>the fact that we have way more ETH than we are willing to stake - capital efficiency doesn’t really matter that much</li>
+</ul>
+<p>I will be voting no on this proposal</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">asira</div>
+          <div class="post_content">
+<ol>
+<li>
+<p>&amp; 2. The redemption fee on icETH is .25% with slippage on Uniswap running at .21% slippage at 100 ETH trade size. Note, that you are paying for the risk automation and liquidation protection when holding icETH. Plus the primary keeper system AND ripcord prevent Nouns from having to actively manage the positions 24/7 while optimizing returns at the same time.</p>
+</li>
+<li>
+<p>I noticed the Nouns community increased the commitment to stETH with an allocation of up 20%, increasing your total holdings to $13m. Please see the approved vote by your community, <a href="https://nouns.wtf/vote/52">Vote 52</a>. This vote tells me that the community is in favor of capital efficiency. I know that the community has made a methodical effort to increase the position in stETH over the past 6-12 months, it has been thoughtful and measured. Other than the reasons above, why would the Nouns community not choose to allocate a portion of the treasury to icETH?</p>
+</li>
+</ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1107_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Clubnotaro.eth</div>
+          <div class="post_content">
+<p>this is a giga brain thread</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1068_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">funkmasterflex</div>
+          <div class="post_content">
+<p>gm Nouns.</p>
+<p>Index Coop has removed the redeem fee from icETH. <strong><a class="inline-onebox" href="https://snapshot.org/#/index-coop.eth/proposal/bafkreicsmdejsukhaabzmrzxryhdgupxg5sgyqijanomxvbolmtxwphwde" rel="noopener nofollow ugc">Snapshot</a></strong></p>
+<p>Let us know if the community would like to discuss moving any of the stETH or ETH reserves. We’re happy to discuss and assist with treasury planning even if our products are not involved. Also happy to talk about more fun stuff like <a href="https://indexcoop.com/jpg-nft-index" rel="noopener nofollow ugc">JPG</a> or <a href="https://mobile.twitter.com/collectooors" rel="noopener nofollow ugc">NFT Governance</a></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

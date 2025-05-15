@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Using streaming payments vs lump sum to fund teams</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Using streaming payments vs lump sum to fund teams</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/249_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">9999</div>
+          <div class="post_content">
+<p>There is an alternate funding model, the streaming payment, that allows the DAO to monitor progress of proposal and gives it better control over funds.</p>
+<p>Streaming payments allow receivers to withdraw funds at a constant rate over a specified time. Funds are deposited into an escrow smart contract, which unlocks a proportion of the funds based on a vesting schedule decided by the sender. The schedule cannot be changed, but funding can be stopped at any time by the sender.</p>
+<p>To access this model, the DAO would fund projects using <a href="https://sablier.finance">https://sablier.finance</a>, a protocol which facilitates a pro-rata time-based withdrawal of funds for project teams and stream cancellation by senders. Documentation can be found here: <a class="inline-onebox" href="https://docs.sablier.finance/streams">Streams - Sablier Docs</a></p>
+<p>It is possible to mix and match these approaches: fund developers with a lump sum, and their on-going costs with a stream.</p>
+<p>Using an alternative to lump sum payments aligns on-chain payments with off-chain proposal guarantees and could be the right fit for future proposals.</p>
+<p>Additional documentation: <a class="inline-onebox" href="https://medium.com/sablier/operating-the-sablier-protocol-manually-e6569092c533">Operating the Sablier Protocol Manually | by Paul Razvan Berg | Sablier | Medium</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/249_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">9999</div>
+          <div class="post_content">
+<p>I’ve created a test of Sablier streams against a mainnet fork of Nouns DAO to simulate a real world scenario. The details for how to set proposing with a stream are all here and can hopefully serve as a template for future use.</p>
+<aside class="onebox githubblob" data-onebox-src="https://github.com/nounsDAO/nouns-monorepo/blob/c6e2441b114e6f67c47f5d6ec9100da8496fd3f6/packages/nouns-contracts/test/sablier/sablier-mainnet-fork.test.ts">
+<header class="source">
+<a href="https://github.com/nounsDAO/nouns-monorepo/blob/c6e2441b114e6f67c47f5d6ec9100da8496fd3f6/packages/nouns-contracts/test/sablier/sablier-mainnet-fork.test.ts" rel="noopener" target="_blank">github.com</a>
+</header>
+<article class="onebox-body">
+<h4><a href="https://github.com/nounsDAO/nouns-monorepo/blob/c6e2441b114e6f67c47f5d6ec9100da8496fd3f6/packages/nouns-contracts/test/sablier/sablier-mainnet-fork.test.ts" rel="noopener" target="_blank">nounsDAO/nouns-monorepo/blob/c6e2441b114e6f67c47f5d6ec9100da8496fd3f6/packages/nouns-contracts/test/sablier/sablier-mainnet-fork.test.ts</a></h4>
+<pre><code class="lang-ts">import chai from 'chai';
+import { ethers, network } from 'hardhat';
+import { BigNumber as EthersBN } from 'ethers';
+import { solidity } from 'ethereum-waffle';
+chai.use(solidity);
+const { expect } = chai;
+
+import {
+  Sablier,
+  Sablier__factory,
+  NounsDaoLogicV1,
+  NounsDaoLogicV1__factory,
+  Weth,
+  Weth__factory
+} from '../../typechain';
+
+import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
+
+import {
+  mineBlock,
+</code></pre>
+
+
+  This file has been truncated. <a href="https://github.com/nounsDAO/nouns-monorepo/blob/c6e2441b114e6f67c47f5d6ec9100da8496fd3f6/packages/nouns-contracts/test/sablier/sablier-mainnet-fork.test.ts" rel="noopener" target="_blank">show original</a>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/61_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Noun12</div>
+          <div class="post_content">
+<p>Are there any problems that DAOs user Sablier have run into it using it?  Do we stop payment streams for projects that are not living up to expectations with a simple governance vote or what would you expect the process to be?</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

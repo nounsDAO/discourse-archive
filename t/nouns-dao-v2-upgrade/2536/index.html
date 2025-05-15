@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Nouns DAO V2 Upgrade</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Nouns DAO V2 Upgrade</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>Below is the proposal the tech pod will put on chain soon, likely at the beginning of next week.<br/>
+This is a major change we’ve been preparing for some time now, including an audit on code4arena and multiple internal test rounds.</p>
+<p>Please take time to make sense of this proposal, and comment with any questions or feedback you have.</p>
+<p>Thanks!</p>
+<p>–</p>
+<h2>
+<a class="anchor" href="#summary-1" name="summary-1"></a>Summary</h2>
+<p>This proposal updates the Nouns DAO logic contract to a new version, with the following improvements and additions:</p>
+<ol>
+<li>
+<strong>Dynamic Quorum</strong>: In V1, quorum is a fixed percentage of total supply. In V2, quorum has a dynamic range, rising as a function of against votes up to a defined cap. Read <a href="https://mirror.xyz/0x10072dfc23771101dC042fD0014f263316a6E400/96zSoFfiT_RM2o2P9UbVKxPzVpB_trZqUjzllBE00BE" rel="noopener nofollow ugc">this post</a> for more info.</li>
+<li>
+<strong>Vote with Gas Refund</strong>: Allow Nouners/delegates to vote and receive a gas refund. The vote still takes place in the case of insufficient ETH to refund.</li>
+<li>
+<strong>Voting Delay Editing Bug Fix</strong>: In V1, editing voting delay was unsafe. V2 makes it safe to edit anytime. More info on the bug <a href="https://github.com/nounsDAO/nouns-diligence/blob/main/reports/proposal-58.md#major" rel="noopener nofollow ugc">here</a>.</li>
+<li>
+<strong>Cancel Proposal Bug Fix</strong>: The DAO has a spam mitigation feature, allowing anyone to cancel a proposal if the proposer has an amount of votes less than or equal to proposal threshold. In V1, this feature didn’t work when proposer had exactly proposal threshold votes; in V2 it works as expected.</li>
+<li>
+<strong>Vetoer Change Is Now 2-step</strong>: We received audit feedback that V1’s vetoer change process was risky as a single-step process. In V2, the risk of setting a wrong vetoer is mitigated using a 2-step process where the current vetoer sets a pending new vetoer. Once set, the pending vetoer must accept for the change to take place.</li>
+</ol>
+<h2>
+<a class="anchor" href="#audit-2" name="audit-2"></a>Audit</h2>
+<ol>
+<li>The code has gone through internal reviews and a <a href="https://code4rena.com/reports/2022-08-nounsdao/" rel="noopener nofollow ugc">code4rena audit</a>.</li>
+<li>
+<strong>No high-risk issues were found in V2</strong>.</li>
+<li>
+<strong>Unrelated to this proposal</strong>, one high-risk issue was found. See <a href="/t/nouns-dao-v2-audit-summary/2525">this audit summary on discourse</a> for more information.</li>
+</ol>
+<h2>
+<a class="anchor" href="#dynamic-quorum-parameters-3" name="dynamic-quorum-parameters-3"></a>Dynamic Quorum Parameters</h2>
+<p>As articulated in this <a href="https://mirror.xyz/0x10072dfc23771101dC042fD0014f263316a6E400/96zSoFfiT_RM2o2P9UbVKxPzVpB_trZqUjzllBE00BE" rel="noopener nofollow ugc">detailed post</a>, three parameters need to be set for dynamic quorum. This proposal sets their values, and we’re offering the thinking behind them here:</p>
+<ol>
+<li>
+<strong>Minimum quorum %</strong>: keeping it at 10%, the same as today’s quorum.</li>
+<li>
+<strong>Maximum quorum %</strong>: setting it to 15%, taking into account recent participation levels around 30%, allowing proposals with more than 15% For votes to be decided by simple majority; the intent is for this value to provide extra protection from voter apathy, while allowing most all proposals to be decided by simple majority rather than quorum.</li>
+<li>
+<strong>Coefficient</strong>: setting it to 1, such that each against vote raises the quorum requirement by one vote, until the maximum quorum is reached.</li>
+</ol>
+<p>These parameters can be edited at any time via a proposal; treat these values as the first experiment.</p>
+<h2>
+<a class="anchor" href="#vote-with-gas-refund-4" name="vote-with-gas-refund-4"></a>Vote with Gas Refund</h2>
+<p>A bit more on how this feature works:</p>
+<ol>
+<li>Governance clients (like <a class="inline-onebox" href="http://nouns.wtf/vote">Nouns DAO</a>) need to update their code to support it.</li>
+<li>Refunds are subject to certain constraints:
+<ol>
+<li>Gas base fee is capped at 200 gwei.</li>
+<li>Gas priority fee is capped at 2 gwei.</li>
+<li>Total gas is capped at 200K, supporting voting reason text up to roughly 9,190 characters.</li>
+<li>If the contract’s balance is insufficient, voter will receive a partial refund.</li>
+</ol>
+</li>
+<li>This feature requires the DAO to maintain the DAO contract’s ETH balance, which should be done via periodic ETH transfer proposals from the treasury to the DAO contract (this proposal performs the first funding).</li>
+<li>The DAO can choose to withdraw refund ETH back into the treasury at any time via a proposal.</li>
+</ol>
+<h2>
+<a class="anchor" href="#proposal-transactions-for-humans-5" name="proposal-transactions-for-humans-5"></a>Proposal Transactions for Humans</h2>
+<ol>
+<li>
+<code>_setImplementation</code>: upgrades DAO logic to V2.</li>
+<li>
+<code>_setDynamicQuorumParams</code>: sets dynamic quorum params to:
+<ol>
+<li>Minimum quorum BPs: 10% (1000 basis points).</li>
+<li>Maximum quorum BPs: 15% (1500 basis points).</li>
+<li>Coefficient: 1 (1,000,000 in unsigned integer with 6 decimal places).</li>
+</ol>
+</li>
+<li>
+<code>transfer</code>: funding vote refunds with 12 ETH, which should be enough for just over 100 proposals at today’s participation rate (excluding honk’s tendency to paste long paragraphs).</li>
+</ol>
+<p>As always, please reach out in the <a href="https://discord.com/channels/849745721544146955/981584123225321503" rel="noopener nofollow ugc">#54-tech-grants</a> channel in Discord with any questions ⌐◨-◨.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">willprice</div>
+          <div class="post_content">
+<p>a long time coming! very excited for voting refunds</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

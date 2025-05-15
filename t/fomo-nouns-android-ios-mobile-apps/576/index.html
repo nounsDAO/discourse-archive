@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Fomo nouns Android &amp; iOS mobile apps</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Fomo nouns Android &amp; iOS mobile apps</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/509_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">n.g</div>
+          <div class="post_content">
+<p>As a usual player, I have missed some functionality and limits of the current web app, such as Fomo play start notifications and tactile/sound feedback that is easier to implement through the mobile app.</p>
+<p>Some days ago, I proposed making a mobile app for Fomo on the general channel and got some positive feedback.</p>
+<p>The Fomo team is very supportive of providing any needed help integrating a mobile app into their system. We are currently discussing how we’ll go together as I am not an official team member and come as an outside “contributor”.</p>
+<p>I have already researched the possibility of realisation. I can provide bata apps with basic voting functionality in a timeline of several weeks and ready app ready to go to stores several weeks later if I allocate more of my time on it.</p>
+<p><strong>Scope of work:</strong><br/>
+Development and the app’s release on corresponding Android and iOS mobile platforms marketplaces.<br/>
+With the following functionality:</p>
+<ul>
+<li>
+<p>Possible noun depicting with voting as done on fomonouns.wtf website.<br/>
+<em>On which I plan to spend around 80 hours. This includes communication with Fomo nouns API and Ethrereum blockchain(though Alchemy, incl getting blocks and noun auctions state). Making the UI, and I’ll need to rewrite nouns-sdk libraries in Dart for noun generation since I can’t use TypeScript libraries.</em></p>
+</li>
+<li>
+<p>With additional functionality:</p>
+<ul>
+<li>Notifications for the start of voting.</li>
+<li>Vibration feedback when voting on a noun opens, so it’ll be harder to miss voting (every play I miss some this way while waiting for the block additions :))</li>
+<li>Sound feedback with the same logic as with vibration.</li>
+<li>Information page to educate people on what nouns/nouns selection is, in case non-crypto involved people download an app and want to understand what is going on.</li>
+</ul>
+<p><em>On which I plan to spend additional 20 hours of work.</em></p>
+</li>
+</ul>
+<p>And 20 more hours for administrative work. Like: preparing the app for launch, publishing beta apps, publishing production apps. This also includes an App Store subscription for 100$ for five years.</p>
+<p>This also includes additional time for bug fixes for a year and small additions. In case of a need to add a major future/majorly change of functionality that will require a substantial time investment, I’ll reach for additional funding.</p>
+<p><strong>Funding:</strong><br/>
+I was looking for funding of 8 ETH for the scope outlined above.</p>
+<p><strong>Some on my background:</strong><br/>
+I have made a full-fledged mobile app for university enrollees, released on marketplaces alongside two mobile games released on Play Market. I also hold a CS bachelor degree where I concentrated on mobile app development. You can find the links on my <a href="https://nikitagoncharuk.com/" rel="noopener nofollow ugc">website</a>.</p>
+<p>At first, I reached out to Noun 22 for support through the Small Grants fund, as I thought going through the on-chain proposal process would be a bit overkill. Noun 22 proposed soliciting feedback from other Noun members on the idea and its funding model, as 8 ETH indeed go over the small grants usual budget.</p>
+<p>I am looking forward to hearing your thoughts on the idea’s viability and funding!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/509_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">n.g</div>
+          <div class="post_content">
+<p>Here is some write up based on some feedback I got on Discord to clarify the thinking behind additional features for the mobile app.</p>
+<h3>
+<a class="anchor" href="#on-notifications-1" name="on-notifications-1"></a>On notifications</h3>
+<p>I currently have notifications through the nouns calendar Twitter account. It is usually notifying 4 minutes before the end of the auction, and it’s when active bidding starts, so it actually takes around 10-15 minutes to end, in which you have to always check if the auction has ended.</p>
+<p>I checked with the timer on January 20, and it took 23 more minutes for the auction to reach the end after I received notification from NounsCalendar.</p>
+<p>It takes time and distracts from other things.<br/>
+Personally, it doesn’t feel comfy, especially when on a commute, as I usually read something and can’t have 2 apps comfortably open on the phone. And I wanted to make a more tailored(and configurable) selection for notifications, like, for example, 5 minutes before the projected auction end and when it actually ends, so I can jump on playing and not spend time waiting for the auction to end.</p>
+<p>On using notifications through Twitter/Discord:<br/>
+As far as I know, it’s impossible to make selectable notifications using Twitter. It probably could be done using a custom discord bot, but in terms of UX, it’ll be a suboptimal solution. There is still a need for an additional back-end as currently there is no way to be notified when the auction <em>actually</em> ends.</p>
+<p><em><strong>With the mobile app I basically want to cut all player interactions into 3 basic and fast steps:</strong></em></p>
+<ol>
+<li><strong>Receive notification that auction is <em>actually</em> ended and Fomo is starting</strong></li>
+<li><strong>Click on notification → app opens</strong></li>
+<li><strong>Start playing Fomo</strong></li>
+</ol>
+<p><em>And remove the need to open the browser, website, and remove waiting for auction end.</em></p>
+<h3>
+<a class="anchor" href="#on-vibrationaudio-feedback-2" name="on-vibrationaudio-feedback-2"></a>On vibration/audio feedback</h3>
+<p>Sound/vibration is mostly intended to be used when you actually “play” the fomo. As you may have noticed, sometimes block comes fast, sometimes not. You may end up waiting for the block to come for more than a few seconds, then turn your attention to something else(like looking out of the window to watch the snow falling), and you miss the start of the voting and several blocks already pass by. Optional vibration/sound notification could solve this as you may feel the vibration holding your phone in hand and turning your attention back to the voting. This is what I have experienced playing the fomo, especially when I’m on the commute.</p>
+<h3>
+<a class="anchor" href="#mock-ups-3" name="mock-ups-3"></a>Mock-ups</h3>
+<p>Here are also some preliminary UI designs I did to better show my view for the app:<br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/xsSmvEdnLNPfYpvpf1hnjrU9u3k.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/ea8b6309c3ff3c119abd5ae6ab212b8f8f6d665e.png" rel="noopener nofollow ugc" title="Frame"><img alt="Frame" data-base62-sha1="xsSmvEdnLNPfYpvpf1hnjrU9u3k" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/ea8b6309c3ff3c119abd5ae6ab212b8f8f6d665e_2_10x10.png" height="454" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/ea8b6309c3ff3c119abd5ae6ab212b8f8f6d665e_2_690x454.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/ea8b6309c3ff3c119abd5ae6ab212b8f8f6d665e_2_690x454.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/ea8b6309c3ff3c119abd5ae6ab212b8f8f6d665e_2_1035x681.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/ea8b6309c3ff3c119abd5ae6ab212b8f8f6d665e.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">Frame</span><span class="informations">1280×844 83.9 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

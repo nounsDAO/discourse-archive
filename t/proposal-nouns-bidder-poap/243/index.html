@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Proposal: Nouns Bidder POAP</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Proposal: Nouns Bidder POAP</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>Hi all! Our team is incredibly excited to share our first proposal with you all for the creation of a Nouns Bidder POAP and claiming microsite.</p>
+<p>I have attached <a href="https://docs.google.com/document/d/1MzVMFQO3do_2IBzSPup4QWyB48OoEdChZyAdOC74uak/edit?usp=sharing" rel="noopener nofollow ugc">the full proposal document here</a> for easy viewing of photographs (you’ll want to see what David has been working up so far), but have also added in the text from the proposal below.</p>
+<p>We are here to build and collaborate as a community. Please provide any notes, feedback, or concerns. Looking forward to hearing from you all. Cheers.</p>
+<hr/>
+<p><strong>Proposal Draft</strong><br/>
+<strong>Nouns Bidder/Settler POAP</strong><br/>
+<em>[this is a draft - please share your feedback]</em></p>
+<p><strong>tl;dr</strong></p>
+<p>As more and more people find out about Nouns and make their way to the main auction page, we wanted to propose a way to not only invite people to bid on Nouns, but to reward them for bidding as well. Our proposal, in order to bring about this excitement for bidding/settling, is to create a microsite/landing page where people who have previously bid on, or settled, a Noun will have the ability to claim a free POAP, marking, on-chain, their involvement in and excitement for the Nouns community.</p>
+<p><strong>Microsite/Landing Page Details</strong></p>
+<p>Below you will find key details on the thought and tech behind how our team plans to tackle this project.</p>
+<p><strong>POAP (Proof Of Attendance Protocol) | What even is it?</strong></p>
+<ul>
+<li>In the simplest of terms, POAP is a system that event organizers can use to distribute unique badges/NFTs (ERC-721 tokens) to people that show up to their event (whether physical or digital). It also provides an open standard for developers to build on.</li>
+<li>Our team will be building out a microsite with the ability to claim a POAP for digitally attending (bidding on or settling) a Nouns Auction.</li>
+<li>You will be able to have this badge, this NFT, in your wallet, showing publicly your involvement in the Nouns Auction process and your belief in the proliferation of the Nouns ecosystem.</li>
+<li>We will be using <a href="http://etherscan.io" rel="noopener nofollow ugc">etherscan.io</a> data from the <a href="https://etherscan.io/address/0x830bd73e4184cef73443c15111a1df14e495c706" rel="noopener nofollow ugc">Nouns DAO: Nouns Auction House Proxy</a> to pull all addresses with bid and settle functions from each auction in order to verify your involvement and allow you to claim your POAP through the site.</li>
+<li>We will be leveraging the <a href="http://poap.xyz" rel="noopener nofollow ugc">poap.xyz</a> platform and API in order to create the cleanest experience for the claimer.</li>
+</ul>
+<p><em>AMENDMENT BEGINS</em></p>
+<p><strong>POAP Claiming Threshold</strong></p>
+<p>Through community feedback and concern, we have amended this proposal by adding a claiming threshold. The threshold is based on a runners-up bidding function.</p>
+<ul>
+<li>A POAP will be rewarded/be able to be claimed by the five (5) runners-up for every auction (unique wallets only, back-and-forth bidding will not be rewarded with multiple POAPs)</li>
+<li>There will also be one (1) POAP reserved for anyone who settles an auction.</li>
+<li>The reasoning behind this amendment is for two key reasons.
+<ul>
+<li>First: Having unlimited POAPs available with the only requirement being a bid, would open the door to countless spam bidders, resulting in the arbitrary burning of gas.</li>
+<li>Second: By restricting the POAPs to only be claimed by the 5 runners-up allows for the value of the POAP to stay in-line with that of Nouns, while still being attainable by a broader audience. If there is an auction that receives exceptionally high offers, the POAP reserved for a Settler, still allows for anyone, no matter the wallet size, to have the chance at receiving a Noun Bidders POAP.</li>
+</ul>
+</li>
+</ul>
+<p><em>AMENDMENT ENDS</em></p>
+<p><strong>Technical Considerations + Source Code</strong></p>
+<ul>
+<li>The tech stack will be Typescript, React, Next.js, and TailwindCSS</li>
+<li>High emphasis on mobile-first usability and functional programming</li>
+<li>Site will be deployed to Vercel and will use their CI/CD pipeline</li>
+<li>Code will be open-sourced on Github so others can fork it and create their own POAP claim landing pages in the future</li>
+<li>We will have both a staging and production site for testing &amp; bug-prevention</li>
+<li>Leverage the POAP API where possible (<a href="http://poap.xyz" rel="noopener nofollow ugc">poap.xyz</a>)</li>
+</ul>
+<p><strong>Design</strong><br/>
+<strong><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/bkXIv7Ut7h97pLaUgjjT2oDmEtB.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/4f768d722a0618ef433356ceba9900abafb7ca8b.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="bkXIv7Ut7h97pLaUgjjT2oDmEtB" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/4f768d722a0618ef433356ceba9900abafb7ca8b_2_10x10.png" height="189" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/4f768d722a0618ef433356ceba9900abafb7ca8b_2_271x189.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/4f768d722a0618ef433356ceba9900abafb7ca8b_2_271x189.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/4f768d722a0618ef433356ceba9900abafb7ca8b_2_406x283.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/4f768d722a0618ef433356ceba9900abafb7ca8b_2_542x378.jpeg 2x" width="271"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">2048×1437 291 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></strong></p>
+<ul>
+<li>
+<em><strong>Design of the POAP</strong></em>
+<ul>
+<li>Nounish beings by Sun-Min + David</li>
+<li>Each Nounish being holds a numbered auction bid paddle marking in history the specific Noun that your bid was counted for</li>
+</ul>
+</li>
+<li>
+<em><strong>Design of the Microsite</strong></em>
+<ul>
+<li>Create wireframes in Figma and generate a low-fidelity interactive prototype (mobile and web)</li>
+<li>Upload prototype into maze.design and test with the nouns community/discord to ensure that key tasks can be completed</li>
+<li>Iterate on prototype to resolve any usability issues based on feedback</li>
+<li>Once wireframes are validated, we’ll conduct two rounds of visual design to and share back with community
+<ul>
+<li>Leverage tailwind design components for easy and efficient build</li>
+<li>Comments will be enabled to review feedback asynchronously and directly in the design</li>
+<li>The website will be branded similarly to nouns.wtf (Londrina Solid font for headlines, Segoe UI for body text, grays and whites)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Project Timeline</strong></p>
+<p>Our team anticipates this project taking approximately 6-8 weeks. You can view our proposed schedule below. (subject to change based on reviews and approvals by the NounsDAO)</p>
+<p>Community co-creation, as many of the other proposals have stated, is our goal. As you can see below, we will have three dedicated times where we will gather community input through Discord and other channels from the NounsDAO community in order to ship this product with the community’s highest standard in mind. (<a href="https://docs.google.com/document/d/1MzVMFQO3do_2IBzSPup4QWyB48OoEdChZyAdOC74uak/edit?usp=sharing" rel="noopener nofollow ugc">Please view the attached document for the timeline</a>)</p>
+<p><strong>Team</strong></p>
+<p>We are a small, but nimble team, comprised of a top-tier product designer, developer, and project manager with decades of combined experience. Also, gracing the team with his impeccable talent is David Horvath. If you don’t know David Horvath, look him up.</p>
+<p><strong>Introducing the team:</strong></p>
+<p><strong><a href="https://twitter.com/thebrkfstsndwch" rel="noopener nofollow ugc">Brkfstsndwch</a></strong> | A project and program manager with close to a decade of experience managing and building design teams and shipping products alongside those teams. With a wide range of experience in project categories from web development to brand creation for companies big and small. Okta, Elastic, Palo Alto Networks, and Microsoft to name a few.</p>
+<p><strong><a href="https://twitter.com/davidzhorvath" rel="noopener nofollow ugc">David Horvath</a></strong> | Co-creator of the Uglydoll plush toy based licensing brand, NFT artist, and creator of Bossy Bear, the Disney book series turned pre-school animated show headed to Nick Jr with Ron Howard and the Imagine Kids and Family team. Maker of Sofubi toys self-produced in Japan.</p>
+<p><strong><a href="https://twitter.com/bored_ux" rel="noopener nofollow ugc">Bored UX</a></strong> | A digital product designer with a decade of experience working with companies ranging from seed stage startups to big tech like Facebook and Google. Bored UX has designed and helped launch over 50 digital products via founding a globally ranked UX agency.</p>
+<p><strong><a href="https://twitter.com/cdt_works" rel="noopener nofollow ugc">Christian</a></strong> | Frontend engineer working with both SharkDAO &amp; NounsDAO on various projects to further the Nouns Extended Universe™. He’s a self-taught dev with a background in design and product management. Christian is currently working for a startup, but is hoping to pivot to the web3 space full-time. Also, he’s currently getting his Master’s in Computer Science from Georgia Tech and has worked as a professional photographer for 10 years.</p>
+<p><strong>Compensation</strong></p>
+<p>We are asking for the funding of the design and development of this project from NounsDAO. We anticipate occasional maintenance and updates to be made to the site, and ask for a small percentage of funding from NounsDAO to help cover the team’s time over the course of the first 6 months following shipment of the site.</p>
+<ul>
+<li>30ETH for Design, Development, and Deployment of the Nouns Bidder POAP Site</li>
+<li>10ETH for the 6 months of maintenance and updates as needed</li>
+<li>Proposed Payment Schedule
+<ul>
+<li>50% due upon proposal approval (15ETH)</li>
+<li>50% due upon project completion (15ETH)</li>
+<li>Maintenance payment due upon project completion (10ETH)</li>
+</ul>
+</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/61_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Noun12</div>
+          <div class="post_content">
+<p>This is fantastic, I love the art, I love the way it rewards participants in a Nouns-derivative fun, playful way and builds more lore and action into the daily Noun O’Clock auction activities. We like the POAPs.</p>
+<p>Some questions:</p>
+<ol>
+<li>
+<p>Will the Nounish Beings be pre-decided and pre-created or will they themselves be randomly generated for each day’s auction by some process?</p>
+</li>
+<li>
+<p>Thinking aloud, if they are randomly generated for each day’s auction following a set of rules that pick from a few buckets of attributes, is there a way for them to be a riff on each day’s Noun?  Like if we had a Lobster noun, the Nounish Being POAPs would be generated to be all be reddish or something like that.  This may add too much complexity and have no point, I am just imagining ways to create deeper linkage between a given’s day Noun and the Nounish Being POAPs.</p>
+</li>
+<li>
+<p>Will each Nounish Being POAP be unique (so each bidder gets a unique POAP, even as compared to others bidders on that same day) or will there be as many identical Noun 58 auction POAP NFTs as there were bidders/settlers for the Noun 58 auction?</p>
+</li>
+<li>
+<p>If the former, is there a way to make each Nounish Being POAP itself a randomized unique NFT for which each participant in a given day’s auction gets a similar but slightly different riff on the same Nounish Being?  More memetic consistency which is the key to Nouns Global Domination.  Also a matroska doll design of unique smart progammatically generated Noun Derivatives!</p>
+</li>
+<li>
+<p>I presume these would all be L1 Ethereum minted POAPs?</p>
+</li>
+<li>
+<p>The structure of the proposal and the team all look good to me. Not a question, just the truth.</p>
+</li>
+</ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p><span class="mention">@Noun12</span>, first of all, thank you so much for your kind words and for taking the time to read through this proposal! It’s great to hear you’re as excited about this opportunity as we are.</p>
+<p>Answers to your questions below:</p>
+<ol>
+<li>
+<p>For this initial proposal, we will have a range of pre-decided Nounish Beings that we would be using. Though, we would love to expand on this in a V2 Proposal once we prove out this system, and a daily generated Nounish Being would be incredibly exciting.</p>
+</li>
+<li>
+<p>Look at you already helping us build on a V2 proposal! Love the way you think and I think that is definitely something we’d want to look into once proving out this system in V1.</p>
+</li>
+<li>
+<p>We are proposing each auction will result in the same POAP for all bidders. So, every auction will have a unique POAP based on the previous auction. I.e. Noun 68 Bidder POAP will be different in some way than Noun 67 Bidder POAP.</p>
+</li>
+<li>
+<p>N/A with above answer.</p>
+</li>
+<li>
+<p>Correct.</p>
+</li>
+<li>
+<p>You’re the real deal. Thank you for getting our brains turning and taking the time to help us out.</p>
+</li>
+</ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/60_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">kenbot</div>
+          <div class="post_content">
+<p>Great proposal, I love this idea.</p>
+<p>This could be extended to bidders on <a href="http://nouns.com/partybid" rel="noopener nofollow ugc">nouns.com/partybid</a> to incentivize group buying and grow distribution of noun POAPs.</p>
+<p>Lets explore this together in a call, there are some dynamics that would be negative, if bidders get a POAP for a micro bid (say .00001) and arbitrage it to OS that would create noise and a low perceived value of Noun POAPs.   Perhaps we could dynamically set the minimum bid to receive a POAP as XXX% of the floor of Noun POAPs at every Noun O’Clock.</p>
+<p>This topic is worth debate.  The sprit of the proposal is increased accessibility for those with commitment to the concept and project.</p>
+<p>This would also give us a ‘news item’ to tweet out on what todays min bid to get the POAP is.</p>
+<p>I’d also love to see a marketplace for NounPOAPs as a part of the microsite as a part of season 2 of the NounPOAP project.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>I am about to step out for a bit today to be with family. But these thoughts are top-tier and I can’t wait to explore them more with you and the community. I’ll be reaching out to have a call.</p>
+<p><strong>My quick thoughts here in the meantime:</strong></p>
+<p>Adding in functionality for party bidders would most definitely increase the awareness and the excitement for joining party bids. Which helps proliferate those projects that the community is working on as well. Therefor, a plus for both projects!</p>
+<p>I do see where you’re coming from with the issue of the minimum bid. I am very interested to hear what the rest of the community thinks re: whether we want to value “perceived value” or “perceived accessibility”. I think that’s where the discussion lies. If the later, then no minimum bid would be necessary. If the former, we would ideally want to add in a minimum bid requirement.</p>
+<p>More soon! But appreciate your time and your thoughts a great deal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Jktuchman</div>
+          <div class="post_content">
+<p>So essentially this is the equivalent of a I voted sticker?</p>
+<p>What utility does a POAP have?</p>
+<p>What’s the incentive for anyone to share the POAP or be excited about a POAP? Thinking out loud what if you built the POAP so if someone voted and then shared their POAP on social media, if a follower clicked on their link and bid on a noun and won, the persons POAD it is would get a kick back for facilitating. Something along those lines to incentivize people to share their POAPs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>Hey friend! Thanks for the note. Questions answered below:</p>
+<p>In a sense, yes. Our POAP will be the marking, on-chain, of your participation in a Nouns Auction.</p>
+<p>At the start, there will not be any intrinsic utility built in. But as time goes on, that is most definitely something we’d love to think through and build on along with the community.</p>
+<p>As for your idea on kickbacks, that is a pretty wild and awesome thought! And something that would take a bit of consulting and time to build. Perhaps in a V3 or V4 version in my mind. But absolutely love the dreaming here. We need that to keep pushing this community.</p>
+<p>Thanks again for your time and your thought on this!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/59_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun14</div>
+          <div class="post_content">
+<p>I think this is a proposal that has potential.<br/>
+Just to brain dump some ideas off the top of my head.</p>
+<ol>
+<li>Only the top few bidders will get a POAP</li>
+<li>POAP holders can get special access to future nouns related projects</li>
+<li>There’s a seasonal leaderboard(e.g. leaderboard for top 1-100 nouns, or for year 2021/22) to track POAP holders. And there’s some rewards for topping the leaderboard.</li>
+</ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>Hey <span class="mention">@noun14</span>! Really appreciate the brain dump here.</p>
+<ol>
+<li>There have actually been quite a few people who have said the same thing. Either the top few bidders, or make sure there is a minimum bid value to deter from a bunch of .01 etc. bids. I think the team is leaning towards this recommendation.</li>
+<li>We all love some utility. That’s something we have in mind and will definitely be working with the community and other project leaders to figure out.</li>
+<li>Again, we love that utility! This is an idea we hadn’t considered. I love the gamification of it.</li>
+</ol>
+<p>Thanks so much for sharing and for your time here! We’ll be waiting for a few more comments from other Nouns and then edit the proposal and hopefully get it on-chain!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Jktuchman</div>
+          <div class="post_content">
+<p>Thanks for the reply!</p>
+<p>I’m very excited to see this project come to fruition.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>Thank you for your notes and your time, everyone. Based on the feedback, we would like to amend the proposal based on the following. With a thumbs up here, we will update the proposal within Discourse and have our sponsor put this on-chain for final voting.</p>
+<p>There have been some really great ideas floating around about the issues with low spam offers vs a minimum bid threshold. The working team on this project has taken into account all feedback and has come to a recommended amendment to the current proposal.</p>
+<p><strong>Our team is proposing:</strong></p>
+<p>We propose to amend the current Nouns Bidder POAP proposal’s claiming structure to allow for <em><strong>POAP claiming to only be allowed by a set number of Runners Up behind the Auction Winner</strong></em> . Our team would love the community’s feedback whether the Runners Up should be restricted to the (3), (5), or (10) Runners Up (only unique wallets per Noun, no one wallet could claim multiple POAPs per Noun) behind the Auction Winner.</p>
+<p><strong>The Pros Behind This Amendment:</strong></p>
+<ul>
+<li>Keeps artistic value high (David Horvath’s + Nouns’)</li>
+<li>Deters spam bidding and burning gas at low bids</li>
+<li>Adds more importance to the collection of a Nouns POAP</li>
+<li>Could ultimately/eventually encourage hire bidding on Nouns Auctions, knowing that there is still something to gain by being involved</li>
+</ul>
+<p><strong>The Cons Behind This Amendment</strong></p>
+<ul>
+<li>This would mean the POAP would be a bit more unattainable for some</li>
+<li>The current proposal was for all bids to receive a POAP, so there would have to be some explanation (on the proposal team’s end) to the community once the project is live</li>
+</ul>
+<p>The Proposing Team would love to hear some final thoughts on this proposal as well as recommendations on a desired Runner Up threshold (3, 5, or 10). We plan on updating the proposal within Discourse by the end of the day today for one final read.</p>
+<p>Thank you all in advance! Let’s build.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2524_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">seneca</div>
+          <div class="post_content">
+<p>Incredible job at taking in feedback and adapting to it. Makes me all the more bullish for the team.</p>
+<p>I like the runner ups idea, it is an simple solution to the spam problem. I’d go for 3 runner ups - feels natural as there is always 1st, 2nd and 3rd place in most competitive games.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/61_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Noun12</div>
+          <div class="post_content">
+<p>Re 1. Will they be unique for each Noun’s Auction over a long time frame?  Does that mean pre-creating hundreds of Nounsh Beings?  Just curious about the process.</p>
+<p>Also thank you for the amendments to the proposal, that’s a good re-cut.</p>
+<p>Re: the number of people who are eligible for the POAPs, if it’s just the 3 runner-ups, are we making Nouns more accessible to enough people?  People who are in the top 3 overlap highly with people who will end up with a Noun over time, so it makes these Nounish Being POAPs a bit redundant from that perspective.  They are awesome, wonderful art, and maybe offer future functionality beyond that too but they reduce to being another benefit to people who are already qualified bidders (people like me as it turns out) .  The initial appeal to me besides <span class="mention">@DAVID</span> ‘s great art was that this would expand the masses’ abilities to participate in Nouns and the auction. This is a bit of a devil’s advocacy to <span class="mention">@seneca</span> 's latest reply but it’s something I think people should consider when thinking about what the goal of this proposal is and should be.</p>
+<p>On the other side, balancing it against pointless microbids that waste gas and lower the value of the POAPs is also a reasonable concern as laid out in <span class="mention">@kenbot</span> 's 3rd paragraph.  So I’d lean towards at least 5 runner-ups but I’m open to cases for fewer awarded POAPs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2524_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">seneca</div>
+          <div class="post_content">
+<p>The issue with making Nouns more accessible via POAPs goes back to the original Nouns distribution problem. If you set a low fixed price, only bots will win. If you set an auction, only whales win. In this case, if you allow all bidders to get a POAP, bots will win (and cause wasteful spam). If you don’t, whales win. While the latter is not the “ideal” solution, it’s far better than the former imo.</p>
+<p>That said, I do think there’s a lot of design space to explore to broaden Nouns accessibility. But that’s another convo!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>Hey there <span class="mention">@Noun12</span> and <span class="mention">@seneca</span>! Responding to both of you in the same reply here.</p>
+<p>Re 1: The Being itself will have a finite cap on unique variations to it for this V1 proposal. I could see a Season 2 POAP being a really cool thing where every 6 months, we produce a new set of Nounish Beings as part of an extended scope to this project which then can further stamp your time beyond just the number on the paddle. Of course having this first round, or “Season 1”, be the OG POAP holders. The main unique/differentiating factor between the Nounish Beings will be the number on their paddle.</p>
+<p>Re 2: This addresses both your, <span class="mention">@Noun12</span>, and your, <span class="mention">@seneca</span>, questions regarding the accessibility of these POAPs. Our proposed final amendment for this issue is to Reward POAPs to the top 5 bidders (unique addresses) and then to the 1 settler per auction. Resulting in 6 POAPs per auction. We feel like 5 is the sweet spot between 3 and 10. 10, opens the doors a bit wide and would potentially allow for spam bids to win one. 3, still feels a little too obsolete for most, knowing that often times the top 3 bids are over 100ETH. 5, allows for some of those that can’t quite attain a Noun to have a shot at a POAP. And then the Settlers POAP will allow for anyone, no matter their wallet size, to receive a POAP if they’re quick on the trigger.</p>
+<p>With a thumbs up here, I will be updating the proposal this evening and having <span class="mention">@Noun12</span> read through one last time before we get this on-chain.</p>
+<p>I appreciate both of your time, energy, and minds in helping bring the proposal to fruition. The team cannot wait to build this for the community. Cheers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>The team is back with the official amendment to the <a href="https://docs.google.com/document/d/1MzVMFQO3do_2IBzSPup4QWyB48OoEdChZyAdOC74uak/edit?usp=sharing" rel="noopener nofollow ugc">Nouns Bidder POAP Proposal</a>. Seeing that I may be stuck with only 1 edit within the initial post, the Google Doc has been updated with the amendment accordingly. You can view that at the end of page 1/beginning of page 2. Looking forward to any final questions and getting this on-chain! <span class="mention">@seneca</span> <span class="mention">@Noun12</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/45_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">KingofAllNouns</div>
+          <div class="post_content">
+<p>Having PartyBidders get a POAP if their PartyBid finished as a qualifying runner up would be so cool.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/88_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">skilift.eth</div>
+          <div class="post_content">
+<p>The one thing that stands out for me is the art. Per the proposal, they’re meant to be “nounish” (which I can kind of see), but they feel like a rather large departure from the core noun aesthetic. I love the bidding paddles as a design choice, but I’m wondering if we could make the characters <em>more</em> nounish, or perhaps go with a different motif. Perhaps the ‘loading’ noun (the one that pops up when scrolling between auctions) holding a bidding paddle, possibly in different colors. Or maybe just the glasses (matching the noun) with a paddle popping up off the frames.</p>
+<p>Just some ideas. I really like the proposal overall!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/249_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">9999</div>
+          <div class="post_content">
+<aside class="quote no-group" data-full="true" data-post="1" data-topic="243" data-username="brkfstsndwch">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://dub1.discourse-cdn.com/flex005/user_avatar/discourse.nouns.wtf/brkfstsndwch/48/314_2.png" width="24"/> brkfstsndwch:</div>
+<blockquote>
+<ul>
+<li>Leverage the POAP API where possible</li>
+</ul>
+</blockquote>
+</aside>
+<p>I was curious if this line was referring to the poap.xzy platform. If not, I wonder if it can be used for Nouns POAP?</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.poap.delivery/">
+<header class="source">
+<img class="site-icon" data-dominant-color="EBDEF7" height="32" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/d/da02dbf9142691e274badc9b080178aab55b56e7.png" width="32"/>
+<a href="https://www.poap.delivery/" rel="noopener" target="_blank">poap.delivery</a>
+</header>
+<article class="onebox-body">
+<h3><a href="https://www.poap.delivery/" rel="noopener" target="_blank">POAP - Delivery ✈️</a></h3>
+<p>POAP.delivery the place where events earn their place in history</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>Hey <span class="mention">@9999</span>! It sure is. Our dev will be working with them to find the most effortless way to integrate and use their platform.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/249_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">9999</div>
+          <div class="post_content">
+<p>Thanks for the reply! I think it would be helpful to make that clearer in the proposal since poap.xyz is a known platform. This detail also helps flesh out the technical details/choices/challenges section of the proposal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p><span class="mention">@9999</span>, really great point you bring up! Our team was just so close to the poap.xyz platform, that the clear indication of the platform we’d be using was an oversight. I’ve updated the proposal above and in the google doc with a point explicitly stating we’d be using poap.xyz as our backend claiming platform. Thanks for the flag! Definitely helps strengthen up the proposal a bit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/851_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">joshuafisher</div>
+          <div class="post_content">
+<p>How does everyone feel about all bidders before this proposal was created get POAP and then moving forward it’s just the top 5?  (can’t lie, I just really want a <span class="hashtag">#9</span> POAP). I love the Bat!</p>
+<p>Also does the Settlement POAP represent the Noun settled or the one created?  Could it be both?  Would be cool to share the Settlement POAP with the person before and after you imho.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/169_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">solimander</div>
+          <div class="post_content">
+<p>I’m a little worried about the conflicting incentives between this project and FOMO nouns. These POAPs incentivize an immediate settlement, while FOMO nouns relies on the assumption that no one will settle prior to the group’s decision.</p>
+<p>That said, there is an opportunity to align these projects in a way that benefits everyone. For example, the POAP could be awarded only if the minted Noun is the community-selected Noun. A tool could be created to allow anyone to submit the settlement with flashbots.</p>
+<p>Interested in thoughts on this issue and alternative solutions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>Welcome to the discourse, <span class="mention">@solimander</span>! Really appreciate the response and the thoughtful concern. Our team on this proposal is already in talks with <span class="mention">@forager</span> and their team to end up with a result through the building process that benefits and aligns with both projects.</p>
+<p>Of course, as this proposal states, we are here to build through community collaboration. Our team will be incredibly transparent through all findings as we build and work alongside other teams (I.e. the FOMO Nouns team).</p>
+<p>Really looking forward to the solution we create together. Cheers!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/314_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">brkfstsndwch</div>
+          <div class="post_content">
+<p>Hey <span class="mention">@joshuafisher</span>!</p>
+<p>Thanks so much for the comment. The team and community definitely hear your concern with the accessibility of the POAP with restricting to the 5 Runners Up. Through discourse with a large group in the NounsDAO community, the proposed direction was to stick with 5 as it allows for the POAPs to hold a bit of value, while still being attainable (some 5th Runners Up are under 5ETH at times), as well as deter spam/bot bidding just to get a POAP and burn arbitrary gas. And remember, this is V1/Season 1 for this first proposal. As we have learnings through this round, we will be proposing a V2/Season 2 that could address many of the communities comments through the process.</p>
+<p>As for your second question, the proposition is to have it rewarded to the current auctions settlement and not the following/incoming auction. But as we spend the next month+building, we will be having constant communication with the community to build and iterate together.</p>
+<p>Thank you again for your time and questions! Excited to end with a product that everyone is stoked on.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/61_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Noun12</div>
+          <div class="post_content">
+<p>This is set to go live, so I will be posting the follow-up proposal for the completion payment at that time.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

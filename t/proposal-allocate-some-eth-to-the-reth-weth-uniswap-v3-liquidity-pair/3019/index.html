@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Proposal: Allocate some ETH to the rETH-WETH Uniswap v3 Liquidity Pair</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Proposal: Allocate some ETH to the rETH-WETH Uniswap v3 Liquidity Pair</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3932_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">bp_gamma</div>
+          <div class="post_content">
+<p>Author: <span class="mention">@bp_gamma</span></p>
+<p>Hi everyone!</p>
+<p>My name is Brian, and I’m from Gamma Strategies, which is an active liquidity manager on Uniswap v3. We work with DAOs and DeFi projects to manage liquidity or create ERC-20 wrappers around Uniswap v3 liquidity positions. We’ve worked with projects like Llama DAO and FWB DAO to manage protocol-owned liquidity and Rocket Pool to incentivize rETH-WETH liquidity on Uniswap.</p>
+<p><strong>Basic Summary:</strong></p>
+<p>Allocate a risk-adjusted portion of treasury ETH to Gamma Strategies’ rETH-WETH managed pair in order to derive yield via trading fees and liquidity mining incentives in the form of RPL (Rocket Pool governance token).</p>
+<p><strong>Motivation</strong></p>
+<p>Rocket Pool is currently incentivizing our rETH-WETH managed position with RPL incentives, which is bolstering the current APRs at 20%. See <a href="https://dao.rocketpool.net/t/uni-v3-reth-eth-incentives-gamma-strategies-proposal/1102" rel="noopener nofollow ugc">here</a> for our proposal which passed via Rocket Pool’s governance process.</p>
+<p>The main way to profit on Uniswap v3 is to provide liquidity to pairs that have:</p>
+<ol>
+<li>
+<p>High correlation and thus low impermanent loss,</p>
+</li>
+<li>
+<p>High volumes per TVL in the pool, and</p>
+</li>
+<li>
+<p>Liquidity mining incentives</p>
+</li>
+</ol>
+<p>The rETH-ETH pool on Uniswap currently meets these requirements because rETH is very correlated with the price of ETH. rETH is essentially a wrapped, staked derivative of ETH which will accrue ETH staking yields over time. So its value will slowly rise against the value of ETH over time.</p>
+<p>The rETH-WETH pool on Uniswap v3 has been generating between $1M - $3M of volume on around $1.78M of TVL, which is fairly high volumes per TVL in the pool. With the addition of more TVL in this pool, there likely will be some amount of increasing returns to scale as more of the volume accruing to Balancer’s $40M+ TVL rETH-ETH pool will start to get allocated to the Uniswap v3 pool via DEX aggregators.</p>
+<p>Lastly, our bolstered yield from $RPL will boost the current yields being derived by LP fees.</p>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>
+<p>We center the liquidity range around the current NAV of rETH:ETH, not around current pool price.</p>
+</li>
+<li>
+<p>The exchange rate will be pulled directly from the contract here: <a class="inline-onebox" href="https://etherscan.io/token/0xae78736cd615f374d3085123a210448e74fc6393#readContract" rel="noopener nofollow ugc">$1,200.29 | Rocket Pool ETH (rETH) Token Tracker | Etherscan</a></p>
+</li>
+<li>
+<p>The range will be managed with a band of +/- 1.5% around the NAV of rETH in terms of ETH.</p>
+</li>
+<li>
+<p>As the NAV price drifts upwards, the allocation of ETH in the pool will increase. For every 0.26% increase in the NAV price of rETH/ETH, a rebalance will automatically be triggered shifting the ranges to +/- 1.5% around the new NAV price.</p>
+<ul>
+<li>This will help keep the allocation of assets to approximately a 50/50 ratio with +/-5% variances</li>
+<li>Based on the current staking rate, this would produce a rebalance every 15 - 18 days</li>
+</ul>
+</li>
+</ul>
+<p><strong>Gamma Specs</strong></p>
+<ul>
+<li>Liquidity providers who provide to our contracts are in full custody of their liquidity, and deposits/withdrawals are permissionless</li>
+<li>No upfront fees. 10% of the swap fees are taken upon each rebalance to pay for rebalances &amp; operational costs.</li>
+</ul>
+<p><strong>Security &amp; Audits</strong></p>
+<p>Gamma implements a 30s TWAP check on all deposits to prevent flashloan risks against our positions. Additionally we mandate deposits in the ratio of the assets in the pool to further protect against any attacks. These configurations were vetted and approved by ConsenSys Diligence. See our audits below:</p>
+<ul>
+<li>4-week audit performed by <a href="https://consensys.net/diligence/audits/2022/02/gamma" rel="noopener nofollow ugc">ConsenSys Diligence</a> on 3/28/2022</li>
+<li>2-week audit performed by <a href="https://github.com/GammaStrategies/hypervisor/blob/master/AE_Gamma_audit_09_03_22.pdf" rel="noopener nofollow ugc">Arbitrary Execution</a> on 3/9/2022</li>
+</ul>
+<p><strong>Risks</strong></p>
+<ul>
+<li>Although there is minimal impermanent loss in the rETH-WETH pair due to high correlation, there are times such as now where rETH trades at a premium to NAV. We will not be providing when rETH trades at more than 1.5% premium to NAV to limit impermanent loss</li>
+<li>rETH could potentially trade at a discount to NAV if rETH were to depeg or become slashed. In that case, more of the DAO’s liquidity would be in the form of rETH.</li>
+</ul>
+<p><strong>Implementation</strong></p>
+<p>The Nouns community would deposit a risk-adjusted amount of ETH &amp; rETH into Gamma Strategies’ rETH-WETH LP position and receive ERC-20 LP tokens. The Nouns community would then stake those LP tokens into a MasterChef contract which will receive RPL rewards for their incentivized liquidity. At any time, the Nouns community can permissionlessly remove liquidity, harvest RPL rewards, or add/stake more liquidity to their position.</p>
+<p>Thank you all for taking the time to read through this proposal, and I would happy to answer any questions or take feedback from the community!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2936_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">AndrewLaddusaw</div>
+          <div class="post_content">
+<p>Is there any historical data on what this type of strategy would have done over the past few months? Year? I don’t think staked ETH has been around that long, so I’m just looking for some type of reference point. It’s tough to envision the DAO going for something like this imo, but I’m still really curious.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3932_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">bp_gamma</div>
+          <div class="post_content">
+<p>Yeah that’s a good question.  Currently it’s generating around 20% Reward APR based on 400 RPL / month distributions and around 352 ETH deposited into our pools.  The pool itself is generating around $1,220 in daily fees per $1.71M of TVL.  So based on trade fees, that’s around 26% APR on trade fees.</p>
+<p>However, with more liquidity in the pool, there likely will be more volumes given the presence of a large Balancer rETH-ETH pool which is taking up majority market share of trade volume.  So with more liquidity in the Uniswap pool, a larger portion of trades would get routed to Uniswap via a DEX aggregator like 1inch.</p>
+<p>Therefore, if NounsDAO were to place an initial amount of 350 ETH in the pool, the likely APR would be around 10% from Rewards and around 10% from LP Fees, for around 20% total APR.  See here for historical data:  <a class="inline-onebox" href="https://info.uniswap.org/#/pools/0xa4e0faa58465a2d369aa21b3e42d43374c6f9613" rel="noopener nofollow ugc">Uniswap Info</a></p>
+<p>It’s also may be the case that Rocket Pool would increase RPL distributions to our pool in the coming months as Uniswap v3 is generating a lot more volume per TVL than the Balancer pool at the moment.  The main reason that the Uniswap pool has lower TVL despite higher volumes is that it requires active management of the position because the price of rETH includes the staking yields within its price, so if the liquidity ranges are not actively managed, the price of rETH will go out of range.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

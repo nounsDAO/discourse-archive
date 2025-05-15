@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Proposal: Stake Portion of Nouns Treasury in Rocket Pool</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Proposal: Stake Portion of Nouns Treasury in Rocket Pool</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">LookingForOwls</div>
+          <div class="post_content">
+<h2>
+<a class="anchor" href="#tldr-1" name="tldr-1"></a>TLDR</h2>
+<p>Rocket Pool is the most decentralized staking solution currently available. Staking a portion of the Nouns treasury with Rocket Pool instead of LIDO reduces risk to the Nouns treasury and promotes network decentralization.</p>
+<h2>
+<a class="anchor" href="#about-rocket-pool-2" name="about-rocket-pool-2"></a>About Rocket Pool</h2>
+<p>Rocket Pool is a pooled staking provider. It is trustless, permissionless and battle tested. With over 2000 Node Operators running over 11000 validators, it’s the gold standard for liquid staking.</p>
+<p>Over 573,000 ETH is staked with Rocket Pool, giving it the third largest TVL after Lido and Coinbase among liquid staking providers.</p>
+<p><img alt="" height="383" role="presentation" src="https://lh4.googleusercontent.com/xVTBnlGj_k-bl5ZWJZxZwi9DzAfTClrw7xZ-i-p6EQLx-NegiCdDbSv9L_uFiaH5iNbOkHtzmUkrBNKDWjldB8500TbW84TkzcInb3T9tTwP66_GJSG7LIkacVzT66CixIekxfSQPwH2mKyWqvynVkUq7aahbclRc7yOseglT0IMjdX3z87sSPVFrsH1ew" width="624"/></p>
+<h2>
+<a class="anchor" href="#why-reth-3" name="why-reth-3"></a>Why rETH</h2>
+<h4>
+<a class="anchor" href="#insurance-4" name="insurance-4"></a>Insurance</h4>
+<p>rETH has best-in-class resistance in a black swan event, such as a massive slashing resulting from client bugs. In a slashing event, funds first come from the Node Operators’ ETH share (over 185k ETH right now), then from the Node Operators’ RPL bonds (currently ~200k ETH, though value would be extremely damaged in a black swan), and only <em>then</em> from rETH holders. By contrast Lido’s insurance fund has only around 6k stETH total, which (A) is stETH denominated itself and (B) services 25 times more TVL. Counting only the ETH portion of RP’s insurance and assuming that no additional risk is incurred by using stETH-denominated insurance, this represents 844x more insurance.</p>
+<p>See <a class="inline-onebox" href="https://mirror.xyz/dabdab.eth/udO6ovzWGglr7KMBSFHS8hy7_q9ORvZReetYvUCh3ho%20%20twitter" rel="noopener nofollow ugc">LSD Insurance, Illustrated — dabdab</a> for a detailed exploration.</p>
+<h4>
+<a class="anchor" href="#peg-performance-5" name="peg-performance-5"></a>Peg performance</h4>
+<p>rETH has shown more resistance to negative de-peg than stETH:<br/>
+<img alt="" height="172" role="presentation" src="https://lh6.googleusercontent.com/mHVZ_CidoUPnZf8jiCvF1xieiQxxP7-V40NcYsyooylEfoHSKM9YtqlIrQe77l7c-py-mFoXMJjpzJ5Wr2q-msMiHhU_Su_FhOfhshchitiAg6ODaC2lvrgEQH5sT1jgK-wfJOduxNbz2H_Eh6vVjz25ODcrQ_U8uQ5FU1gGgK6CgFCsQCXNVAW7wUqyfQ" width="624"/><br/>
+Both stETH and rETH are expected to be better able to maintain their respective pegs via significantly different methods. Lido will request their Node Operators to exit as needed to restore supply/demand balance. Rocket Pool will primarily balance using deep liquidity and market arbitrage opportunities for rETH holders. If needed, arbitrage opportunities for Node Operators that create/exit validators serve as guardrails for the peg.</p>
+<h4>
+<a class="anchor" href="#value-accruing-token-6" name="value-accruing-token-6"></a>Value-accruing token</h4>
+<p>rETH is a value accruing token. In most jurisdictions, this limits taxes to when it is sold, as opposed to being considered ongoing income.</p>
+<h4>
+<a class="anchor" href="#tail-risks-7" name="tail-risks-7"></a>Tail risks</h4>
+<p>Every LSD has some risks inherent to them.</p>
+<p>For example, right now a Lido Node Operator could opt to keep all execution layer rewards for themselves and refuse to exit validators. They have no personal stake, so the main financial penalty is that no more ETH would be given to them in the future. This is quite unlikely as there would be massive reputational damage, and their Node Operators were specifically chosen as trusted members of the Ethereum community.</p>
+<p><em><strong>While one can argue which tail risks are larger, a key practice in risk management is diversification.</strong></em></p>
+<h2>
+<a class="anchor" href="#proposal-8" name="proposal-8"></a>Proposal</h2>
+<ul>
+<li>Stake 5000 ETH with Rocket Pool by swapping ETH to rETH on the open market</li>
+<li>This should be done when premiums are no higher than 1%</li>
+</ul>
+<h2>
+<a class="anchor" href="#challenges-9" name="challenges-9"></a>Challenges</h2>
+<ul>
+<li>Due to the many advantages of rETH over similar LSDs there is high demand leading to a small (0.95%) premium for purchased rETH. This represents ~2 months of yield and is quickly offset.</li>
+</ul>
+<h2>
+<a class="anchor" href="#disclosures-10" name="disclosures-10"></a>Disclosures</h2>
+<p>I am <strong>not</strong> part of the Rocket Pool team nor will I directly benefit from this proposal.</p>
+<p>I am a Nouns delegate, Rocket Pool Node Operator and currently hold RPL.</p>
+<h2>
+<a class="anchor" href="#glossary-11" name="glossary-11"></a>Glossary</h2>
+<ul>
+<li>
+<strong>LSD</strong> - Liquid Staked Derivative</li>
+<li>
+<strong>rETH</strong> - Rocket Pools LSD Token</li>
+<li>
+<strong>NO</strong> - Node Operator - an entity that runs one or more Ethereum validators</li>
+<li>
+<strong>RPL</strong> - Rocket Pools Protocol Token</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

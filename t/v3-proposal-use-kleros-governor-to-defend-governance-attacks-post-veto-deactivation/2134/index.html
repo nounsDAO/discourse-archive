@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>V3 Proposal: Use Kleros Governor to Defend Governance Attacks Post Veto Deactivation</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">V3 Proposal: Use Kleros Governor to Defend Governance Attacks Post Veto Deactivation</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">warden</div>
+          <div class="post_content">
+<p>I am a code4rena warden currently reviewing the addition of dynamic quorum on NounsDAOV2Logic.</p>
+<p>Kleros Governor should prevent obviously malicious transactions from ever making it through even if the attacker has supermajority of the voting power <em>without</em> adding friction to day-to-day activities.</p>
+<p>Figured I give a TLDR on how it works in case the Nouns community did not know of this option. If there is interest, I can elaborate more.</p>
+<h1>
+<a class="anchor" href="#kleros-governor-governance-flow-1" name="kleros-governor-governance-flow-1"></a>Kleros Governor Governance Flow</h1>
+<h2>
+<a class="anchor" href="#snapshots-optional-2" name="snapshots-optional-2"></a>Snapshots (Optional)</h2>
+<p>First, use <a href="https://snapshot.org/#/" rel="noopener nofollow ugc">snapshots</a> for vote <em>signal</em>. This gassless tool supports delegation and can be used to collect sentiment and raise awareness around a proposal.</p>
+<p>Any proposal that did not go through snapshot could be immediately challenged and will be rejected by the court.</p>
+<h2>
+<a class="anchor" href="#kleros-governor-contract-3" name="kleros-governor-contract-3"></a>Kleros Governor Contract</h2>
+<ol>
+<li>A proposal is submitted along with deposit and enters a challenge period (let’s say 5 days). A proposal is a list of [<code>target</code>, <code>calldata</code>, <code>value</code>];</li>
+<li>If the proposal passes the challenge period, anyone can execute it;</li>
+<li>Someone can challenge it with a deposit during the challenge period. If it is challenged, the proposal goes to court.</li>
+<li>The court analyses the contents of the proposal and checks if it violates (for example) NounDAO constitution.</li>
+<li>The court gives its ruling. The ruling can be appealed.</li>
+<li>Jurors that give incoherent rulings (e.g. clearly participating in an attack) get slashed if their ruling is inverted in the final ruling.</li>
+<li>Finally, if the proposal passes it will be executed and the challenger loses the deposit. Otherwise, it is not executed and the proposer loses the deposit.</li>
+</ol>
+<h2>
+<a class="anchor" href="#deposits-4" name="deposits-4"></a>Deposits</h2>
+<ul>
+<li>The proposer’s deposit is a bounty awarded to a successful challenger. This incentivizes whistleblowers;</li>
+<li>Similarly, the challenger’s deposit is a bounty to discourage attackers from preventing improvements to the protocol.</li>
+</ul>
+<h1>
+<a class="anchor" href="#conclusion-5" name="conclusion-5"></a>Conclusion</h1>
+<p>For an obviously malicious transaction such as the one executed on Build Finance DAO, the system forces the attacker to subvert the entire Kleros system which makes attacking the Nouns treasury unprofitable.</p>
+<p>This system has been used to govern Kleros and Proof-of-Humanity for a while. It is battle tested.</p>
+<p>Here are some <a href="https://kleros.gitbook.io/docs/products/governor" rel="noopener nofollow ugc">Kleros docs to dive deeper</a>.</p>
+<p>Disclaimer: I understand how Kleros and Kleros Governor works because I was a kleros dev.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2936_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">AndrewLaddusaw</div>
+          <div class="post_content">
+<p>So does the DAO have to create constitutional rules that would govern the court? It seems like giving up some of the decentralization in order to increase security. I could definitely see the value if the veto is ever lifted by the Nounders though. There will need to be more things in place to prevent different malicious attacks on the treasury.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>Thank you! For those of us who are too lazy to read the docs <img alt=":slight_smile:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" width="20"/> can you please explain a bit how you avoid the risk of enough Jurors being bribed such that there is no “incoherent ruling”?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2430_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">jaybuidl</div>
+          <div class="post_content">
+<p>Hey, Kleros dev here! There is no need for a constitution for this. All the governor does is provide an optimistic mechanism for anyone to challenge any transaction intended to reflect an off-chain vote (eg. Snapshot).</p>
+<p>For example, the DAO has voted on Snapshot to “<em>change parameter x to 3</em>” on some smart contract.</p>
+<p><strong>Without a Governor</strong>, one needs to trust a DAO member with access to an admin role on the smart contract to enforce the vote. That’s a significan trust assumption.</p>
+<p><strong>With a Governor</strong>, anybody who has an incentive in seeing the Snapshot vote executed on-chain can submit a transaction (its calldata) to the Governor with a predefined bond of several ETH. Now a challenge period of several days starts (that’s configurable).</p>
+<ul>
+<li>If the submitter posted a transaction to the Governor to “<em>change parameter x to 5</em>”, or whatever other parameter, there is an incentive for anyone to challenge the transaction (with a bond in ETH) and possibly get rewarded with part of the submitter’s deposit. Such challenge starts a Kleros dispute: a randomly selected jury will be selected to rule on whether the submitted transaction reflected the intention of the Snapshot vote. In the rare cases where the jury rules incorrectly, it is possible to appeal, which draws a new jury increasing exponentially in number of jurors and makes honest errors increasingly unlikely.</li>
+<li>If there was no challenge by the end of the challenge period, it is reasonable to consider that the submitted transaction reflects the Snapshot vote accurately. Therefore the Governor smart contract allows anyone (willing to pay for gas) to execute the calldata.</li>
+</ul>
+<p>Effectively there is no need for any DAO member to be trusted to execute the transaction. The Governor is the only one allowed to assume an admin role on the DAO smart contracts. The Governor’s smart contract can be freely audited by anyone, there is no way for anyone (even from Kleros) to execute a transaction without going through the optimistic fraud-proof mechanism.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2430_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">jaybuidl</div>
+          <div class="post_content">
+<blockquote>
+<p>how you avoid the risk of enough Jurors being bribed such that there is no “incoherent ruling”?</p>
+</blockquote>
+<p>Great question. The appeal mechanism draws a new set of twice as many jurors at each round (usually 3, 7, 15, 31 etc). The majority vote of the <strong>last round</strong> is regarded as the coherent ruling, so anyone who voted incoherently in the earlier rounds get slashed. Therefore the jurors are incentivized <strong>to do their own research into the dispute</strong> at stake, consider the evidence and vote honestly, since there might always be an appeal - as opposed to following the other jurors in the round.</p>
+<p>This <a href="https://kleros.gitbook.io/docs/kleros-faq#can-you-really-trust-a-decision-made-by-a-bunch-of-anonymous-people-on-the-internet" rel="noopener nofollow ugc">FAQ</a> might answer some other questions <img alt=":slight_smile:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" width="20"/></p>
+<p>The best person to discuss further is definitely <a href="https://twitter.com/daisugist" rel="noopener nofollow ugc">Guangmian</a>, I’m sure he’d be happy to schedule a call or a chat.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">daisugist</div>
+          <div class="post_content">
+<p>Hi <span class="mention">@verb-e</span>, this is Guangmian here, integrations lead at Kleros and colleague of <span class="mention">@jaybuidl</span> !</p>
+<p>Looking at the solutions discussed in the two Nouns Governance Attack articles in the past year (<a href="https://dialectic.ch/editorial/nouns-governance-attack" rel="noopener nofollow ugc">here</a> and <a href="https://dialectic.ch/editorial/nouns-governance-attack-2" rel="noopener nofollow ugc">here</a>), most of them seem to have:</p>
+<ul>
+<li>an enormous cost for at least some of the DAO members (e.g. ragequit)</li>
+<li>a cost for the DAO that varies according to how high-stakes or contentious the transaction in question is (e.g. dynamic quorum or penalty)</li>
+</ul>
+<p>In the ideal scenario:</p>
+<ol>
+<li>the cost of resolving these disputes should only vary according to how difficult it is to rule on a case (e.g. trying to drain a treasury without justification should be a no-brainer to decide, and should be trivial and cheap to resolve/block).</li>
+<li>the protection mechanism should be able to dynamically adjust the cost of an attack to match the stakes at hand.</li>
+</ol>
+<p>Kleros achieves both of these things. As arbitration costs only vary according to the difficulty of the case at hand; if a case resolves in one round of arbitration, it should not cost more than a few hundred dollars even in the most difficult cases. On the other hand, large amounts of Kleros tokens are owned by our jurors and staked in our courts, making it very illiquid. Any attempt to buy enough tokens to overpower a specific case would cause a price spike that would make the attack cost prohibitive. The robustness of this protection mechanism is also further amplified by the appeal mechanism mentioned by <span class="mention">@jaybuidl</span> above.</p>
+<p>FYI Kleros has solutions that already work off-the-shelf with Snapshot. Though Nouns DAO doesn’t use Snapshot at the moment, but we can make it work with Nouns once we understand its setup better.</p>
+<p>If anyone wants to chat, we could connect on <a href="https://t.me/daisugist" rel="noopener nofollow ugc">Telegram</a>!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2936_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">AndrewLaddusaw</div>
+          <div class="post_content">
+<p>Very interesting stuff! Thanks for the detailed reply. It was really helpful.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">warden</div>
+          <div class="post_content">
+<p>I’d like to expand on security and walk through what a defending a bribery attack under kleros governor looks like.</p>
+<p>I will focus on a change that is obviously bad and there is no contentiousness on the community, something like “transfer all treasury funds do some EOA” .</p>
+<p>A couple of preliminary notes:</p>
+<ul>
+<li>To be eligible to be selected a juror for a case, a candidate must stake PNK (Pinakion) on a court. This is done (among other things) to force an adversary to put skin in the game;</li>
+<li>Courts are structured in a tree where staking on leaf courts also stakes on all courts above. At each appeal, the case goes up to a more general court.</li>
+<li>All arbitration fees are paid in ETH. Arbitration clients (e.g. NounsDAO) don’t need to know what PNK is or hold it;</li>
+</ul>
+<h1>
+<a class="anchor" href="#kleros-attack-defense-game-1" name="kleros-attack-defense-game-1"></a>Kleros Attack-defense Game</h1>
+<ol>
+<li>
+<p>The attacker must submit the malicious transaction to kleros governor where it will sit for the challenge period (let’s say 5 days). Expecting the community will see and challenge the tx, the attacker will try to subvert the court the governor is using (e.g. blockchain technical court) beforehand. Several ways to approach this:</p>
+<ul>
+<li>Buy and stake enough PNK on that court so that he have good chances of being selected as a juror. Alternatively, make a bribing contract promising returns to collect PNK from other users and use that to stake;</li>
+<li>While holding a big % of the stake in a court increases your chances of being selected, it does not guarantee it, so if his submission indeed gets challenged, the attacker will also try to convince jurors selected by PNK he (the attacker) do not control into participating in the attack (vote in his favor).</li>
+</ul>
+</li>
+<li>
+<p>The attacker submits the tx to the governor with a deposit and it enters the 5 day challenge period. If 5 days pass and no one challenges it, it will drain all treasury funds to some EOA;</p>
+</li>
+<li>
+<p>Someone challenges it with a deposit and it goes to arbitration. The total funds collected is currently <code>2*arbitrationFee + submitter deposit + challenger deposit</code>.</p>
+</li>
+<li>
+<p>3 jurors are chosen.</p>
+</li>
+<li>
+<p>The attacker was ready to fund an appeal in case he lost the first round, but let’s say he wins: 2 out of 3 jurors vote in favor of the attacker.</p>
+<p>At this point, some 6 days have passed and the community is well aware of the attack.</p>
+</li>
+<li>
+<p>Defenders fund an appeal. This can be crowdfunded and the required deposit is:</p>
+<p><code>defenderAppealDeposit = appeal fee + (appeal fee * loserFeeStakeShare)</code></p>
+<p>If the defenders successfully fund their side, the attacker also must fund their side or he loses the case.</p>
+<p><code>attackerAppealDeposit = appeal fee + (appeal fee * winnerFeeStakeShare)</code></p>
+<p>The additional <code>appeal fee * feeStakeShare</code> is a bounty to parties that contribute the side that ultimately wins.</p>
+</li>
+<li>
+<p>The attacker funds their side of the appeal. The case moves to a higher court and 5 new jurors are selected;</p>
+</li>
+<li>
+<p>Let’s say this round the attacker lost. At each round the attacker (and whoever they convinced/bribed) must evaluate the if chances of winning the final round are high enough. The current cost of losing is the sum of:</p>
+<ul>
+<li>The deposit sent to the governor;</li>
+<li>The appeal fee stakes of each round;</li>
+<li>All the arbitration and appeal fees;</li>
+<li>All the PNK stake that was selected to vote for the attacker is locked.</li>
+</ul>
+</li>
+<li>
+<p>While more difficult to convince new jurors join or continue the attack, the attacker funds his side of the appeal again increasing bounty to defend against it.</p>
+</li>
+<li>
+<p>Each new appeal extends the time to react, we are now some 15 days into the attack. The number of jurors per round also increases <code>2^n+1</code> where <code>n</code> is the round.</p>
+</li>
+<li>
+<p>People that didn’t even know what Nouns or Kleros is, now rush to crowdfund the defense appeals hoping to get a slice of the crowdfunding bounty. PNK from stakeholders is also staked to defend the reputation and potentially get the attacker’s PNK when the case closes;</p>
+</li>
+<li>
+<p>Jurors are less willing to participate in the attack as it is clearer their chance of winning continues to go down with consensus around the issue. Even jurors that participated in the bribery in previous rounds now change sides to avoid further losses. The more the attacker tries to out buy honest participants, the greater the reward for defeating him.</p>
+</li>
+</ol>
+<p>Finally, the attacker gives up. Outcome:</p>
+<ul>
+<li>Juror locked PNK that voted in favor of the attacker is transferred to jurors that voted in favor of the defender. In addition, they also get paid arbitration and appeal fees. This anti-fragile mechanism curates for high quality jurors;</li>
+<li>People that contributed ETH to crowdfund defender’s appeals get their money back + are awarded with the attacker’s crowdfunding fee stake;</li>
+<li>The challenger gets his money back and is awarded the attackers deposit.</li>
+</ul>
+<p>The cost to attack kleros around a non contentious issue grows exponentially and not in the attacker’s favor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">daisugist</div>
+          <div class="post_content">
+<p><span class="mention">@warden</span> <span class="mention">@verb-e</span> let us know if there is any interest in hoping on a call to discuss this. Would love to talk through the different ways Kleros can be part of the solution to governance attacks for Nouns.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">daisugist</div>
+          <div class="post_content">
+<p>It’s been almost a year, but <span class="mention">@warden</span> and <span class="mention">@verb-e</span> , it’s been a real long time since the last reply, but I’, just following up to see if the need raised in this thread still needs to be addressed? Happy to chat more offline if needed.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

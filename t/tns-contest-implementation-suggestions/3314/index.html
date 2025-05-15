@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>TNS Contest Implementation Suggestions</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">TNS Contest Implementation Suggestions</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/4210_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Clover</div>
+          <div class="post_content">
+<p><strong>The Problem</strong></p>
+<p>Many delayed payments for distributing prize money to contest winners, Dozens of people complained about it, even saying things that were unpleasant when read.<br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/cmaV9yoDsaE2aMrJi9VIVG33D4R.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/5/569bd3e66be8ec8babadf9529ec26aa2e44adde1.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="cmaV9yoDsaE2aMrJi9VIVG33D4R" data-dominant-color="404348" height="80" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/569bd3e66be8ec8babadf9529ec26aa2e44adde1_2_690x80.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/569bd3e66be8ec8babadf9529ec26aa2e44adde1_2_690x80.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/569bd3e66be8ec8babadf9529ec26aa2e44adde1_2_1035x120.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/569bd3e66be8ec8babadf9529ec26aa2e44adde1_2_1380x160.jpeg 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1488×173 79.1 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/xA6Th1g9fHEIFCA0F8CPpiJkzCx.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/e/eb5cbc6aa8cec1c72184077c1a033c8a668e5991.jpeg" rel="noopener nofollow ugc" title="image|690x58emphasized text"><img alt="image|690x58emphasized text" data-base62-sha1="xA6Th1g9fHEIFCA0F8CPpiJkzCx" data-dominant-color="3D4044" height="58" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/e/eb5cbc6aa8cec1c72184077c1a033c8a668e5991_2_690x58.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/e/eb5cbc6aa8cec1c72184077c1a033c8a668e5991_2_690x58.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/e/eb5cbc6aa8cec1c72184077c1a033c8a668e5991_2_1035x87.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/e/eb5cbc6aa8cec1c72184077c1a033c8a668e5991_2_1380x116.jpeg 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image|690x58emphasized text</span><span class="informations">1488×126 40.9 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/p6lyqj8hUOmETO9YupaW9siQEww.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/a/afee0a2fd164c9e710f0d4e23945051aba536dc0.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="p6lyqj8hUOmETO9YupaW9siQEww" data-dominant-color="3D4044" height="151" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/afee0a2fd164c9e710f0d4e23945051aba536dc0_2_690x151.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/afee0a2fd164c9e710f0d4e23945051aba536dc0_2_690x151.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/afee0a2fd164c9e710f0d4e23945051aba536dc0_2_1035x226.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/afee0a2fd164c9e710f0d4e23945051aba536dc0_2_1380x302.jpeg 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1488×327 66.3 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/coUkf2dSJZk5SIo6nXWhnBpn0AA.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/5/56eae5937a8f99ebdfa2f0fff0b13a6478131354.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="coUkf2dSJZk5SIo6nXWhnBpn0AA" data-dominant-color="42454A" height="110" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/56eae5937a8f99ebdfa2f0fff0b13a6478131354_2_690x110.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/56eae5937a8f99ebdfa2f0fff0b13a6478131354_2_690x110.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/56eae5937a8f99ebdfa2f0fff0b13a6478131354_2_1035x165.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/56eae5937a8f99ebdfa2f0fff0b13a6478131354_2_1380x220.jpeg 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1488×239 71.7 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>2 weeks - 1 month is a very long time for normal Prize contest distribution.</p>
+<p><em>The negative effects of a delayed contest prize distribution could include:</em></p>
+<ol>
+<li>Decreased participant engagement and enthusiasm</li>
+<li>Negative public perception and reputation for the company or organization hosting the contest</li>
+<li>Decreased trust in the organization and future participation in contests or events</li>
+<li>Potential legal issues or complaints from participants.</li>
+</ol>
+<p><strong>Suggestion</strong></p>
+<p><em>Discord</em></p>
+<ol>
+<li>Creating a channel <span class="hashtag">#General-Chat-Contest</span> on Discord  (As a gathering for participants who may have many questions or discussions of ideas from participants)</li>
+<li>Creating the <span class="hashtag">#Contest-Update</span> channel is useful for announcing ongoing contests, upcoming contests, previous contest prize distribution information, and important contest information (helping participants to bookmark important information about the contest).</li>
+</ol>
+<p>Reason : TNS has many activities every day, in addition to conducting contests, TNS also holds twitter spaces, so information about contests is sometimes not highlighted because of the many activities being carried out.</p>
+<p><em>Time adjustment</em></p>
+<p>TNS typically conducts contests with a submission deadline of 1 day, 3 days - 1 week, and various time periods (mostly 1 day) for the submission deadline carried out by TNS.<br/>
+The time for assessment - announcement of winners is carried out in 1 day or even 1 month, and for distribution it is carried out in 2 weeks to 1 month.</p>
+<p>Here are the points of suggestions for adjustments:</p>
+<ul>
+<li>
+<p>Deadline 1 week - 2 weeks for a contest is a standard time and also participants will have more than enough time to prepare &amp; give very good results.</p>
+</li>
+<li>
+<p>Conducting a contest with the Calabara platform, which makes it easier to conduct contests, such as verifying the winner’s Wallet (so <span class="mention">@Benbodhi</span>  does not need to DM the winner to ask for their Wallet), fair voting, and other things.</p>
+</li>
+<li>
+<p>Vote 1-2 Day (Providing leisure time for potential voters to assess participant submissions)</p>
+</li>
+<li>
+<p>3-7 day for Redward Distribution<br/>
+Reason It is important to distribute contest rewards as soon as possible because it helps to maintain the integrity and credibility of the contest. If contest rewards are not distributed in a timely manner, it may create doubts among participants about the fairness and transparency of the contest, and may discourage them from participating in future contests. Additionally, prompt reward distribution helps to demonstrate a commitment to fairness and transparency, and can help to build trust and goodwill among participants. Overall, distributing contest rewards in a timely manner is important for the smooth and successful running of the contest.</p>
+</li>
+</ul>
+<p>“Waiting 10-17 days is sufficient to prepare the contest reward distribution transaction on the blockchain”</p>
+<p>These are the things that I can convey, thanks <img alt=":v:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/v.png?v=12" title=":v:" width="20"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3659_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">lilskrtskrt</div>
+          <div class="post_content">
+<p>I agree with everything that Clover has said in this thread. I was one of the people asking for my payouts, and I even asked why the task of tracking down contest winners wasn’t delegated to reduce the payout distribution time, I didn’t receive an answer to that question.</p>
+<p>I agree that the negative effects of delaying contest prize distribution can cause decreased trust in organizations that facilitate contests, and without a transparent and clear ruleset for contests it may lead to decreased participation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Lnino</div>
+          <div class="post_content">
+<p>Agree!<br/>
+Or TNS need more fastest Team to handle this.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3082_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Evil</div>
+          <div class="post_content">
+<p>damn ‎‎‎                                                                                                                                                                                                                                     ‎‎‎                                                                                                                                                                                                                                     ‎‎‎                                                                                                                                                                                                                                     ‎‎‎</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/5342_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">anastacia</div>
+          <div class="post_content">
+<p>Hello Noun</p>
+<p>I don’t know what happened with TNS team.<br/>
+The prize for the contest took so long to distribute.<br/>
+Contest highlight reel and nouns give back from November<br/>
+Also bonuses for PFP contests at new year Has NOT distribute yet!<br/>
+Its already 2023 And they making new contest again while last contest prize has not distribute.</p>
+<p>Question:<br/>
+Does the team works so well for this?<br/>
+Does the team need more workers to do distribution of prize?<br/>
+Why TNS so hard to distribute the prize? Why TNS keep the Fund?</p>
+<p>The winner absolutely waiting for their prize, they waiting too long!</p>
+<p>Compare to other Nouns group which is fasy distribute the prize, TNS so slow loke snail doing this.</p>
+<p>Dont keep the fund, distribute them TNS!</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

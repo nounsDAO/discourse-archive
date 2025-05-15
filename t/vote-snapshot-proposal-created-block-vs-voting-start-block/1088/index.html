@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Vote Snapshot - Proposal Created Block vs. Voting Start Block</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Vote Snapshot - Proposal Created Block vs. Voting Start Block</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/169_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">solimander</div>
+          <div class="post_content">
+<p><strong>Background</strong></p>
+<p>From the inception of Nouns, the vote snapshot has been taken at the time a proposal is created. This means if a proposal is created at block 1000, and voting starts at block 2000, the ownership and delegation information from block 1000 will be used to determine who can vote on the proposal and how many votes they have.</p>
+<p>This was established to normalize quorum votes as the Noun supply is ever-increasing.</p>
+<p><strong>Recent Discovery</strong></p>
+<p>Recently, the diligence committee <a href="https://github.com/nounsDAO/nouns-diligence/blob/main/reports/proposal-58.md#major">found an issue</a> relating to the use of the ‘voting delay’ to offset the vote period start time in an effort to consume the snapshot from the proposal creation block.</p>
+<p><strong>Options</strong></p>
+<p>We have two options to remedy the bug:</p>
+<ol>
+<li>Continue to snapshot voting power at the proposal creation block. This is the status quo.
+<ul>
+<li>
+<strong>Minor Technical Note</strong>: This will either require an additional state variable to be inserted on <code>propose</code>, which will marginally increase the gas required to put a proposal on-chain, OR additional checkpointing and migration of two struct values.</li>
+</ul>
+</li>
+<li>Move the snapshot to the start of the voting period. This switches things up a bit. Changes to voting power that occur during the ‘voting delay’ will now be taken into account as they’ll occur prior to the snapshot. This includes delegation, transfers, and Nouns minted and distributed to their owners during this period. Note that this is the approach used by other protocols like Compound.</li>
+</ol>
+<p><strong>Ask</strong></p>
+<p>I’m interested in opinions of the group prior to implementation of one of the proposed fixes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>I like option 2 a lot. I think it makes the voting delay period more valuable for the DAO; for example, people might choose to move their delegation during this time towards a different vote if their current delegation isn’t aligned with their POV.</p>
+<p>It’s also cheaper on gas which is always nice <img alt=":slight_smile:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" width="20"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1087_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">dot</div>
+          <div class="post_content">
+<p>Way 2 may create an additional attack vector where attackers work towards their attack during the voting delay.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/169_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">solimander</div>
+          <div class="post_content">
+<p>Yes and no.</p>
+<p>Malicious users can already gather votes during the voting delay, though more social coordination is required as delegation during that period won’t change voting power.</p>
+<p>In the event that Noun delegation markets exist in the future, they can circumvent any protections provided by the proposal creation block snapshot by gathering voting power in contracts and then leasing it out at any time, even to target a proposal that has already been created.</p>
+<p>If the attacker can access that many votes, I’m not sure how much it matters if they can be moved around during the voting delay. The attacker could simply propose whatever they want using their Nouns.</p>
+<p>All that said, I do agree that it could enable an attacker who is trying to defeat a proposal to more easily do so.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/249_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">9999</div>
+          <div class="post_content">
+<p>The original reason for using proposal created block instead of voting start block is rooted in the changing supply of NOUN tokens along with using basis points to determine voting parameters.</p>
+<p>At the time a proposal is created, the future supply of NOUN tokens is not known, so voting quorum is stored with the proposal using the total supply at proposal created block. With the status quo using proposal created block as snapshot, <code>proposal quorum / voting power at snapshot</code> = <code>quorum votes basis points</code>. In other words, the status quo respects all voting parameters at the same point in time.</p>
+<p>If we instead snapshot on voting start block, voting power has increased due to NOUN supply increasing and <code>proposal quorum / voting power at snapshot</code> != <code>quorum votes basis points</code>.</p>
+<p>In practice, unless voting delay is increased by a large amount, or quorum votes basis points is decreased by a large amount, the time shift between snapshotting approaches won’t have a noticeable effect. Aesthetically, however, it is nice that we have a single frame of reference to determine dynamic voting parameters.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>What is the purpose of the voting delay period?</p>
+<p>I believe it’s meant to provide time for making sense of the proposal, to allow members to make sense of their position.</p>
+<p>A question that arises here: do we want to allow for specific actions to be taken around one’s form opinion, such as: acquire more voting power for oneself, or more importantly, if one’s not sure of their opinion, to delegate their vote to a party they deem most credible to make the decision.</p>
+<p>A basic premise for voting delay seems to be: one should have some time to decide who to trust on their behalf before voting power is locked.</p>
+<p>If we don’t want to enable these actions, we could just as well set voting delay to zero and make voting period longer, no? There doesn’t seem to be much difference in the current implementation.</p>
+<p>IMO in the long run it’s really valuable to allow delegation changes during voting period, and this voter freedom is a cool principle to uphold.</p>
+<p>What do you think?</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Guide: How to Prepare An On-Chain Proposal</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Guide: How to Prepare An On-Chain Proposal</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1641_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">nounsintern</div>
+          <div class="post_content">
+<p>I helped put a proposal on-chain the other day (<a href="https://nouns.wtf/vote/124">prop 124</a>) and Seneca made it really easy for me with the way they formatted the information. I thought a quick guide might help for people with proposals and people sponsoring proposals.</p>
+<p>This assumes familiarity with the basics of proposals which you can <a href="https://nouns.center/funding/proposals" rel="noopener nofollow ugc">learn about here</a>.</p>
+<ul>
+<li>Step 1: prepare your proposal in <a href="https://www.markdownguide.org/basic-syntax/" rel="noopener nofollow ugc">markdown format</a>
+</li>
+<li>Step 2: prepare your metadata which is just a <code>title</code>
+</li>
+<li>Step 3: prepare your transaction which should just be an <code>address</code> and an <code>amount</code>
+</li>
+</ul>
+<p>An example proposal would be something like this</p>
+<pre><code class="lang-auto">title: my cool proposal
+address: 0xmyaddress
+amount: 10 (ETH)
+
+lorem ipsum blah blah post body formatted in markdown
+</code></pre>
+<p>This is all the information you or a sponsor need to put your proposal on chain. By formatting in markdown up front, you ensure that your proposal looks the way you want it to look when it goes live.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2635_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rekola</div>
+          <div class="post_content">
+<p>This is great thanks <span class="mention">@nounsintern</span>!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1802_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">tropicflesh</div>
+          <div class="post_content">
+<p>wow, thanks for this, <span class="mention">@nounsintern</span>!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2058_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">cdt.eth</div>
+          <div class="post_content">
+<p>would be cool add something like this to the <a href="https://nouns.center/funding/proposals" rel="noopener nofollow ugc">nouns center proposal guide</a> but may be best if there’s visuals of what the <a href="http://nouns.wtf">nouns.wtf</a> UI looks like with these things filled in so it’s really clear for Nouners</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1641_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">nounsintern</div>
+          <div class="post_content">
+<p>Oh I totally had the thought that the only thing missing from that guide was a paragraph with the info I posted in OP.</p>
+<p>I should have just made a pull request haha.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2936_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">AndrewLaddusaw</div>
+          <div class="post_content">
+<p>Great stuff. Adding to my list of prop advice through Nouncil.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3348_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krel</div>
+          <div class="post_content">
+<p>There is also this: <a href="https://nouns.notion.site/Submit-a-Proposal-to-the-DAO-0605e2437e184eae82dc07c30bcd2ed9" rel="noopener nofollow ugc">Submit a Proposal to the DAO</a></p>
+<p>I also find <a href="https://dillinger.io/" rel="noopener nofollow ugc">https://dillinger.io/</a> very useful to perfect the markdown, however it wont come out exactly like that on the nouns website, so always need to do an extra round of proofing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2058_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">cdt.eth</div>
+          <div class="post_content">
+<p>yea i wanted something like this on there but the only reason i never added it is because i’ve never opened a prop myself so wasn’t familiar with how it looks and what goes where etc</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

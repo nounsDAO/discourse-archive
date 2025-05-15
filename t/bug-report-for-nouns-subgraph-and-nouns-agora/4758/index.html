@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Bug report for nouns subgraph and nouns agora</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Bug report for nouns subgraph and nouns agora</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Pablo</div>
+          <div class="post_content">
+<p>While trying to implement <a href="https://eips.ethereum.org/EIPS/eip-4824" rel="noopener nofollow ugc">EIP-4824</a> for Nouns DAO, we found that there are inconsistent results obtained from subgraph, nouns agora, and on-chain query.</p>
+<p>Taking 0xfa4fc4ec2f81a4897743c5b4f45907c02ce06199 as an example, results from two <a href="https://thegraph.com/hosted-service/subgraph/nounsdao/nouns-subgraph" rel="noopener nofollow ugc">nouns</a> <a href="https://thegraph.com/explorer/subgraphs/Crqf9jWMbgEXzCgAptAQfyTYaTK9851f5sFZBJUvqKn9?view=Overview&amp;chain=mainnet" rel="noopener nofollow ugc">subgraph</a> are 25, and result from <a href="https://www.nounsagora.com/delegate/0xfa4fc4ec2f81a4897743c5b4f45907c02ce06199" rel="noopener nofollow ugc">nouns agora</a> is 14. However, the correct on chain result is 18 (can be checked with <a href="https://etherscan.io/token/0x9c8ff314c9bc7f6e59a9d9225fb22946427edc03#readContract#F3" rel="noopener nofollow ugc">etherscan</a> and <a href="https://opensea.io/0xfa4fc4ec2f81a4897743c5b4f45907c02ce06199?search%5Bcollections%5D%5B0%5D=nouns" rel="noopener nofollow ugc">opensea</a>).</p>
+<p>I believe that basic data accuracy is super important for any governance and  DApp based on Nouns. Thus, we reach out here to see if anyone who manages nouns subgraph or nouns agora can help with this issue.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/o0qf2pfNFUKCGdeYjCnX68iXRdc.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/a/a8406c836623e501561a8aafcbf074049077c94e.jpeg" rel="noopener nofollow ugc" title="image_2023-06-11_20-30-31"><img alt="image_2023-06-11_20-30-31" data-base62-sha1="o0qf2pfNFUKCGdeYjCnX68iXRdc" data-dominant-color="161226" height="400" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a8406c836623e501561a8aafcbf074049077c94e_2_690x400.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a8406c836623e501561a8aafcbf074049077c94e_2_690x400.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a8406c836623e501561a8aafcbf074049077c94e_2_1035x600.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a8406c836623e501561a8aafcbf074049077c94e_2_1380x800.jpeg 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image_2023-06-11_20-30-31</span><span class="informations">1920×1115 72 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/3fbkV15tfJg83mfBe0wFdxNd2Va.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/1/16bde350e831536d3c319b7f1eec75a455528c28.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="3fbkV15tfJg83mfBe0wFdxNd2Va" data-dominant-color="F2F3F3" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/16bde350e831536d3c319b7f1eec75a455528c28_2_306x500.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/16bde350e831536d3c319b7f1eec75a455528c28_2_306x500.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/16bde350e831536d3c319b7f1eec75a455528c28_2_459x750.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/16bde350e831536d3c319b7f1eec75a455528c28_2_612x1000.jpeg 2x" width="306"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">706×1150 96.6 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/jncQBpcp4aMoMxQfIbAeyrby5qH.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/8/87c8e20ef7d8f3e2c8a32fe4e7ddd6307b8e1f4b.png" rel="noopener nofollow ugc" title="image_2023-06-11_20-31-16"><img alt="image_2023-06-11_20-31-16" data-base62-sha1="jncQBpcp4aMoMxQfIbAeyrby5qH" data-dominant-color="FAFBFB" height="394" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/87c8e20ef7d8f3e2c8a32fe4e7ddd6307b8e1f4b_2_690x394.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/87c8e20ef7d8f3e2c8a32fe4e7ddd6307b8e1f4b_2_690x394.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/87c8e20ef7d8f3e2c8a32fe4e7ddd6307b8e1f4b_2_1035x591.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/8/87c8e20ef7d8f3e2c8a32fe4e7ddd6307b8e1f4b.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image_2023-06-11_20-31-16</span><span class="informations">1120×640 71.1 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

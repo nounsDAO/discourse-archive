@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Verbs szn 3 ideas brainstorm</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Verbs szn 3 ideas brainstorm</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>Hi there,</p>
+<p>We’re coming to you again asking for help in planning another season of execution.</p>
+<p>We’d love your help with:</p>
+<ul>
+<li>Feedback (for / against) on ideas we have below in the backlog section</li>
+<li>Suggestions for additional ideas you find exciting</li>
+</ul>
+<p>To provide you with a complete picture, we’re also sharing what’s already in progress as well.<br/>
+As always, we’re looking to work on what’s most valuable to the DAO - your inputs are meaningful!</p>
+<p>Thanks!<br/>
+verbs team</p>
+<h2>
+<a class="anchor" href="#in-progress-1" name="in-progress-1"></a>in progress</h2>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>title</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>streamer</td>
+<td>allows the DAO to create USDC streams funded by Token Buyer. <br/><br/>currently being audited.</td>
+</tr>
+<tr>
+<td>Noracle: auction house price history on-chain</td>
+<td>upgrades to Auction House that stores auction prices on-chain; also introduces some gas optimizations. <br/><br/>will be audited right after streamer.</td>
+</tr>
+<tr>
+<td>ragequit</td>
+<td>allows DAO members to exit by burning their tokens in exchange for a proportional share of the treasury. Ragequit offers a defense mechanism in addition to the vetoer against 51% attacks, and opens a path to removing/reducing the vetoer power in the future.<br/><br/>this is an active research project. read more <a href="https://docs.google.com/document/d/1v9oUJQxWfkZxIHhBDQvbyWUy29QMySoUjzM2_X1BrXs/edit#" rel="noopener nofollow ugc">here</a>.</td>
+</tr>
+<tr>
+<td>change proposal vote snapshot timing</td>
+<td>currently proposal vote snapshots occur on their creation block, meaning voters can’t organize their votes once a proposal is live.<br/><br/>we’re moving the snapshot to when voting starts, thus allowing voters the voting delay period to move their tokens or delegations around.<br/><br/>we have a working proof of concept, and a more <a href="https://hackmd.io/Ml1kPUePTKS1vBKij_Bm1A#Votes-Snapshot-After-Voting-Delay" rel="noopener nofollow ugc">detailed spec here</a>.</td>
+</tr>
+<tr>
+<td>conditional objection period</td>
+<td>a conditional voting period that gets activated upon a last-minute proposal swing from defeated to successful, affording against voters more reaction time.<br/><br/>we have a working proof of concept, and a more <a href="https://hackmd.io/Ml1kPUePTKS1vBKij_Bm1A#Objection-only-Period" rel="noopener nofollow ugc">detailed spec here</a>.</td>
+</tr>
+</tbody>
+</table>
+</div><h2>
+<a class="anchor" href="#backlog-2" name="backlog-2"></a>backlog</h2>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>title</th>
+<th>description</th>
+<th>conviction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>refund gas on proposal execution</td>
+<td>a successful proposal is something the DAO wants to execute, it should happily pay for gas as well; especially useful for high-gas proposals like contract deployments. requires further research to defend against grieving.</td>
+<td>high</td>
+</tr>
+<tr>
+<td>milestone-based proposal payments</td>
+<td>requires additional speccing.<br/>probably m/n signers to release the next milestone.<br/>milestone order, amount and recipient all specified in advance on proposal creation.<br/>probably require a text description of why funds are being released.<br/>probably recipient can request on chain with a progress update as well.</td>
+<td>high</td>
+</tr>
+<tr>
+<td>increase on-chain transparency for multisig / pod spending</td>
+<td>this feature adds a minimal extra step for multisigs when they spend their allocated funds: they need to provide a reason string.<br/><br/>when the DAO funds a pod / other multisig, the funds can go to a middleman contract that lets the multisig spend their funds at any time, just requiring the reason string be documented on chain first. furthermore, the DAO can withdraw any outstanding funds at any time.<br/><br/>then we would add a simple ledger UI on top, and the DAO should get a significant spending transparency boost.</td>
+<td>high</td>
+</tr>
+<tr>
+<td>increase friction for contract upgrade and high spend proposals</td>
+<td>it seems intuitive to many that the more a proposal wants to spend, it should require more of a “hell yes” from the DAO.<br/>this can be generalized to more risk → greater majority requirement, and so can include sensitive contract upgrades.<br/><br/>potential ways to increase friction:<br/>* require a super majority, e.g. 67% of active votes on a prop must be For (excluding abstains)<br/>* lengthen the voting period<br/>* higher quorum requirement</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>autonomous proposals: empower the community to propose</td>
+<td>similar to <a href="https://medium.com/compound-finance/compound-autonomous-proposals-354e7a2ad6b7" rel="noopener nofollow ugc">what Compound has</a>.<br/><br/>it would be a new smart contract that has sufficient votes to submit proposals (through ownership or delegation), e.g. a Proposer contract.<br/><br/>Proposer holds a list of candidate proposals, and can accept new candidate proposals from:<br/>* anyone<br/>* accounts that hold a certain token; could be a single Noun, could also be anyone holding a Lil, a toad, etc.<br/><br/>candidate proposals (CPs) then need to get additional voter support, and that threshold could be proposal threshold or have its own threshold.<br/><br/>CPs that get sufficient support can be proposed to the DAO (sequentially due to the DAO’s constraint of one active proposal per proposing account).<br/><br/>The desired effect is builders having an easier time getting proposals on chain, without compromising on proposal quality.</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>allow vote editing shortly after voting</td>
+<td>there have been several instances of voting mistakes (meaning to vote one way, accidentally voting the opposite). we’d like to offer a short timeframe to correct such mistakes.<br/><br/>vote editing otherwise will remain prohibited to prevent gaming.<br/><br/>requires further thought to prevent potential abuse.</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>private voting</td>
+<td>this is a research project, where we would explore different approaches and their pros and cons, in different dimensions such as technical complexity, cultural impact, etc.<br/><br/>certain outputs would be detailed design alternatives and proofs of concept; optional output would be deploying a solution to mainnet pending DAO approval.</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>vote on sub-proposals (support passing parts of proposals)</td>
+<td>some proposals have a general consensus, but disagreement on part of the budget allocation.<br/>example:<br/>A builder wants to create a nounish song for $10K and then spend $5K on marketing.<br/>It’s possible that the DAO thinks it good to spend $10K on the song, but not $5K on marketing.<br/><br/>a solution for this problem could be in allowing proposals to have optional elements to them.<br/>in the example above, the song budget is a required line item, but the marketing is an optional one.<br/>a voter would have the following voting options:<br/>1. against<br/>2. for the $10k, against the additional $5k<br/>3. for the $10k and the $5k<br/><br/>the optional elements would also need to reach quorum and have majority to pass.<br/><br/>this example above is the most simple one. our current assessment is that this feature has sizable complexity to it.</td>
+<td>low</td>
+</tr>
+<tr>
+<td>allow proposal description amendments until voting starts</td>
+<td>oftentimes proposals receive valuable feedback once on-chain. allowing proposers to edit their proposal description before voting starts can contribute to higher quality and clarity for voters.<br/><br/>requires further thought to make sure we don’t create voter confusion.</td>
+<td>low</td>
+</tr>
+<tr>
+<td>descriptor trait retirement</td>
+<td>currently all traits (heads, bodies, etc.) are additive, without an option to remove.<br/>trait retirement would allow the DAO to disable any specific image; a disabled trait would still exist in already-minted Nouns, but would not be part of the randomized traits for new Nouns.<br/><br/>the main motivation in introducing this feature would be if the DAO wanted to be less strict about what gets added, to leave more room for trial and error.</td>
+<td>low</td>
+</tr>
+<tr>
+<td>delegate override</td>
+<td>this feature would allow token owners to override votes cast by their delegates.<br/>the motivation is security, as owners have more skin in the game, and therefore more likely to vote in good faith and be less susceptible to bribes.<br/><br/>our initial design work showed us this feature is far from trivial, with the downside of allowing Nouners to abuse the system by delegating to themselves and preserving the right to edit their vote.<br/><br/>we might come up with a design without this flaw with further research.</td>
+<td>low</td>
+</tr>
+<tr>
+<td>granular delegation</td>
+<td>this feature would allow a holder of multiple Nouns in the same wallet to split their delegation to multiple destinations. today this requires transferring Nouns to different wallets.<br/><br/>not pursuing this feature since Agora is actively working on new delegation designs (e.g. liquid delegation).</td>
+<td>nope</td>
+</tr>
+</tbody>
+</table>
+</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/4109_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">CHEFFO</div>
+          <div class="post_content">
+<p>Spectacular. Always great to know that Verbs are on it. Knowing that these updates can be added to sub-dao stacks is truly inspiring and humbling. These are the robust building blocks that make NounsDAO eco system so special and hard to understand for most project leaders, “DAOS” and NFT “maxi”.</p>
+<p>It is hard to overstate the innovation that is happening in these updates and contracts. Most other NFT projects have zero tech…a simple “get lucky” dapp, and that’s it…the remaining holder experience is a Token Proofed event…a few times a year. That is 99% of NFT projects.</p>
+<p>Thru Verbs, we are going to see automation, filtration, customization, modulation; as well as audits and on-going proper maintenance. Thank you for all the hard work and big brain. These features, voted on and baked into the CCO code stack, are the foundational tech elements that all other tech builders in the eco system rely on to grow and innovate.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/249_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">9999</div>
+          <div class="post_content">
+<p>This is a great list of upgrades. Thanks for compiling it.</p>
+<p>I think standardizing a multisig and milestone system for the DAO (<code>milestone-based proposal payments</code>) and <code>increase on-chain transparency for multisig / pod spending</code> are both important longer term goals. The adhoc systems that are in place right now more or less work: an assessment of trust is made when the proposal is being voted on, folks like maty keep an eye on spending, and we haven’t had any major issues.</p>
+<p>However, we do have a gap in technical capabilities for proposal creation for holders and delegates with 1 vote. Currently there is high friction for single vote holders to coordinate and get a proposal on-chain. For single vote delegates, it is currently impossible to coordinate because they do not have the ability to re-delegate to another address. I believe the tools developed for <code>autonomous proposals</code> would empower a larger number of voters than any of the other ideas in the backlog and so would advocate for bumping it to HIGH.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/613_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">jacob</div>
+          <div class="post_content">
+<p><strong>Airdrops</strong></p>
+<p>The DAO has had a long standing issue where it cannot easily pay for proposals in Nouns directly. In the past, we’ve had to instantiate a trusted acquisition committee to acquire nouns, which had the effect of dissuading and blocking new entrants: it was also a cumbersome process generally.</p>
+<p>I would love to see <strong>Aidrops</strong> implemented as a direct and scalable solution to this problem: the DAO can issue new Nouns outside of the daily auction via proposal.</p>
+<p>This would allow the DAO to easily include Nouns as compensation in proposals, which may reduce the amount of ETH that needs to be spent as well as align incentives for the long term.</p>
+<p>By ensuring this can only happen by proposal, the DAO will only issue these Nouns if it thinks the proposal will create more value than the dilution.</p>
+<p><a href="https://create.zora.co/collections/0x77a3134777ad590c8a32a740291a39450c3c2f08" rel="noopener nofollow ugc">Link to NFT that timestamps this idea.</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2936_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">AndrewLaddusaw</div>
+          <div class="post_content">
+<p>Would love your thoughts on this as a low tech solution to the milestone based prop payments: <a class="inline-onebox" href="/t/the-nouns-trust/3151">The Nouns Trust</a></p>
+<p>As far as <span class="mention">@verb-e</span>, this list looks great. Keep up the awesome work. <img alt=":raised_hands:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/raised_hands.png?v=12" title=":raised_hands:" width="20"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/4087_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0xDigitalOil</div>
+          <div class="post_content">
+<p>Great GDoc on Ragequit. Good coverage and very well thought out.</p>
+<p>To make sure I got it right –</p>
+<ol>
+<li>Ragequit serves as a mechanism against 51% attack assuming that the quits can be executed on demand faster than the prop voting delays.</li>
+<li>Does not serve against a different attack vector where the attacker finds vulnerability in the contracts and circumvents transacting through the regular prop flow.</li>
+</ol>
+<p>More than mitigating the 51% attack vector, seems more likely to be implemented due to:</p>
+<ol>
+<li>Great mechanism to justify getting rid of the veto.</li>
+<li>Nouners that bought in cheap wanting to arbitrage for bv, or at least have exit liquidity at bv which is 96% above secondary floor price.</li>
+</ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2936_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">AndrewLaddusaw</div>
+          <div class="post_content">
+<p>Can you help me understand why we would want a ragequit mechanism versus unhappy people just selling their nouns on secondary? I don’t think I’m understanding the purpose of it or how it protects against a 51% attack at all.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/4087_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0xDigitalOil</div>
+          <div class="post_content">
+<p>Secondary exit liquidity is low because you can always just buy the next Noun.</p>
+<p>Ragequit enables exit liquidity to near or at book value on demand.</p>
+<p>It protects against a 51% attack assuming that everyone gets a chance to quit the DAO and get ETH back before the 51% attack can take place, assuming that the attack takes place through a DAO prop which will have an inherent delay before it is executed and the attack actually takes place.</p>
+<p>Hope that helps.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1973_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">davidbrai</div>
+          <div class="post_content">
+<p>Thanks <span class="mention">@0xDigitalOil</span></p>
+<blockquote>
+<ol>
+<li>Ragequit serves as a mechanism against 51% attack assuming that the quits can be executed on demand faster than the prop voting delays.</li>
+</ol>
+</blockquote>
+<p>Correct. Ragequit would either be possible to call immediately, or during a proposal’s timelock delay.</p>
+<p>It also serves as a protection in case the veto gets captured. One would be able to ragequit in case a proposal is vetoed.</p>
+<blockquote>
+<ol start="2">
+<li>Does not serve against a different attack vector where the attacker finds vulnerability in the contracts and circumvents transacting through the regular prop flow.</li>
+</ol>
+</blockquote>
+<p>Correct. Hard to protect against smart contract vulnerabilities with smart contracts.</p>
+<blockquote>
+<ol>
+<li>Great mechanism to justify getting rid of the veto.</li>
+</ol>
+</blockquote>
+<p>It has pros &amp; cons compared to the veto, but it opens up the possibility to change/remove how veto works.</p>
+<blockquote>
+<ol start="2">
+<li>Nouners that bought in cheap wanting to arbitrage for bv, or at least have exit liquidity at bv which is 96% above secondary floor price</li>
+</ol>
+</blockquote>
+<p>The financial/price impacts of ragequit can’t be ignored and would need to be taken into account. In the gdoc we tried to outline the different possibilities there.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/4087_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0xDigitalOil</div>
+          <div class="post_content">
+<p>Had a bit more time to read through the list after I initially just commented on the ragequit research doc.</p>
+<p>Regarding priorities, I would love to chime in:</p>
+<ol>
+<li>Gas refund on prop execution is  a nice-have, but I would probably move to medium given other titles that would have higher impact and limited dev bandwidth.</li>
+<li>Same for increase on-chain transp for multisig spending – nice have but its audit use would probably not be that high, so medium.</li>
+<li>Vote editing would make higher priority as a heavy voting block could accidentally sway a prop the wrong way. I’ve already voted the wrong way on some props, so I know what it feels like.</li>
+<li>Private voting is probably the highest impact of them all imho and should be moved to high, as I have a hunch that various props are passing that wouldn’t if it weren’t for social consequences. I would be interested in lending a hand in finding and producing a ZK voting solution for the DAO.</li>
+<li>Proposal description amendments and even prop transaction amendments before voting I would move to medium.</li>
+</ol>
+<p>The rest looks great to me.</p>
+<p>As far as ragequit research, where do we stand on running testing and eventual deployment of such? Any timelines in mind?</p>
+<p>Thanks for all verbs.</p>
+<p>Cheers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1927_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">yitong</div>
+          <div class="post_content">
+<p>Hello! very excited to see you guys thinking about what’s next! Some ideas:</p>
+<ol>
+<li>Wanna support some way to get builders paid with Nouns. Maybe can be done without new issuance by simply running a prop to fund an autobidder contract.</li>
+<li>Would love to see something around a dynamic voting period, where the larger the funding request, the longer the voting time. (I see you already have this in your idea list)</li>
+<li>General QOL improvements like vote editing and proposal amendment before voting start would be great too.</li>
+</ol>
+<p>Other items on your list are exciting too! just highlighting some that stood out to me.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1973_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">davidbrai</div>
+          <div class="post_content">
+<p>Thanks for the feedback <span class="mention">@0xDigitalOil</span> !</p>
+<blockquote>
+<p>As far as ragequit research, where do we stand on running testing and eventual deployment of such? Any timelines in mind?</p>
+</blockquote>
+<p>We’re currently getting inputs from the foundation lawyers regarding risks involved with the different ragequit design options we outlined in the document shared above.<br/>
+Following that, we plan to bring the different design options to a more public debate, potentially with some token weighted voting to understand which version of ragequit the DAO is in favor of implementing.<br/>
+Next after that would be implementation, audit &amp; on-chain prop.</p>
+<p>Hard to give a timeline right now. This can be a very big change to the DAO so we are being careful with decision making here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>Thank you <span class="mention">@AndrewLaddusaw</span>! I think the idea of electing a small group of people to hold props accountable is definitely worth trying!</p>
+<p>Haven’t done enough deep thinking on how we’d like to solve this challenge; I suspect we might want to join forces with your idea, perhaps set up the on-chain milestone-based funds release such that it listens for votes of this trusted group.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>Thank you <span class="mention">@0xDigitalOil</span> for reviving the idea of making sure proposal execution doesn’t interact with any malicious code.</p>
+<p>Adding this problem to our backlog. I think it could be great if we had an automatic system like what <span class="mention">@solimander</span> has been doing <a href="https://github.com/nounsDAO/nouns-diligence/blob/main/reports/proposal-58.md" rel="noopener nofollow ugc">here</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1973_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">davidbrai</div>
+          <div class="post_content">
+<p>Another potential idea for the backlog:</p>
+<p>When creating a proposal, allow to optionally set a longer voting dela and/or voting period.<br/>
+The rational is to already put a proposal on chain, but not force a decision to made very quickly. Give room for discussion.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">enti</div>
+          <div class="post_content">
+<p>I’m a bit late to this brainstorm, but on milestone-based proposal payments, I’d suggest you guys read on the research by BlockScience and PrimeDAO on DAO2DAO collaboration (which ends up with what they call a proposal inverter).</p>
+<ul>
+<li><a class="inline-onebox" href="https://medium.com/primedao/exploring-dao2dao-collaboration-mechanisms-c37218a17a21" rel="noopener nofollow ugc">Exploring DAO2DAO Collaboration Mechanisms | by BlockScience | PrimeDAO | Medium</a></li>
+<li><a class="inline-onebox" href="https://mirror.xyz/0x0966262125B5E01B5D77B862830a341419BC2872/y-aaFWpbogZt5jWGqu6sVlOG-fKh0p-5V6l2o01yyy0" rel="noopener nofollow ugc">Proposal Inverter-The next stage in DAO2DAO Coordination, Part 1 — Inverter Network</a></li>
+<li><a class="inline-onebox" href="https://mirror.xyz/inverterblog.eth/94wdEuifUD3v68vAb1vrTZM7dNrBITovOwoE8zxNrY4" rel="noopener nofollow ugc">The birth of Inverter Network, Team and Feature Updates- Part 2 — Inverter Network</a></li>
+</ul>
+<p>I won’t go deep into it here, and I’m not involved with the end product (happy to make the connection), but I believe learning from their research, or making use of the Inverter Network would unlock better accountability for proposals as well as more collaboration potential within all Nouns forks and other DAOs in the broader Ethereum ecosystem.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

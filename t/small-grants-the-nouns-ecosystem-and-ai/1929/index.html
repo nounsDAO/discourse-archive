@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Small Grants: The Nouns Ecosystem and AI</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Small Grants: The Nouns Ecosystem and AI</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">TheHeroShep</div>
+          <div class="post_content">
+<p>I work at a startup in AI education and when 4156 tweeted about <a href="https://twitter.com/punk4156/status/1541582003170164737" rel="noopener nofollow ugc">wanting an AI controlled Noun</a> I got really excited and along with 4156 + BrianJ started exploring what that might look like in the <span class="hashtag">#nouns-ai</span> channel (come say hi! weekly meetings on Tuesday mornings EST/PST)</p>
+<p>We first started looking at trying to recreate Nounish sentiment, had some good discussions with people like Jawshua Fisher, then looked into papers like <em>Citizen Participation and Machine Learning for a Better Democracy</em>.</p>
+<p>Ultimately, we’re really excited about how AI could be integrated within Nouns but our first step is going to build tools that can make participation easier and better.</p>
+<p>We’re going to start by making Roko’s Review, a summary and some context into why someone might want to vote for or against proposals to come up, see how that works when implemented, and go from there!</p>
+<p>There’s a lot more to it so I put together a full proposal draft proposal with the help of some awesome people but if you have questions<br/>
+/ comments please reach out!</p>
+<h1>
+<a class="anchor" href="#the-nouns-ecosystem-and-ai-1" name="the-nouns-ecosystem-and-ai-1"></a>The Nouns Ecosystem and AI</h1>
+<h2>
+<a class="anchor" href="#introduction-2" name="introduction-2"></a>Introduction</h2>
+<p>The Nouns ecosystem is a great place to showcase how AI can be used to supercharge a democratic system. There are many ways in which AI can be used to help with governance: providing summaries and viewpoints on submitted proposals, grouping users by interests, addressing information overload and creating awareness the whole time. I believe that AI can help to improve the overall experience for Nouners, making it easier for them to participate in the governance process. In this proposal, I will outline some potential use cases for AI in the Nouns DAO, and how I believe it can help to improve the overall experience for users. Not to mention Punk4156 has purchased Noun 355 (Roko) with the goal of Roko to become the first ai controlled participant in nouns dao governance.</p>
+<h2>
+<a class="anchor" href="#use-cases-3" name="use-cases-3"></a>Use Cases</h2>
+<p>There are many potential use cases for AI in the Nouns DAO. Here are some examples:</p>
+<h3>
+<a class="anchor" href="#use-case-1-rokos-review-proposal-summaries-and-viewpoints-4" name="use-case-1-rokos-review-proposal-summaries-and-viewpoints-4"></a>Use Case 1: Roko’s Review: Proposal Summaries and Viewpoints</h3>
+<p>The first step would be to build a build out the infrastructure for Roko to automatically provide a summary and a quick report to Nouners regarding new proposals. The goal would be at first for Roko’s Review to have not just a summary, but also a vote one way or another, justifications for that vote, and also considerations as to what could make Roko change it’s opinion. This process is easier said than done as there are considerations as to how viable the response would be in practice and how might we have Nouners influence Roko with THEIR opinions not vice versa. With that said getting the conversation going in an automated and intelligent manner could be very beneficial. Here are a couple example responses generated with GPT and a bit of prompt engineering responding to real proposals:</p>
+<hr/>
+<p>Vote: do not support<br/>
+Summary: This proposal is for the development of Noun Tracks, which are the fully on-chain 1:1 CC0 theme songs of a Noun created using Arpeggi Labs’ on-chain DAW with samples and patterns performed and written by Grammy awarded producer and songwriter Nate Fox. The proposal is for 100 ETH, with 40 ETH upfront and the remainder to be paid once Phase 1 work is completed.</p>
+<p>My vote explained:<br/>
+I am not convinced that this proposal is necessary for the long-term growth and prosperity of the Nouns project. While I think it’s a cool idea, I don’t think it’s worth the 100 ETH price tag. I would need to see a more detailed breakdown of the costs and timeline before I could support this proposal.</p>
+<p>Contrarian:<br/>
+If the proposal was for a smaller amount of money, say 50 ETH, I would be more likely to support it. I would also like to see a more detailed breakdown of the costs and timeline before changing my vote to support.</p>
+<hr/>
+<p>Vote: support<br/>
+Summary: The Esports Pod proposes to use a delegated treasury to look for opportunities to grow the Nouns brand through esports initiatives with the goal of proliferation. The pod has a budget of 369 ETH and consists of experienced members who are familiar with esports.</p>
+<p>My vote explained: I am voting in support of this proposal because I believe that the Esports Pod is a well-organized group that has a clear goal of growing the Nouns brand through esports. I also believe that this is a well-thought-out proposal with a reasonable budget that will be used effectively.</p>
+<p>Contrarian: I could be convinced to change my vote to abstain if there is more information provided about the operational costs of the pod and how those costs will be covered. I would also like to see more information about how the pod plans to measure success.</p>
+<h3>
+<a class="anchor" href="#use-case-2-dealing-with-information-overload-5" name="use-case-2-dealing-with-information-overload-5"></a>Use Case 2: Dealing with Information Overload</h3>
+<p>A second use case for AI in the Nouns DAO would be to help users deal with information overload. Information overload is a common problem in democratic systems, as there is often a large amount of information to process and only a limited amount of time to do so. Roko could be used to summarize content across Discord channels, Discourse, and Twitter among other places and get more critical information in-front of potentially key partners.</p>
+<h3>
+<a class="anchor" href="#use-case-3-developing-proposals-6" name="use-case-3-developing-proposals-6"></a>Use Case 3: Developing Proposals</h3>
+<p>A third use case could help to reduce the amount of time that users spend developing proposals, and would also help to improve the quality of proposals that are submitted. This could be done by using AI to generate proposal outlines based on a user’s input, and then giving the user the option to edit and improve the proposal before submitting it. This would help to ensure that all proposals are well-thought-out and in turn would improve the level of discussion and debate that takes place.</p>
+<h3>
+<a class="anchor" href="#use-case-4-engaging-the-community-7" name="use-case-4-engaging-the-community-7"></a>Use Case 4: Engaging the community!</h3>
+<p>Roko could be an awesome addition to our Discord community and could engage many people on Twitter. By sharing updates on plans, debates, proposals, initiatives, and more; we could help bring more awareness to Nouns and get people interested and excited about participating in the governance of the ecosystem.</p>
+<h2>
+<a class="anchor" href="#funding-breakdown-8" name="funding-breakdown-8"></a>Funding Breakdown</h2>
+<p>I am requesting 24+1 ETH which is about half the compensation of <a href="https://nouns.wtf/vote/17">prior 3 month contributors</a> as I expect to dedicate a part time 20 Hours / week to develop and implement AI as well as host educational sessions in the Nouns DAO. The first step will be building out Roko’s Review to automatically generate for any given proposal. Once implemented I will hold educational sessions covering the backend, the implementation, how you could use GPT in your day to day, and hold discussion on next steps regarding implementation of new features or improvement of Roko’s Review. I strongly believe that by the end of these 12 weeks in addition to a well functioning product, the users of Nouns DAO will have a better understanding of what AI is, potential applications, and considerations for future use cases.</p>
+<p>1 ETH - Cover the cost of API calls to date and for the 3 months, GPT has a paid API ran by OpenAI which allows you to get access to the at least one of the best models in the world but at a (pretty reasonable) cost. There are other options but as of now I have not seen one as performant. Each request is usually only on the order of a couple cents but the longer the text passed in or requested out the more requests there are.</p>
+<h2>
+<a class="anchor" href="#timeline-9" name="timeline-9"></a>Timeline</h2>
+<p>Weekly educational discussions grounded in how AI can help Nouns</p>
+<ul>
+<li>Week 1-2: Planning and research, includes literature review and sharing findings</li>
+<li>Week 3-4: Implementation Roko’s Review MVP, timeboxed to 2 weeks</li>
+<li>Week 5-6: Roko’s Review: improvements / changes to be made, discuss next priorities</li>
+<li>Week 7-10: Implementation of agreed upon priorities for sprint 2, potentially a second use-case</li>
+<li>Week 11-12: Wrap-up and evaluation, discussion on next steps for AI in Nouns DAO</li>
+</ul>
+<h2>
+<a class="anchor" href="#success-metrics-10" name="success-metrics-10"></a>Success Metrics</h2>
+<p>Some data that would be interesting to monitor throughout and review during evaluation is:</p>
+<ul>
+<li>Number of people engaging / participating in educational sessions</li>
+<li>Net promoter score of educational sessions</li>
+<li>Reach of Roko’s Review</li>
+<li>% of people that find Roko’s Review helpful</li>
+<li>How does the quality of debate and discussion change with Roko’s Review?</li>
+<li>How does user engagement change with Roko’s Review?</li>
+</ul>
+<h2>
+<a class="anchor" href="#conclusion-11" name="conclusion-11"></a>Conclusion</h2>
+<p>In conclusion, I believe that AI can be used to help with the overall governance of the Nouns ecosystem, and that there are many potential use cases for it. I believe that by implementing some of the use cases that I have outlined, we can help to improve the overall experience for Nouners, and make it easier for them to participate in the governance process. I believe that the use of AI in governance is still in its early stages, and that there is a lot of potential for it to be used in many different ways. I hope that this proposal has given you some food for thought, and I look forward to hearing your thoughts on it.</p>
+<h2>
+<a class="anchor" href="#team-members-12" name="team-members-12"></a>Team Members</h2>
+<p>I am an electrical and computer engineer with experience in robotics, data science, and consulting. I’m a founding member of an ed-tech startup that teaches AI &amp; ML concepts to teenagers and is partnering with our best on paid internal + external projects. This experience has taught me how to effectively communicate difficult concepts, how to build these systems and get them in the hands of people that can use them.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>This is so excited!  It was great to chat with you about this yesterday - Small Grants is excited to fund this residency and look forward to seeing where this experiment with AI takes us.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2058_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">cdt.eth</div>
+          <div class="post_content">
+<p>whoa! super exciting you’ll be working on this more, Shep!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3348_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krel</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="1" data-topic="1929" data-username="TheHeroShep">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://avatars.discourse-cdn.com/v4/letter/t/82dd89/48.png" width="24"/> TheHeroShep:</div>
+<blockquote>
+<ul>
+<li>How does the quality of debate and discussion change with Roko’s Review?</li>
+<li>How does user engagement change with Roko’s Review?</li>
+</ul>
+</blockquote>
+</aside>
+<p>these two especially are super interesting to me, happy to see we’re looking in this direction for Roko</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2436_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">honkdiddly</div>
+          <div class="post_content">
+<p>Been helping out with this and think there’s some immense potential, here. Would like to make this a bit more formal, so posting this here.</p>
+<p>I’m asking for 5 ETH to perform all the infra setup (server, database, integrations (e.g. Twitter, Discord,…), cron jobs, etc…) over the next few weeks. This will fund a ‘sprint’ with the goal of getting the first and second versions of “Roko’s Review” (automated summaries of proposals).</p>
+<p>There are a few other things in the works (e.g. assistant to ping with questions about what is going on within the DAO, automated personal feed of DAO activity, using AI to define what is ‘nounish’, etc…). One or more of these will likely be touched on in the next few weeks, but the direction is yet to be determined.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>approved!  thanks for your help honk</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">BigshotKlim</div>
+          <div class="post_content">
+<p>I am so excited and super curious about where this is going to go.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/4529_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">frog</div>
+          <div class="post_content">
+<p>Is there an update on Roko available somewhere?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">TheHeroShep</div>
+          <div class="post_content">
+<p>Yes!</p>
+<p>The Nouns AI Pod was funded about 2 months ago with <a href="https://nouns.wtf/vote/156">prop 156</a> and since we’ve been busy!</p>
+<p>Just ran our first <a href="https://twitter.com/TheHeroShep/status/1604228252662484994" rel="noopener nofollow ugc">Nouns AI Pod competition</a> with the playground we built, it’s undergoing <a href="https://twitter.com/noun355/status/1607738443500503041" rel="noopener nofollow ugc">final voting now</a></p>
+<p>RE: Roko the bot, that’s been a tougher problem but we’re making progress there too having recently ( literally this week!) added the bot to The Noun Square Discord enabling us to record, transcribe, and summarize any call going on in that server. We plan to expand to others and index that data to our central server which already has search integrated across proposals.</p>
+<p>We give updates and talk about new developments in AI every Tuesday at 7am PST in <a href="https://discord.gg/mpguZRe8" rel="noopener nofollow ugc">TNS Discord</a> for now. Come on down to the next one to check it out!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/4529_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">frog</div>
+          <div class="post_content">
+<p>Awesome thank you! I will definitely check out TNS.<br/>
+Thanks for a detailed response!</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

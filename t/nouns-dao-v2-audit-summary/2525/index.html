@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Nouns DAO V2 Audit Summary</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Nouns DAO V2 Audit Summary</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p><a href="https://code4rena.com/reports/2022-08-nounsdao/" rel="noopener nofollow ugc">See the full code4arena report here</a>.</p>
+<h2>
+<a class="anchor" href="#tldr-1" name="tldr-1"></a>TL;DR</h2>
+<ul>
+<li>One high-risk issue found, <strong>unrelated to V2, in a function no one has used to date</strong> (more info below).</li>
+<li>Three medium-risk issues found, <strong>all fixed as part of V2</strong>.</li>
+<li>Some additional low-risk and gas optimizations found as well (not summarized in this post).</li>
+</ul>
+<h2>
+<a class="anchor" href="#the-high-risk-issue-delegate-by-signature-to-address-zero-2" name="the-high-risk-issue-delegate-by-signature-to-address-zero-2"></a>The high-risk issue: delegate by signature to address zero</h2>
+<ol>
+<li>The issue is in the <code>delegateBySig</code> function that’s part of <code>NounsToken</code>, only when the delegatee is address zero (<code>0x000...</code>).</li>
+<li>When this function is used to delegate to address zero, the delegator wallet loses all its Nouns votes and can no longer transfer their Nouns out of that wallet.</li>
+<li>To date there have been no uses of <code>delegateBySig</code>; <a href="http://nouns.wtf">nouns.wtf</a> and other governance clients have been using <code>delegate</code> which doesn’t have this issue.</li>
+<li>To be extra safe, avoid using <code>delegateBySig</code>; if you must, triple check the message you’re signing is delegating to a non-zero delegatee.</li>
+</ol>
+<h3>
+<a class="anchor" href="#what-is-delegatebysig-3" name="what-is-delegatebysig-3"></a>What is <code>delegateBySig</code>?</h3>
+<p>It’s a function of <code>NounsToken</code> that is meant to support the use case of a Nouner signing a message with their intent to delegate, then passing that message to someone else to post on chain and pay gas.</p>
+<p>This is part of a bigger concept of supporting “gasless transactions”, where various apps can allow you to submit transactions for free, or rather pay them for the gas in a currency other than ETH (e.g. your credit card, or some USD-pegged ERC20 token).</p>
+<h2>
+<a class="anchor" href="#medium-risk-issues-4" name="medium-risk-issues-4"></a>Medium-risk issues</h2>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Fix (already part of V2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vote gas refund could be abused with long vote reasons.</td>
+<td>Total gas use is capped at 200K, supporting voting reason up to roughly 9,190 characters.</td>
+</tr>
+<tr>
+<td>Proposals should be cancelable by anyone when proposer’s votes are less than or equal to proposal threshold.<br/><br/>In V1, they were not cancelable when proposer’s votes were exactly proposal threshold.</td>
+<td>In V2 anyone can cancel a proposal when proposer’s votes are less than or equal to proposal threshold.</td>
+</tr>
+<tr>
+<td>In V1 it’s possible to burn the veto power without meaning to, if the vetoer accidentally set a new vetoer to address zero.<br/><br/>The main concern was that setting a new vetoer was a single step that did not check for address zero.</td>
+<td>In V2 setting the vetoer is a 2-step process:<br/>1. Setting a pendingVetoer<br/>2. pendingVetoer then needs to call acceptVetoer</td>
+</tr>
+</tbody>
+</table>
+</div><p>–</p>
+<p>Any further question? Please reach out in the <a href="https://discord.com/channels/849745721544146955/981584123225321503" rel="noopener nofollow ugc">#54-tech-grants</a> Discord channel.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2936_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">AndrewLaddusaw</div>
+          <div class="post_content">
+<p>Verbs seems to have been a boon for the DAO and for the subDAOs. I think most people don’t have the technical chops to notice what you provide, myself included, but I saw a DAO’s launch contract cost go from something like 5 ETH to 1.5ETH because of the efficiencies you all have created. That is value that will be compounded many times over. That doesn’t factor the added security and I’m sure many other great additions you’ve made, so a hearty ‘Thank You’ from me. For the things I understand (very few) to the many I’ll probably never notice.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1640_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">eojjim</div>
+          <div class="post_content">
+<p>nice work verb team! elad/david</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>FOMO Nouns (FOrce Mint Our Nouns)</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">FOMO Nouns (FOrce Mint Our Nouns)</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/26_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rayo</div>
+          <div class="post_content">
+<h3>
+<a class="anchor" href="#what-is-it-1" name="what-is-it-1"></a>What Is It?</h3>
+<p>We propose a tool that allows the Nouns community to vote on and mint the most appealing Nouns for each auction.</p>
+<p>As background, Nouns are psuedo-randomly generated for each auction based on the block when the prior auction is settled. Each block generates a unique Noun, and recent auctions have been settled on a random block when either the auction winner wants to receive their Noun or a random user wants to start the next auction.</p>
+<p>We believe the Noun community can benefit from more deliberating selecting the next Noun for a number of reasons:</p>
+<ul>
+<li>More appealing Nouns build the appeal of the Nouns art</li>
+<li>More appealing Nouns have generally garnered higher bids in recent auctions. This helps build the Nouns treasury and influence.</li>
+<li>Voting enables wider community participation in the Nouns project even for users who don’t hold and are unlikely to win a Noun</li>
+<li>The voting and settlement setup provides even more excitement around Noun O’Clock</li>
+</ul>
+<p>We propose building a website that will allow community members to browse and vote for their preferrered Noun attributes. These preferences would be passed to a bot that would monitor blocks after each auction and settle the auction only if a high-quality Noun would be minted for the next auction.</p>
+<h3>
+<a class="anchor" href="#origin-of-the-project-2" name="origin-of-the-project-2"></a>Origin of the Project</h3>
+<p>This idea grew out of Shark DAO’s interest in forcing a Shark to be minted for the DAO to acquire. After some discussion, we realized the whole Nouns community may have preferences on what Nouns to mint, and we could set this up as a platform for the community to voice their preferred attributes for the benefit of the broader Nouns ecosystem.</p>
+<p>The builders:</p>
+<p><a href="https://twitter.com/_forager" rel="noopener nofollow ugc">@_forager</a> <a href="https://twitter.com/0xRayo" rel="noopener nofollow ugc">@0xrayo</a><br/>
+<img alt="\ 200x200" data-base62-sha1="ym3aZo73L3cqrjvkuqi8XIK1C9M" height="400" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/f0c80a50afe678a75d8afdf9b08564e46cd3de0e.jpeg" width="400"/> <img alt="\ 200x200" data-base62-sha1="yzDJBrESVlckZcVQouYZ9Xmf7ao" height="400" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/f2514d304aa0fda8d866a2fc45248c6e306251e8.jpeg" width="400"/></p>
+<h2>
+<a class="anchor" href="#project-scope-3" name="project-scope-3"></a>Project Scope</h2>
+<h3>
+<a class="anchor" href="#what-will-be-delivered-4" name="what-will-be-delivered-4"></a>What will be delivered?</h3>
+<ol>
+<li><strong>Voting Website</strong></li>
+</ol>
+<ul>
+<li>Website allowing users to browse Noun Heads and see the current vote tallies</li>
+<li>MetaMask sign-in with vote casting &amp; clearing</li>
+<li>Backend to track votes and pass on to Settlement infrastructure</li>
+<li>Social cursor integration (ala Party Bid)</li>
+</ul>
+<ol start="2">
+<li><strong>Settlement Infrastructure</strong></li>
+</ol>
+<ul>
+<li>Website backend integration to turn community votes to settlement rules</li>
+<li>Bot setup to monitor blocks and evaluate the Noun minted</li>
+<li>Smart contract to ensure settlement only occur on the desired block</li>
+<li>Flashbots integration to insure rapid block inclusion</li>
+</ul>
+<p>We have already begun building several aspects of the project.</p>
+<h3>
+<a class="anchor" href="#what-is-the-funding-request-5" name="what-is-the-funding-request-5"></a>What is the funding request?</h3>
+<p>We propose funding of 71 ETH with the following breakdown:</p>
+<ul>
+<li>56 ETH for the voting website and settlement infrastructure (as outlined above)
+<ul>
+<li>24 ETH for the website (including frontend, backend, infrastructure setup)</li>
+<li>32 ETH for the settlement infrastructure (including bot monitoring, settlement contract, Flashbots integration, infrastructure setup)</li>
+</ul>
+</li>
+<li>15 ETH to fund auction settlement for ~1 year</li>
+</ul>
+<p>Deployment costs and maintenance for the first year will come out of the pay above. Maintenance after the first year or additional features will be part of separate proposals. A list of possible future enhancements is included at the end.</p>
+<h3>
+<a class="anchor" href="#voting-website-details-6" name="voting-website-details-6"></a>Voting Website Details</h3>
+<p>Voting will occur via a website. Users will sign-in with MetaMask and be allocated a certain number of votes. They will be able to browse Noun attributes and vote on ones they would wish to see in upcoming Nouns (e.g. Shark heads). All votes will be stored on the website backend and viewable by users.</p>
+<p>We plan to initally allow voting <strong>only on Heads</strong> as this is the most noticeable attribute of a Noun. Other attributes can be added but will require some modification as combinations of traits are highly unlikely to be seen in a reasonable settlement window, and we believe the community is unlikely to prioritize the body, glasses, or other attributes above heads.</p>
+<p>At the end of an auction, our bot will grab the votes from the website and attempt to settle a high-quality Noun.</p>
+<p><strong>Demo Mockup</strong><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/esV3zSNC9HzxKPfcTrtvudzTF4h.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/656356d45a90acfa66b74077e6645993a7cd7385.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="esV3zSNC9HzxKPfcTrtvudzTF4h" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/656356d45a90acfa66b74077e6645993a7cd7385_2_10x10.png" height="361" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/656356d45a90acfa66b74077e6645993a7cd7385_2_690x361.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/656356d45a90acfa66b74077e6645993a7cd7385_2_690x361.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/656356d45a90acfa66b74077e6645993a7cd7385_2_1035x541.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/656356d45a90acfa66b74077e6645993a7cd7385_2_1380x722.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">3294×1724 279 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h3>
+<a class="anchor" href="#settlement-infrastructure-details-7" name="settlement-infrastructure-details-7"></a>Settlement Infrastructure Details</h3>
+<p>Monitoring for settlement will begin immediately when the auction ends. The bot will use an expectation of the settlement window (e.g. 10 blocks) along with the votes cast to determine which Nouns would be worth minting.</p>
+<p>Settlement can’t be delayed forever, so we can’t wait for a perfect Noun and must target the best Noun that will appear in a reasonable window. Currently, settlement is performed within ~10 blocks by the auction winner or another user. <strong>[1]</strong></p>
+<p>The bot will monitor each block looking for a good Noun, and when one is found, a settlement transaction will be immediately launched. To ensure the transaction is included in that exact same block, a custom contract with a high gas / Flashbots transaction will be used.</p>
+<p><strong>[1]</strong> We believe the community may opt to leave settlement to our infrastrucutre. This will give us more flexibility to extend the settlement window to find better Nouns and also save the community gas.</p>
+<h2>
+<a class="anchor" href="#miscellanea-8" name="miscellanea-8"></a>Miscellanea</h2>
+<h3>
+<a class="anchor" href="#project-ethos-9" name="project-ethos-9"></a>Project Ethos</h3>
+<p>The project code will be open sourced under GNU GPLv3 with all code shared on GitHub upon project completion. Our goal is to help the Nouns community build the best roster of Nouns possible, promote the Nouns project, and maximally expand the Nouns treasury by driving higher bids on attractive Nouns.</p>
+<h3>
+<a class="anchor" href="#limitations-and-risks-10" name="limitations-and-risks-10"></a>Limitations and Risks</h3>
+<p>Noun auction settlement can be performed by any user. While recent auctions have taken ~10 blocks (and community may accept longer), it’s possible for a competing tool or mischevious user to settle the auction immediately or on an undesirable Noun. However, this is possible even without this project, and we can adjust our configuration to minimize the impact of this type of activity.</p>
+<p>Our bot will also need to maintain a balance of ETH in order to settle the auction. We have requested a set of seed money, but it’s possible this may be exhausted and require further funding or donations. In addition, gas fees on Ethereum are volatile, so we may need to skip settlement or pay very high fees if the network is congested at the time an auction ends.</p>
+<h2>
+<a class="anchor" href="#future-extensions-11" name="future-extensions-11"></a>Future Extensions</h2>
+<p>Outside the scope of this proposal, we believe there are a number of extensions possible:</p>
+<ul>
+<li>Full decentralization of the infrastructure and protocol</li>
+<li>Extension from heads into other attributes, combinations of attributes, or other characteristics like the overall color palette</li>
+<li>Forking the Nouns front end to include the current auction as well</li>
+<li>More features to encourage community particpation</li>
+<li>Making the project self-funded</li>
+<li>Additional gamification (vote weights, real world influeces, etc)</li>
+</ul>
+<p>Gamification opens up a number of interesting ideas that may drive attention and excitement for Nouns. These can includes things like:</p>
+<ul>
+<li>Real world event weighting (Ex: during shark week, votes on sea-related attributes count for more)</li>
+<li>Adding weights to certain wallets (Ex: Since every noun that ends in 1 is a party noun, the auction before that noun is minted could have wallets with noun fractions in them be weighted more)</li>
+<li>Random lightning-rounds: Everyone that’s on the website gets a free vote</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/59_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun14</div>
+          <div class="post_content">
+<p>This is such an interesting idea.<br/>
+Qn:<br/>
+Would we eventually reach a point where we minted all the “most appealing” heads and are left with the “least appealing” ones?<br/>
+What happens then?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/26_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rayo</div>
+          <div class="post_content">
+<p>Thanks for the question. While we’ll try to mint the ones that gather the most votes, it wont be a guarantee since anyone can settle. It may be the case that an individual wants to settle before we get the chance to in order to mint one in order to get a less appealing one. Additionally, after all the appealing heads have been minted, I suspect people will begin voting on heads that haven’t appeared yet in order to have a diverse set of nouns.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/28_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">mach</div>
+          <div class="post_content">
+<p>can you go into more detail on the 32 eth request? I can’t imagine a world where I see that price justified but maybe i’m missing something</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/61_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Noun12</div>
+          <div class="post_content">
+<p>The random nature of it makes each existing and prospective Noun truly unique.</p>
+<p>Voting in this model as proposed would lead to overproduction of certain heads as alluded to above, but it would also take the magic out of the process, the “you never know what will come next and no one controls it” aspect.  I get that the choices would not be infinite, but the absence of much choice and the limited time makes it even more likely people’s choices will be base ones (Beer heads are cool, naturally) and will not be thoughtful about diversity of the overall Nouns ecosystem.</p>
+<p>We don’t need to go full Gattaca on our Nouns.</p>
+<p>Separately, if I was a bidder, I’d never leave the Settlement to anyone else, that is a risk, so the fit is questionable to begin with.</p>
+<p>The creativity to suggest such a project is appreciated but I would be against it in a vote.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/497_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">4156</div>
+          <div class="post_content">
+<p>very interesting proposal. imo it’s valuable infrastructure and I agree with all of the motivations to build it that are set forth above. my main pushback is primarily around the cost. at present, 71 ETH represents $236,359 USD, with $186,256 USD going directly to the builders. as mentioned elsewhere, I am not against the DAO (thoughtfully) overpaying for services to bootstrap the ecosystem, but this feels a bit excessive? it would be helpful to see a justification or breakdown of the costs, including perhaps a multiplier over fair market value. in my mind, a 1.5-2x multiplier vs. fmv is reasonable based on the opportunity costs in the space, the difficulty and risk of having a DAO as a ‘client’, and the premium the DAO should pay to bootstrap a proposal ecosystem. this feels closer to 3-4x. thanks for the thoughtful proposal!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/26_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rayo</div>
+          <div class="post_content">
+<p>cc: <span class="mention">@mach</span> <span class="mention">@4156</span><br/>
+Thanks for the feedback.<br/>
+We are certainly willing to lower costs. We based our compensation using previous proposals since it’s difficult to know what constitutes fmv at the moment and it’s something we discussed among ourselves.</p>
+<p>32 eth-- Forager’s comp:</p>
+<ul>
+<li>Soldity Dev work</li>
+<li>Flash bot integration</li>
+<li>deployment costs</li>
+</ul>
+<p>24 eth – My comp:</p>
+<ul>
+<li>Front end Dev work</li>
+<li>Back end Dev work (incl. incorporating with database for storage, metrics monitoring)</li>
+<li>deployment costs for infrastructure</li>
+</ul>
+<p>The 15 eth will be used to cover the gas fees to get the Noun minted and can also be lowered and then topped up when the funds run low via another proposal.</p>
+<p>edit: I don’t know if this reply feature worked so tagging 4156 just to be sure</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/26_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rayo</div>
+          <div class="post_content">
+<p>Thanks for the feedback.</p>
+<p>I would note that we can’t truly control what gets minted next. Anyone can continue the magic of randomness by settling the auction themselves immediately after an auction ends. With every block we have a 1/234 chance of getting any specific head. For this project, we wouldn’t always try to get the top-voted noun because it’s extremely unlikely that we’ll see it in a reasonable amount of time. We will be looking at the top N (exact number tbd) noun heads and try to select based on that. On the twitter spaces we have already tried to use the crystal ball feature to mint a desirable noun and on one occasion it has worked. This proposal is to gamify that experience so we can gather the community’s preferences.</p>
+<p>Wrt not trusting someone to settle the auction if you were a bidder, the settlement feature is already trustless and users that have not bid on a noun have already submitted a settlement transaction.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/28_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">mach</div>
+          <div class="post_content">
+<p>Thanks for the reply,<br/>
+As 4156 stated, I as well am not opposed to offering higher than market rate for services to progress the nouns project and I do think that previous proposals were a little out of budget for their work. Do you have a timeframe in mind for see through of the project?<br/>
+I’m on a line where I think the rate is fair to the scope but also don’t want to set precedent for the industry as a whole that can damage other new projects trying to hire devs. I think a situation where the 15 eth for fees can be paid up front. As well as 1/4 the dev costs. Another 2/4 upon completion and then the final 1/4 3-6 months after deployment of the project would look better to me.<br/>
+Open of course to idea and discussion on this</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/26_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rayo</div>
+          <div class="post_content">
+<p>We can have our V1 up within 6 weeks. And then continue to add more features as necessary, plus continue with maintenance for the site.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/65_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">forager</div>
+          <div class="post_content">
+<p>Hey All! We’re really heartened to hear the general excitement for the idea, and we definitely hear the concerns around the cost. We’re bringing the proposal as huge Nouns fans first and definitely not looking to overcharge the DAO. We also want to avoid building a precendent of overspending on projects.</p>
+<p>The market rate for a niche project like this is quite hard to evaluate, so we primarily based this on the Nouns Party proposal that had a similar website-to-contract interaction setup. We have a smaller team but are still wearing all of the hats, and we also thought the community would prefer a (slightly higher) fixed payment versus the annuity “fee-per-settlement” type setup.</p>
+<p>There are a bunch of miscellaneous costs here from AWS costs to contract deployment that we thought were better for us to just cover. We can absolutely itemize this if helpful, but as 4156 mentioned, the largest cost here is opportunity cost. My biggest consideration is long term support as a real-time setup like this will require on-going alerts, new work and testing as Flashbots or EIP changes occur, etc.</p>
+<p>For the 15 ETH for settlement, we can absolutely cut this down to 5 ETH to start and submit a future proposal or solicit voluntary donations later. We also considered a model where community members can donate ETH for benefits (like more votes) if everyone prefers the crowd-source model. This adds some smart contract work, but we can handle it if needed.</p>
+<p>Finally, we fully support splitting up the payment (like the 1/4 up front, 1/2 on delivery, 1/4 after some maintenance window) to ensure the Nouns community gets what we’re promising.</p>
+<p>With all that said, we are totally open to lowering the costs here if the community feels this is overpaying for the work and support here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>I agree with Noun12.  While I think this would be a cool product, I have a concern about the market fit.  When I was the winning bid in the 22 auction, there was no way I as going to leave the auction unsettled and potentially let someone else come in and outbid me.  I settled it as quickly as possible.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/65_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">forager</div>
+          <div class="post_content">
+<p>Hey <span class="mention">@noun22</span> and <span class="mention">@Noun12</span>, I just wanted to provide a bit more details on the “settlement” thing.</p>
+<p>The auction ends at the set time (as shown by the countdown on the site). Once that is over, you have won the auction, and there is <strong>zero</strong> risk of you being outbid or not getting your Noun. In fact, <em>most</em> auctions so far have not been settled by the winner. This is a standard part of the whole auction design, and it’s not a security risk to any of the winners. The only thing settlement does is (a) send the winner their Noun (b) mint the new Noun (c) kick-off the new auction.</p>
+<p>It likely works this way due to a foundational Ethereum Virtual Machine constraint where any and all actions must be initiated by an external account. In effect, it’s impossible for the contract to “settle itself” without a user initiating that settlement, so someone submits this transaction just for the contract to “knock over the dominoes” and start the next auction.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>Edit: nevermind! It appears you cannot bid even if interacting with the contract after the auction ends</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/45_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">KingofAllNouns</div>
+          <div class="post_content">
+<p>This is an interesting idea. It does seem to change the nature of the Nouns. When I purchased my Noun16, part of the appeal was that it was unlikely that there would be another King generated anytime soon. I paid more for sure. The flip side of this is that there is a wide set of preferences out there and specific designs may appeal to different people. Also, a version that is initially “less appealing” and thus goes for less ETH may be an interesting entry point for someone (or a partybid) that has been unable to transact on more popular versions.</p>
+<p>This may result in emergent group behavior. For instance, what if the community decided to focus in on Bigfoot heads and continually riff on versions of the Bigfoot? Maybe some large percentage of Nouns in existence would be Bigfeet, at least for a while? Would the Bigfeet then become a bloc?</p>
+<p>I love the enthusiasm from the team but on balance I don’t love the idea of controlling the Noun generation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/497_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">4156</div>
+          <div class="post_content">
+<p>been thinking more about this, and questions of compensation aside, I think there might be a better implementation than advanced voting on heads. the thing that makes nouns (and most PFPs) interesting is, imo, ‘coherence’ more than any individual trait. that is to say, a matching frog is more interesting than a non-matching unicorn, and a shark with a wave shirt is more interesting than a shark with a cow shirt.</p>
+<p>when I think about how nounders have used the nouns crystal ball, it has been as a one player real-time game where we try to mint the most coherent noun. imo the upside here is in taking that real-time game and making it multiplayer. a new block comes in, everyone has 3 seconds to vote on it, if votes are &gt; threshold, a transaction is fired.</p>
+<p>this model has the benefit of making the FOMO about coherence rather than individual heads, and also furthering noun o’clock as a fun event that anyone can participate in if they’re present.</p>
+<p>i would personally be willing to allocate more ETH for an app of this nature, as it enhances the experience of noun o’clock, and pushes the boundaries of real-time on-chain UX!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/26_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rayo</div>
+          <div class="post_content">
+<p>Thanks all for the feedback.<br/>
+cc: <span class="mention">@4156</span> <span class="mention">@KingofAllNouns</span> <span class="mention">@noun22</span> <span class="mention">@Noun12</span></p>
+<p>After talking with <span class="mention">@forager</span>, we both love the idea <span class="mention">@4156</span> suggested of allowing for real-time user voting for determining user preferences. We feel this better captures the experience we are trying to achieve with this project. We also understand the concerns around a forcefully generated Noun and potentially impacting the rarity of certain traits. We’ll be editing the proposal today to adjust from a pre-determined voting mechanism to a real-time voting mechanism.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/65_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">forager</div>
+          <div class="post_content">
+<p>+1, just wanted to say <span class="mention">@4156</span> that I absolutely LOVE this idea!</p>
+<p><span class="mention">@rayo</span> and I had discussed how important coherence was, but we had been trying to figure out the “advanced voting” version that gets really tricky. The real-time version makes that much more feasible, addresses a lot of the concerns others have raised about hurting the magic of Nouns minting, and makes Noun O’Clock even more fun. I can just imagine people on Twitter Spaces yelling about this, and like you said, it’s a multiplayer and higher certainty extension of the crystal ball that we’re already using.</p>
+<p>PS - <span class="mention">@noun22</span>, I’m happy to share some more details with you on this. As part of researching and testing this idea, I’ve spent more time than I care to admit looking into the contracts, redeploying the whole Nouns auction setup on Görli, etc!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/497_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">4156</div>
+          <div class="post_content">
+<p>awesome, so glad you like it and i think this could be an extremely compelling ux. advanced version is minting a POAP or other token for the participants who voted in favor of the winning noun.</p>
+<p>on the question of compensation, what if we brought the cost down to 50 ETH by removing 10 ETH from the settlement pool and 11 ETH from your shared comp? the DAO could always top up the settlement pool later and 50 seems like a more palatable (though still arbitrary) number for kicking things off</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">gremplin</div>
+          <div class="post_content">
+<p>I agree with this angle. I think in a more PartyBid style setting this could be an exciting post-auction event.</p>
+<p>It could potentially represent the global aspect of how NoC phases through timezones, with the most-awake populations gravitating toward different aesthetics, I would think.</p>
+<p>Would people still be able to circumvent the voting by using the “old” front end style, or interacting with the contract? Or would something like this become <em>the</em> method of settlement?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/26_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rayo</div>
+          <div class="post_content">
+<p>This would become the method of settlement. Voting for certain attributes will be scrapped and replaced with emoji consensus using the crystal ball. The mock-ups on the proposal are just demos we created internally and our new proposal will include a new mock-up of what we imagine the front end will look like</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>Awesome, love the new direction.</p>
+<p>Also, just wanted to add that <span class="mention">@forager</span> sent me some info on how the contract processes bids and settlements and allayed one of my main concerns. Thanks forager + excited to see this proposal progress</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/97_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">devloper</div>
+          <div class="post_content">
+<p>+1 the idea of a “real time” multiplayer consensus game as a fun way to choose the next noun. A group of us had brainstormed around this a bit in the past and where we ended up was that the mechanism needs to be very lightweight so that participants can submit their opinions in seconds.</p>
+<p>Will we be altering the settlement process in some way for a 10 minute (longer?) consensus window? Will we store a history of potential seeds and enable the contract to choose from those seeds? If so, how do we avoid griefing?</p>
+<p>Obviously these are technical concerns, but just want to confirm that it’s possible and not overly intrusive to the core noun structure.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>A couple of thoughts:</p>
+<ul>
+<li>Glad to see positive reactions to this idea. I think it has some unknown effects, and it’ll be interesting to learn once it’s live (experimentation velocity <img alt=":tada:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/tada.png?v=10" title=":tada:"/>)</li>
+<li>On comp I think the community can keep iterating as well. Specifically, it would be valuable for everyone if we got more explicit on how it’s priced, e.g. by showing some bottom up cost structure with time estimates</li>
+</ul>
+<p>What do you think?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/65_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">forager</div>
+          <div class="post_content">
+<p>Hey All, <span class="mention">@rayo</span> and I revised the proposal in the spirit of a real-time / Party Bid style site. There are definitely some added challenges and more pieces to build, but we’re super excited about the new direction!</p>
+<p>We also like <span class="mention">@4156</span>’s comp suggestion. We’ve cut it down to 50 ETH and will more explicitly setup the community donations mechanism for settlement (versus asking the DAO to fund it).</p>
+<p>Please take a look at the new proposal, and we look forward to everyone’s thoughts:</p>
+<hr/>
+<h1>
+<a class="anchor" href="#project-fomo-nouns-1" name="project-fomo-nouns-1"></a>Project: FOMO Nouns</h1>
+<h2>
+<a class="anchor" href="#what-is-it-2" name="what-is-it-2"></a>What Is It?</h2>
+<p>We propose a tool that allows the Nouns community to vote on and mint the most appealing Nouns for each auction in real time.</p>
+<p>As background, Nouns are psuedo-randomly generated for each auction based on the block when the prior auction is settled. Each block generates a unique Noun, and recent auctions have been settled on a random block when either the auction winner wants to receive their Noun or a random user wants to start the next auction.</p>
+<p>We believe the Noun community can benefit from more deliberating selecting the next Noun for a number of reasons:</p>
+<ul>
+<li>More appealing Nouns build the appeal of the Nouns art</li>
+<li>More appealing Nouns have generally garnered higher bids in recent auctions. This helps build the Nouns treasury and influence.</li>
+<li>Voting enables wider community participation in the Nouns project even for users who don’t hold and are unlikely to win a Noun</li>
+<li>The voting and settlement setup provides even more excitement around Noun O’Clock</li>
+</ul>
+<p>We propose building a website that will allow community members to vote on whether to settle in a given block and mint a particular Noun, and if sufficient votes are received, immediately settle the auction in the same block to mint the desired Noun.</p>
+<h3>
+<a class="anchor" href="#origin-of-the-project-3" name="origin-of-the-project-3"></a>Origin of the Project</h3>
+<p>This idea grew out of Shark DAO’s interest in forcing a Shark to be minted for the DAO to acquire. After some discussion, we realized the whole Nouns community may have preferences on what Nouns to mint, and we could set this up as a platform for the community to voice their preferred attributes for the benefit of the broader Nouns ecosystem.</p>
+<p>The builders:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><a href="https://twitter.com/_forager" rel="noopener nofollow ugc">@_forager</a></th>
+<th style="text-align:center"><a href="https://twitter.com/0xRayo" rel="noopener nofollow ugc">@0xrayo</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img alt="" data-base62-sha1="ym3aZo73L3cqrjvkuqi8XIK1C9M" height="400" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/f0c80a50afe678a75d8afdf9b08564e46cd3de0e.jpeg" width="400"/></td>
+<td style="text-align:center"><img alt="" data-base62-sha1="yzDJBrESVlckZcVQouYZ9Xmf7ao" height="400" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/f2514d304aa0fda8d866a2fc45248c6e306251e8.jpeg" width="400"/></td>
+</tr>
+</tbody>
+</table>
+</div><h2>
+<a class="anchor" href="#project-details-4" name="project-details-4"></a>Project Details</h2>
+<p>The website will allow users to see the Noun mintable in every block (approximately every 15 seconds). It will also contain relevant information and analytics (e.g. available settlement funds, whether any attributes would be the first minted).</p>
+<p>In a short window after each block appears, users will be able to vote on whether the new Noun is attractive enough to mint. Voting may be binary (i.e. yes/no) or score based (i.e. 0-10), and it will require a threshold that adjusts based on the number of active users. MetaMask sign-in will be required to prevent vote spamming.</p>
+<p>All features will aim to be fun, social, and interface. Ideas include voting via emoji (<img alt=":nauseated_face:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/nauseated_face.png?v=10" title=":nauseated_face:"/> to <img alt=":smiling_face_with_three_hearts:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiling_face_with_three_hearts.png?v=10" title=":smiling_face_with_three_hearts:"/>), social cursor interactions (ala PartyBid), a real-time vote progress bar, and/or POAP awards for some-or-all participants during voting.</p>
+<h3>
+<a class="anchor" href="#early-mock-up-5" name="early-mock-up-5"></a>Early Mock-up</h3>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/cRKEz3qXxN9iJq3loXhAlpG6WaL.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/5a2d97bc23c71f937bf6ede3df8a1cdbe86ee513.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="cRKEz3qXxN9iJq3loXhAlpG6WaL" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/5a2d97bc23c71f937bf6ede3df8a1cdbe86ee513_2_10x10.png" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/5a2d97bc23c71f937bf6ede3df8a1cdbe86ee513_2_379x500.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/5a2d97bc23c71f937bf6ede3df8a1cdbe86ee513_2_379x500.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/5a2d97bc23c71f937bf6ede3df8a1cdbe86ee513_2_568x750.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/5a2d97bc23c71f937bf6ede3df8a1cdbe86ee513_2_758x1000.png 2x" width="379"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use xlink:href="#far-image"></use></svg><span class="filename"></span><span class="informations">1256×1654 140 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use xlink:href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Votes will be tallied in real-time on the backend. If a sufficient number of votes are received, settlement will be instantly initiated. Settlement must occur in the same-block, so Flashbots will be used to speed inclusion. This will require a contract to provide miner tips and ensure the settlement transaction is not mined in later blocks.</p>
+<p>A contract will be also be built to store community donations and fund settlement costs.</p>
+<h2>
+<a class="anchor" href="#project-deliverables-6" name="project-deliverables-6"></a>Project Deliverables</h2>
+<p>The project will encompass the following deliverables and support for 1 year.</p>
+<ul>
+<li>
+<strong>Development</strong>
+<ul>
+<li>Frontend:
+<ul>
+<li>Instant display of mintable Nouns</li>
+<li>Metamask integration</li>
+<li>Voting mechanism</li>
+<li>Social integration for chat, emojis, other fun mechanics</li>
+<li>Relevant Noun analytics &amp; history</li>
+</ul>
+</li>
+<li>Backend:
+<ul>
+<li>Aggregate and store user votes</li>
+<li>Calculate and store relevant Noun analytics</li>
+<li>Secure kick-off of auction settlement</li>
+</ul>
+</li>
+<li>Contract:
+<ul>
+<li>Accept community donations to fund settlement</li>
+<li>Pay for instant block inclusion (via Flashbots)</li>
+<li>Ensure late block inclusion is prevented</li>
+</ul>
+</li>
+<li>E2E Speed:
+<ul>
+<li>Settlement must occur <strong>extremely</strong> rapidly to ensure inclusion requiring tuning and optimizing each component</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>Infrastructure &amp; Deployment</strong> (1 year)
+<ul>
+<li>Frontend:
+<ul>
+<li>Domain name registration</li>
+<li>Website hosting &amp; SSL</li>
+<li>Alchemy/Infura monitoring integration</li>
+</ul>
+</li>
+<li>Backend:
+<ul>
+<li>Redis (or other storage) hosting</li>
+<li>Settlement infrastructure</li>
+<li>Alchemy/Infura settlement integration</li>
+</ul>
+</li>
+<li>Contract:
+<ul>
+<li>Contract deployment</li>
+<li>Settlement contract tests</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>
+<a class="anchor" href="#project-funding-7" name="project-funding-7"></a>Project Funding</h2>
+<p>We propose funding of <strong>50 ETH</strong> to help support the deliverables above. This will be split:</p>
+<ul>
+<li>28 ETH to <a href="https://twitter.com/_forager" rel="noopener nofollow ugc">@_forager</a> for settlement backend, contract for donations and Flashbots payment, on-chain Nouns monitoring and analytics components</li>
+<li>22 ETH to <a href="https://twitter.com/0xRayo" rel="noopener nofollow ugc">@0xrayo</a> for the front end, back end, and analytics</li>
+</ul>
+<p>Start-up deployment and infrastructure costs will be covered under development costs. The website and infrastructure will be supported for a minimum of 1 year. Support after that period will fall under a seperate proposal and/or be left for community support.</p>
+<p>Settlement costs will not be included in this proposal. Normal settlement costs ~0.05 ETH, and fast inclusion may require additional payment for higher gas or Flashbots miner tips. Community donations will be solicited to support this expense.</p>
+<h2>
+<a class="anchor" href="#miscellanea-8" name="miscellanea-8"></a>Miscellanea</h2>
+<h3>
+<a class="anchor" href="#project-ethos-9" name="project-ethos-9"></a>Project Ethos</h3>
+<p>The project code will be open sourced under GNU GPLv3 with all code shared on GitHub upon project completion. Our goal is to help the Nouns community build the best roster of Nouns possible, promote the Nouns project, and maximally expand the Nouns treasury by driving higher bids on attractive Nouns.</p>
+<h3>
+<a class="anchor" href="#limitations-and-risks-10" name="limitations-and-risks-10"></a>Limitations and Risks</h3>
+<p>Noun auction settlement can be performed by any user. While recent auctions have taken ~10 blocks (and community may accept longer), it’s possible for a competing tool or mischevious user to settle the auction immediately or on an undesirable Noun. However, this is possible even without this project, and we can adjust our configuration to minimize the impact of this type of activity.</p>
+<p>Settlement on a specific block is also not guaranteed, and there may be situations where users vote for a Noun but settlement does not occur. There will be a tradeoff between settlement guarantee, time allowed for voting, and the transaction cost. We will optimize the whole system as much as possible in order to strike the best possible balance between these factors.</p>
+<p>The project will require a balance of ETH to settle each auction. Community donations will be needed, after a brief testing period, for the tool to continue to be useful. In addition, gas fees on Ethereum are volatile, so we may need to skip settlement or pay very high fees if the network is congested at the time an auction ends.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2524_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">seneca</div>
+          <div class="post_content">
+<p>+1 from me.</p>
+<p>I love the iteration into real-time voting vs passive voting on Noun heads. Makes it much more interactive and FOMO inducing around NoC.</p>
+<p>Would love to see more emphasis on post-win goodies for participants. I think it’s a real opportunity to 1) incentivize usage and 2) build a community around the FOMO Nouns app.</p>
+<p>Either way, love the prop. Great work <span class="mention">@forager</span> and <span class="mention">@rayo</span>!!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/26_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">rayo</div>
+          <div class="post_content">
+<p>absolutely.<br/>
+If this passes, we’ll be posting updates as we develop and we welcome these kinds of suggestions</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/65_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">forager</div>
+          <div class="post_content">
+<p>Just wanted to tackle a couple questions we didn’t cover in the proposal!</p>
+<hr/>
+<p>On settlement: <span class="mention">@gremplin</span>, <span class="mention">@devloper</span></p>
+<p>My thought is to largely leave settlement as-is. I am hoping we build a community (soft) consensus to use FOMO versus making it a (hard) requirement. One adjustment might be to add an explicit link to FOMO when an auction ends and slightly deemphasize the direct settlement (e.g. FOMO gets a bright color button, direct settlement is a smaller gray button). However, the underlying Nouns contracts can remain the same.</p>
+<p>This preserves the current Nouns “minting magic” and decentralization that I definitely don’t want to hurt. However, we can absolutely revisit this later when FOMO becomes the proven way to settle if we want to try alternate mechanics, address griefers, etc.</p>
+<hr/>
+<p>On technical viability: <span class="mention">@devloper</span></p>
+<p>I’ve done proof of concept runs on Rinkeby (via high gas) and Görli (via flashbots). This setup is very possible if we make an “instant” decision, but we need to explore more on how much voting time we can allow before it impacts settlement. I’m actively researching answers on this now and digging into mev-geth. However, I think we’ll have enough time for a frantic but fun voting window.</p>
+<hr/>
+<p>On the goodies: <span class="mention">@seneca</span></p>
+<p>Totally agree! As 4156 suggested, I think the idea of POAP’s or other perks have a lot of second order benefits. We didn’t outright put this in the proposal since we have a lot of uncertainty on the best approach and level of effort, but as <span class="mention">@rayo</span> mentioned, we’ll look to include this type of stuff wherever we can. We’ll also be happy to collaborate if anyone wants to take this super next-level with custom generative art or other really innovative perks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">comtechnet</div>
+          <div class="post_content">
+<p>FOMO - Fear Of Missing Out - need a new FLA!</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

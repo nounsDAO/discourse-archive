@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>[Proposal] A privacy layer for Nouns</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">[Proposal] A privacy layer for Nouns</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3101_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">duc</div>
+          <div class="post_content">
+<h2>
+<a class="anchor" href="#tldr-1" name="tldr-1"></a>TL;DR</h2>
+<p>A way for users to anonymously place a bid for daily Nouns auctions.</p>
+<h2>
+<a class="anchor" href="#problem-statement-2" name="problem-statement-2"></a>Problem statement</h2>
+<p>Privacy is a fundamental human right. But privacy concerns play a part in discouraging adoption beyond the crypto niche, as traditional investors hesitate to expose how much they trade on a trading dapp like Uniswap, or how often they invest &amp; borrow on a lending dapp like Compound. Especially, in the more relevant context to Nouns, the “bluechip” NFT collectors wouldn’t be willing to disclose to the world which NFT assets they’ve collected and are holding in their wallets.</p>
+<p>Additionally, people often intend to keep secret sauce for their own. That’s also true for professional NFT traders who wouldn’t want to retire their portfolio and trading strategy to others.</p>
+<p>For example, by observing recent Nouns bids, we could know which bids poap.eth placed, which bids he won and which nouns he has in his Ethereum wallets.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/4aRHW8xS4jdI4IANI1zCsfwqFT1.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/1/1d4325a94e6badeaee10ff40f930ba33e4d5cb47.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="4aRHW8xS4jdI4IANI1zCsfwqFT1" data-dominant-color="A6A5A3" height="389" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/1d4325a94e6badeaee10ff40f930ba33e4d5cb47_2_253x389.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/1d4325a94e6badeaee10ff40f930ba33e4d5cb47_2_253x389.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/1d4325a94e6badeaee10ff40f930ba33e4d5cb47_2_379x583.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/1d4325a94e6badeaee10ff40f930ba33e4d5cb47_2_506x778.png 2x" width="253"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">782×1198 102 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div> <div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/fTqJYlHIOLJBVCzOQLf9z3LmcCE.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/6/6f64b26d55d09fa1d19e0ccdfe3be7d0b9334aac.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="fTqJYlHIOLJBVCzOQLf9z3LmcCE" data-dominant-color="A3A2A1" height="389" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6f64b26d55d09fa1d19e0ccdfe3be7d0b9334aac_2_253x389.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6f64b26d55d09fa1d19e0ccdfe3be7d0b9334aac_2_253x389.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6f64b26d55d09fa1d19e0ccdfe3be7d0b9334aac_2_379x583.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6f64b26d55d09fa1d19e0ccdfe3be7d0b9334aac_2_506x778.jpeg 2x" width="253"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">776×1196 117 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h2>
+<a class="anchor" href="#our-solution-3" name="our-solution-3"></a>Our solution</h2>
+<p>We are from the <a href="https://incognito.org/" rel="noopener nofollow ugc">Incognito</a> core team who have been building a privacy layer for web3 since 2018. Incognito network is powered by over 3100 nodes with about $250M shielded (a.k.a deposited) volume through 13 supported bridges to popular blockchains like Ethereum, BNB Chain, Polygon, etc. The smart contract code and audit report of the bridges could be found <a href="https://github.com/incognitochain/bridge-eth/tree/dev/deployment/bridge/contracts" rel="noopener nofollow ugc">here</a> and <a href="https://www.coinspect.com/doc/Incognito%20-%20Smart%20Contract%20Audit.pdf" rel="noopener nofollow ugc">here</a> respectively.</p>
+<p>We’ve previously brought privacy to popular DEXs such as Uniswap, Curve and PancakeSwap in the past. Similarly, our solution for the aforementioned problems is integrating Incognito with Nouns smart contracts, from that we will be able to leverage Incognito’s privacy ecosystem in order to bring privacy to Nouns’ functions (bidding, voting, etc).</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/zalaDTFREurpdVx6bYDoKiKYdpL.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/f/f6775a86764b6623c903c2c1522a8d9c97292eb1.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="zalaDTFREurpdVx6bYDoKiKYdpL" data-dominant-color="F5F1F1" height="295" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/f/f6775a86764b6623c903c2c1522a8d9c97292eb1_2_624x295.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/f/f6775a86764b6623c903c2c1522a8d9c97292eb1_2_624x295.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/f/f6775a86764b6623c903c2c1522a8d9c97292eb1_2_936x442.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/f/f6775a86764b6623c903c2c1522a8d9c97292eb1_2_1248x590.png 2x" width="624"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1600×754 124 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Let me describe a concrete workflow of anonymously placing a bid with Nouns here so that you can get how it works:</p>
+<p><strong>Step 1</strong>: User needs to shield ETH into Incognito then receive private ETH in the Incognito wallet</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/fwTHIMWPCSi8RtDzO5mz09e2rn6.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/6/6cd8a290bab7dfc0e885166a03470febc0386f34.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="fwTHIMWPCSi8RtDzO5mz09e2rn6" data-dominant-color="F5F3F4" height="172" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6cd8a290bab7dfc0e885166a03470febc0386f34_2_624x172.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6cd8a290bab7dfc0e885166a03470febc0386f34_2_624x172.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6cd8a290bab7dfc0e885166a03470febc0386f34_2_936x258.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6cd8a290bab7dfc0e885166a03470febc0386f34_2_1248x344.png 2x" width="624"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1600×441 57.8 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p><strong>Step 2</strong>: From shielded private ETH in Incognito wallet, the user can anonymously place a bid for a newly created Noun.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/fYmmy5TT976qk06ZUbH3eUQKZO1.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/6/6ff35858f92bf5e07d567494d736180c8a7683e1.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="fYmmy5TT976qk06ZUbH3eUQKZO1" data-dominant-color="F6F2F3" height="285" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6ff35858f92bf5e07d567494d736180c8a7683e1_2_624x285.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6ff35858f92bf5e07d567494d736180c8a7683e1_2_624x285.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6ff35858f92bf5e07d567494d736180c8a7683e1_2_936x427.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6ff35858f92bf5e07d567494d736180c8a7683e1_2_1248x570.png 2x" width="624"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1600×731 95.9 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p><strong>Step 3</strong>: Once a Noun auction is settled, either ETH (if being losing bid) or Noun NFT (if being winning bid) will be returned to the vaults then re-shielded to a designated one-time address (OTA) in Incognito chain so that the user can receive private ETH or private Noun in the Incognito wallet.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/6t5HxbmRmDzkTzaX2czXUSZKU3W.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/2/2d56ea6ac5c2df4186260b73a9e60b76d029daf4.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="6t5HxbmRmDzkTzaX2czXUSZKU3W" data-dominant-color="F4EEEF" height="233" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/2d56ea6ac5c2df4186260b73a9e60b76d029daf4_2_624x233.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/2d56ea6ac5c2df4186260b73a9e60b76d029daf4_2_624x233.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/2d56ea6ac5c2df4186260b73a9e60b76d029daf4_2_936x349.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/2d56ea6ac5c2df4186260b73a9e60b76d029daf4_2_1248x466.png 2x" width="624"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1600×600 117 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Since all transactions initiated from Incognito wallet (to Incognito chain) are confidential and unlinkable, no one can guess which Ethereum address a bid is placed by, so which Nouns an Ethereum wallet has actually collected. For more details of how Incognito’s privacy-preserving works, please check out <a href="https://we.incognito.org/t/introduction-to-privacy-v2/12776" rel="noopener nofollow ugc">the topic</a>.</p>
+<p><a href="https://nouns.wtf/">nouns.wtf</a> is a very interesting project with many innovative ideas, especially Nouns DAO that is a novel way to fund projects built by the community. But it would be far better if the funded projects can contribute back to the Nouns DAO from their revenue to continue incentivizing other good projects. So in our design, <strong>users who want to preserve their privacy by using the product, they will need to pay a small fee from their bidding amount and the fee will be transferred directly to Nouns DAO address.</strong></p>
+<h2>
+<a class="anchor" href="#funding-request-4" name="funding-request-4"></a>Funding request</h2>
+<p>We estimate this project taking ~1.5 month of dedicated effort by a team of:</p>
+<ul>
+<li>1 cryptographer</li>
+<li>1 blockchain engineer</li>
+<li>2 app engineers (1 for the website and 1 for backend jobs)</li>
+<li>1 designer</li>
+</ul>
+<p><strong>Functions to be delivered</strong>: one complete product including website, wallet extension (for interacting with the website and Incognito blockchain) that will be ready for users to:</p>
+<ul>
+<li>shield (a.k.a deposit) ETH into Incognito chain.</li>
+<li>anonymously place a Noun bid.</li>
+<li>store private ETH and/or private Noun NFT in Incognito wallet.</li>
+<li>unshield (a.k.a withdraw) ETH and/or Noun NFT back to Ethereum wallet.</li>
+</ul>
+<p>Given a rate of 8 ETH/mo for each contributor, we’re requesting 60 ETH total for delivery of this first product.</p>
+<h2>
+<a class="anchor" href="#future-works-5" name="future-works-5"></a>Future works</h2>
+<p>Due to the integration’s flexibility, in addition to privacy bidding, other usecases such as privacy voting or privacy Nouns selling with popular marketplaces like OpenSea, X2Y2, etc are definitely possible.</p>
+<p>If you are interested in exploring the Incognito project, you might visit the following helpful resources: <a href="https://explorer.incognito.org/" rel="noopener nofollow ugc">network explorer</a>, <a href="https://we.incognito.org/" rel="noopener nofollow ugc">forum</a>, <a href="https://we.incognito.org/t/incognito-whitepaper-incognito-mode-for-cryptonetworks/168" rel="noopener nofollow ugc">whitepaper</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3193_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">midokishinji95</div>
+          <div class="post_content">
+<p>This looks interesting, though it takes time to build but it will support my collection strategy eventually. Will there be any security issue with this integration ?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3191_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">thinhle68</div>
+          <div class="post_content">
+<p>Cool idea. It’s high time for Nouns to take privacy layer into consideration. Let’s BUIDL</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3192_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">tsunamipapi</div>
+          <div class="post_content">
+<p>This sounds good, not seeing any privacy idea lately.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3101_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">duc</div>
+          <div class="post_content">
+<p>Thanks for your kind words, guys. That is giving us more motivation to bring the proposal to reality…</p>
+<p>Regarding the security question, as mentioned in the proposal, both Incognito network and similar integrations have been battle-tested on mainnets for about 3 years, not just a sort of proof of concept prototype, so we are pretty confident we can securely bring the privacy option to Nouns users.</p>
+<p>Happy to hear more feedback from the great community!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3348_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krel</div>
+          <div class="post_content">
+<p>pretty sus to have a bunch of friends/bots mindlessly encourage your prop</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">gremplin</div>
+          <div class="post_content">
+<p>Typically wallets that want to remain anonymous while bidding simply fund a fresh wallet from an exchange - the process above seems like a weirdly complex way to go about it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3101_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">duc</div>
+          <div class="post_content">
+<p>Hey <span class="mention">@gremplin</span>, you mean funding a fresh wallet from a CEX, correct? If so, there are a few obvious reasons that would prevent us from preserving our anonymity in this way:</p>
+<ol>
+<li>
+<p>The CEX might usually track all activities belonging to an identity that happened in its system. Consequently, it could easily link our deposit wallet to the fresh wallet. Even worse, many CEXs require KYC as well so we are giving up entire our privacy to a CEX if we do that way.</p>
+</li>
+<li>
+<p>Furthermore, CEXs are custodial. Remember why crypto users were moving to use DEX instead.</p>
+</li>
+<li>
+<p>Also, after winning a bid and receiving a Noun in the fresh wallet, what if we keep needing anonymity for other actions like transferring to another wallet or opening an auction on an NFT marketplace in order to hide our NFT collection strategy?</p>
+</li>
+</ol>
+<p>While the proposed solution seems complicated behind the scene (for example, zero-knowledge proofs we use for privacy-preserving), we will be trying to bring the most convenient UI/UX to the end-users via Incognito wallet and web interface which users can achieve (3) frictionlessly alongside the main goal - preserve anonymity. We hope that our proposal would bring a complete privacy solution to  Nouns over all common functions, not only bidding.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3101_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">duc</div>
+          <div class="post_content">
+<p>Hello Nouns fam, in order to help non-technical audiences easily envision how the UI/UX will look like, we’ve made intuitive mock-ups for the aforementioned steps in the original proposal as follows:</p>
+<h4>
+<a class="anchor" href="#step-1-1" name="step-1-1"></a>Step 1:</h4>
+<p>User simply opens Incognito wallet extension, goes to the shielding page by clicking on “Shield a coin” button then sends ETH to the shielding address (shown in QR code) to perform shielding into Incognito.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/fHQO0DmaQ3TPAbMlR9AGitQe0MF.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/6/6e159a7231318490c16ccc07902b5a5066162679.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="fHQO0DmaQ3TPAbMlR9AGitQe0MF" data-dominant-color="2F3338" height="468" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6e159a7231318490c16ccc07902b5a5066162679_2_251x468.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6e159a7231318490c16ccc07902b5a5066162679_2_251x468.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6e159a7231318490c16ccc07902b5a5066162679_2_376x702.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/6e159a7231318490c16ccc07902b5a5066162679_2_502x936.jpeg 2x" width="251"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">750×1392 106 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div> <div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/oPwnzT9puhdonzjkAmToQ2qAnqy.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/a/ae072434d86bc7bb747728ff4b2b998945f5700a.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="oPwnzT9puhdonzjkAmToQ2qAnqy" data-dominant-color="393939" height="468" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/ae072434d86bc7bb747728ff4b2b998945f5700a_2_253x468.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/ae072434d86bc7bb747728ff4b2b998945f5700a_2_253x468.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/ae072434d86bc7bb747728ff4b2b998945f5700a_2_379x702.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/ae072434d86bc7bb747728ff4b2b998945f5700a_2_506x936.png 2x" width="253"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">750×1392 86.7 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h4>
+<a class="anchor" href="#step-2-2" name="step-2-2"></a>Step 2:</h4>
+<p>From pNouns website, user can place an anonymous bid similarly to what he/she is performing with the current Nouns website (<a href="https://nouns.wtf">https://nouns.wtf</a>). Only discrepancy is that he/she would sign the bid transaction through Incognito wallet extension instead of Metamask.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/toGh5lbogYytLN57ueNP1YSweyI.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/c/ce094bc92e0e434dda3760bd39b07ebdaf078140.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="toGh5lbogYytLN57ueNP1YSweyI" data-dominant-color="46484A" height="348" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/ce094bc92e0e434dda3760bd39b07ebdaf078140_2_624x348.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/ce094bc92e0e434dda3760bd39b07ebdaf078140_2_624x348.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/ce094bc92e0e434dda3760bd39b07ebdaf078140_2_936x522.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/ce094bc92e0e434dda3760bd39b07ebdaf078140_2_1248x696.jpeg 2x" width="624"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1558×870 80.9 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h4>
+<a class="anchor" href="#step-3-3" name="step-3-3"></a>Step 3:</h4>
+<p>User can view a list of privacy nouns he/she is owning from winning privacy biddings on pNouns website.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/vF2S9UGF0QzDgbtIoqmpRqQJ631.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/d/dde7344248469bf4761edc03d9380efce639bb2b.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="vF2S9UGF0QzDgbtIoqmpRqQJ631" data-dominant-color="5C5859" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/dde7344248469bf4761edc03d9380efce639bb2b_2_526x500.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/dde7344248469bf4761edc03d9380efce639bb2b_2_526x500.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/dde7344248469bf4761edc03d9380efce639bb2b_2_789x750.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/dde7344248469bf4761edc03d9380efce639bb2b_2_1052x1000.png 2x" width="526"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×1368 64.6 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h4>
+<a class="anchor" href="#step-4-4" name="step-4-4"></a>Step 4:</h4>
+<p>Finally, user can unshield a privacy Noun back to Ethereum by clicking on “Unshield” button that then would open Incognito wallet extension on the top right corner for inputting recipient Ethereum wallet and confirming the unshielding transaction. The “Unshield” button will be visible when user hover in a particular privacy Noun.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/rELuTqFqK32Jp2KgfjrbWW3h0io.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/c/c1d665fec9832ebcf0f1353b14d2e1d87ce989dc.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="rELuTqFqK32Jp2KgfjrbWW3h0io" data-dominant-color="5C585A" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/c1d665fec9832ebcf0f1353b14d2e1d87ce989dc_2_526x500.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/c1d665fec9832ebcf0f1353b14d2e1d87ce989dc_2_526x500.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/c1d665fec9832ebcf0f1353b14d2e1d87ce989dc_2_789x750.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/c1d665fec9832ebcf0f1353b14d2e1d87ce989dc_2_1052x1000.png 2x" width="526"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1440×1368 80.2 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>Thank you!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">neji</div>
+          <div class="post_content">
+<p><strong>Update</strong> : nevermind, I see the mock-up, getting how it works now. (I didn’t notice the comments just read the original prop)<br/>
+Thanks for your answer, I’m a big fan of privacy projects and will definitely give it a try once it goes live.<br/>
+To be honest, I’m not a developer so couldn’t fully understand everything in the proposal. Specifically, when you say you will bring privacy to Nouns bidding function, can you please give an intuitive mock-up or things like that so that even the average audience can envision how it will look like?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Linno</div>
+          <div class="post_content">
+<p>Hi <span class="mention">@duc</span> , Thanks for providing this walk through. This is a truly ground breaking idea - totally privacy during an auction. I <img alt=":heart:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/heart.png?v=12" title=":heart:" width="20"/> it!  This would be ground breaking for Nouns and a key differentiator.</p>
+<p>My only request would be that the Incognito Wallet Extension (I see this being like the Metamask with Privacy-Enabling features) have integration with Hardware Wallet E.g. Ledger Nano, so that my private keys are safe and secure on the Ledger. I would also use my Ledger to sign transactions, just like I would with using Metamask.</p>
+<p>Do others in the Noun fam agree with my idea?<br/>
+If you do, please express your approval by clicking the <img alt=":heart_decoration:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/heart_decoration.png?v=12" title=":heart_decoration:" width="20"/> on this Comment. Thanks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3101_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">duc</div>
+          <div class="post_content">
+<p>Glad to hear that you love the prop. Surprisingly, you also knew the Incoginto Wallet Extension. That product is pretty new and has just been launched for a month.</p>
+<p>Re Hardware Wallet support, yes, totally agree with you, security should be the 1st priority and our team is working on it in this Q4.</p>
+<p>And sorry for the late response, the prop didn’t get much support from the community (yet). However, we will still build it anyway since bringing privacy to the crypto space is a mission that our team set on day one.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Linno</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="14" data-topic="2554" data-username="duc">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://dub1.discourse-cdn.com/flex005/user_avatar/discourse.nouns.wtf/duc/48/3101_2.png" width="24"/> duc:</div>
+<blockquote>
+<p>the prop didn’t get much support from the community (yet). However, we will still build it anyway since bringing privacy to the crypto space is a mission that our team set on day one.</p>
+</blockquote>
+</aside>
+<p>Thx for the update <span class="mention">@duc</span>. I’m amazed by the dedication of the Incognito team. They remain true to their mission of bringing privacy to the crypto space.</p>
+<p>For folks here in the Noun’s community,  if you do not know much about the Incognito project, I highly recommend you take a look at all the exciting stuff on their recently published  Q4 Dev Roadmap here - <a class="inline-onebox" href="https://we.incognito.org/t/incognitos-q4-2022-technical-roadmap/19343" rel="noopener nofollow ugc">Incognito's Q4 2022: Technical Roadmap - Roadmap - Incognito</a></p>
+<p>It’s an impressive project with a high quality technical team. The most exciting thing for my personally is the “Hardware Wallet” support work is starting with Phase 1 development.  They not only say things, they actually are building it.</p>
+<p>Check this project out!</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

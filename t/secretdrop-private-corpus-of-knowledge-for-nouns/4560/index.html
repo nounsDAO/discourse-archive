@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>SecretDrop - Private Corpus of Knowledge for Nouns</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">SecretDrop - Private Corpus of Knowledge for Nouns</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/6332_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">jaeaster</div>
+          <div class="post_content">
+<h1>
+<a class="anchor" href="#tldr-1" name="tldr-1"></a>TLDR;</h1>
+<p>We propose SecretDrop, a private corpus of knowledge, memes, media and data built and accessed only by current and future Nouners!</p>
+<h2>
+<a class="anchor" href="#background-2" name="background-2"></a>Background</h2>
+<p>We a team of two building <a href="https://medusanet.xyz" rel="noopener nofollow ugc">Medusa</a>, a decryption oracle based on threshold cryptography. We are exploring problems we can solve for Nouns that involve private data managed onchain. We’re inspired by PersonaeLabs proposals for <a href="http://heyanoun.xyz" rel="noopener nofollow ugc">heyanoun.xyz</a> and <a href="https://prop.house/nouns/private-voting-research-sprint/3954" rel="noopener nofollow ugc">Aztec+Aragon’s proposal</a> for private voting.</p>
+<p>SecretDrop is one of many ideas we have that we can build with Medusa. We also have some thoughts around private auctions and how we can improve private voting with Medusa. Our goal is to engage with the community, get feedback and fail fast if the need is not there. Feel free to leave questions, comments, ideas and suggestions. We hope this is the start of a collaborative relationship between Medusa and Nouns!</p>
+<h2>
+<a class="anchor" href="#introduction-3" name="introduction-3"></a>Introduction</h2>
+<p>SecretDrop enables Nouners to broadcast messages and content to Nouns DAO, resulting in an exclusive corpus of knowledge, memes, media and data that only current and future Nouners can access!</p>
+<p>SecretDrop is powered by <a href="https://medusanet.xyz" rel="noopener nofollow ugc">Medusa</a>, a decentralized decryption oracle network incubated by Protocol Labs, and is a multi-chain app that composes Ethereum state with Arbitrum execution.</p>
+<h2>
+<a class="anchor" href="#objective-4" name="objective-4"></a>Objective</h2>
+<p>Our primary objective is to build a web3-native application where Nouners share secret content with other Nouners. We achieve this with Medusa, a decryption oracle that enables users to access private content on web3. This application enables members to broadcast encrypted messages to members of the DAO without fear of interception or unauthorized access.</p>
+<h2>
+<a class="anchor" href="#secretdrop-mechanisms-5" name="secretdrop-mechanisms-5"></a>SecretDrop mechanisms</h2>
+<p>A new secret is represented as an NFT on Arbitrum with public metadata + private content stored in Arweave.</p>
+<p>The process is as follows:</p>
+<ol>
+<li>
+<strong>Creating a new secret</strong>: A Noun encrypts their message (can be a document, video etc) and submits it in the application. The content is uploaded to Arweave and then a transaction mints an NFT created by the authoring Noun and owned by the SecretDrop contract. A signal is also emitted to alert Medusa of the new encrypted content. A preview of the content based on public metadata is discoverable through the application and can be shared publicly.</li>
+<li>
+<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Unlocking a secret:</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> A Noun submits a tx to SecretDrop, which first verifies they are a Noun and then emits a request to Medusa. The Noun receives a secret reencryption from Medusa (via onchain events), which allows them to decrypt the content. Once a Noun has been granted access, they will not have to submit a tx to view the content in subsequent sessions.</li>
+</ol>
+<p>The content is always encrypted, i.e. private, and can be stored on any storage solution. For this proposal, we plan on using the Arweave decentralized storage network via <a href="https://bundlr.network/" rel="noopener nofollow ugc">Bundlr</a> for ease of use.</p>
+<p>For performance and cost reasons, we combine Ethereum and Arbitrum execution. All transactions originate on Ethereum in order to authorize Noun ownership. Further processing, including onchain proof verification, occur on Arbitrum via <a href="https://developer.arbitrum.io/arbos/l1-to-l2-messaging#eth-deposits" rel="noopener nofollow ugc">L1-to-L2 messaging</a>. Because all txs originate on Ethereum, Nouns will not have to bridge or switch networks; the whole process will be transparent and seamless to users.</p>
+<h2>
+<a class="anchor" href="#benefits-6" name="benefits-6"></a>Benefits</h2>
+<p>By implementing a private broadcasting mechanism using Medusa, Nouns DAO members will benefit from:</p>
+<ol>
+<li>Fully decentralized way of sharing exclusive content between current and future Nouns DAO members</li>
+<li>Native onchain experience: Medusa interactions happen fully onchain, and later can be integrated more deeply into the DAO structure (instead of an external service). For example, Nouns could leverage onchain governance to allow public access to certain content via Medusa’s public decryption.</li>
+<li>Collaborating with a pioneering project in the Web3 space that leverages threshold cryptography for private data access.</li>
+</ol>
+<h2>
+<a class="anchor" href="#budget-and-timeline-7" name="budget-and-timeline-7"></a>Budget and Timeline</h2>
+<p>We estimate the project will take approximately 3 months to complete with a team of 2-3 developers. The proposed budget is $80,000 to cover development, testing, and deployment costs.</p>
+<h2>
+<a class="anchor" href="#deliverables-8" name="deliverables-8"></a>Deliverables</h2>
+<h3>
+<a class="anchor" href="#milestone-1-15-months-9" name="milestone-1-15-months-9"></a>Milestone 1:  1.5 months</h3>
+<ol>
+<li>SecretDropGateway smart contract for Nouns DAO members on Ethereum.</li>
+<li>SecretDrop smart contract on Arbitrum that manages Secret NFTs and integrates with the Medusa network for encrypted message management and decryption.</li>
+<li>Integration with the external storage layer (Arweave / Bundlr)</li>
+</ol>
+<h3>
+<a class="anchor" href="#milestone-2-15-months-10" name="milestone-2-15-months-10"></a>Milestone 2:  1.5 months</h3>
+<ol>
+<li>An activity-feed and archive interface to submit, browse, and unlock messages from Nouns</li>
+<li>A dashboard showing the Medusa network usage and health</li>
+<li>API documentation and support for integration with SecretDrop contracts</li>
+</ol>
+<h1>
+<a class="anchor" href="#team-11" name="team-11"></a>Team</h1>
+<p>We are a team of two people with complementary backgrounds and have worked together efficiently over the last 10 months. Nicolas Gailly is veteran cryptography researcher and distributed systems engineer. Nicolas is the creator of <a href="https://drand.love/" rel="noopener nofollow ugc">drand</a>, a network akin to Medusa relying on threshold cryptography that generates unbiased randomness essential for Filecoin leader elections and other blockchains. He has worked on the consensus layer of Filecoin as well as the proof of storage underlying the blockchain. He is also versed in the SNARKs space and implemented and deployed in production <a href="https://research.protocol.ai/blog/2021/snarkpack-how-to-aggregate-snarks-efficiently/" rel="noopener nofollow ugc">snarkpack</a>, a way to efficiently aggregate thousands of SNARKs together.</p>
+<p>Jonathan Easterman is a versatile developer with product savvy and greenfield engineering experience. Jonathan spearheaded a multi-year transformation of AppFolio’s architecture from a monolithic Ruby-on-Rails application running on bare-metal servers to cloud-native microservices running on AWS and Kubernetes. This laid the foundation for product teams to accelerate new feature development. He then led a team to build a brand new offering where he scaled an SMB SaaS product for real estate service providers from 0 to 10,000 DAU over 18 months.</p>
+<p>Nicolas owns the core Medusa cryptography and networking while Jonathan owns the smart contracts, deployment infrastructure, SDK and frontend dapps of Medusa.</p>
+<p>Nicolas Gailly:</p>
+<ul>
+<li>Linkedin <a href="https://www.linkedin.com/in/nicolas-gailly-3353688a/" rel="noopener nofollow ugc">https://www.linkedin.com/in/nicolas-gailly-3353688a/</a>
+</li>
+<li>Github: <a href="https://github.com/nikkolasg/" rel="noopener nofollow ugc">https://github.com/nikkolasg/</a>
+</li>
+<li>Protocol Labs page: <a href="https://research.protocol.ai/authors/nicolas-gailly/" rel="noopener nofollow ugc">https://research.protocol.ai/authors/nicolas-gailly/</a>
+</li>
+</ul>
+<p>Jonathan Easterman:</p>
+<ul>
+<li>Linkedin <a href="https://www.linkedin.com/in/jonathan-easterman/" rel="noopener nofollow ugc">https://www.linkedin.com/in/jonathan-easterman/</a>
+</li>
+<li>Github: <a href="https://github.com/jaeaster" rel="noopener nofollow ugc">https://github.com/jaeaster</a>
+</li>
+</ul>
+<h2>
+<a class="anchor" href="#caveats-12" name="caveats-12"></a>Caveats</h2>
+<h3>
+<a class="anchor" href="#decentralization-roadmap-13" name="decentralization-roadmap-13"></a>Decentralization Roadmap</h3>
+<p>As of May 2023, Medusa is a pre-Mainnet network with nodes solely operated by the core team. We are working to move to a permissioned network (similar to Cosmos) during the next 6-12 months and then gradually introduce permissionless access to participate in the network. We will introduce a plan for the Noun community to gradually move to the permanent Mainnet once shipped.</p>
+<h3>
+<a class="anchor" href="#guarantees-14" name="guarantees-14"></a>Guarantees</h3>
+<p>The availability of secret content will rely on the Arweave/Bundlr stack. The availability of access to that content relies on Ethereum. The ability for Nouners to unlock access to new content relies on Medusa and Arbitrum.</p>
+<p>We guarantee this pre-mainnet Medusa network is to run for at least 1 year. There is no guarantee of 100% uptime. If the network is not available for any reason, requests can still be sent and responses will be delivered in a reasonable time frame (24-48 hours). Therefore, message broadcasts will always settle eventually.</p>
+<h3>
+<a class="anchor" href="#expectations-15" name="expectations-15"></a>Expectations</h3>
+<p>This is an alpha release of the Medusa product and is to be used with caution. The code has not been yet audited. However because major web3 ecosystems would benefit from Medusa, we feel putting Medusa on Mainnet already can help ecosystems such as Nouns and allow the Medusa project to receive early feedback in a controlled manner.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

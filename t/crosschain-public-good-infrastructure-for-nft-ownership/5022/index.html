@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Crosschain Public Good Infrastructure for NFT ownership</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Crosschain Public Good Infrastructure for NFT ownership</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">pr0</div>
+          <div class="post_content">
+<p>Authors:<br/>
+<span class="mention">@pr0</span> Founder of Scry Protocol</p>
+<p>Summary<br/>
+Scry is an open source, permissionless infrastructure for oracles which is the only protocol that allows anyone to be able to run their own oracles and source their own data from any oracles they choose. We are building Veryfi, an open tool that allows anyone, on any chain, to verify assets on any other chain, allowing for access to protocols for NFT holders on other chains, without needing to transfer ownership or even send a transaction.</p>
+<p>Motivation<br/>
+Veryfi allows for nouns holders to use their ownership on other chains, such as L2s where gas may be much cheaper for new use cases such as games, protocols, rewards without needing to give their NFT to some contract. The system is fully open source and will help other projects aswell to be able to access ownership on any EVM network. This allows not only direct value for the DAO and its holders but also to fund a public good, with branding and awareness as a funder for core infrastructure being put on the tool.</p>
+<p>Core features and new use cases that Veryfi enables</p>
+<ol>
+<li>Access to NFT Holders Across Chains<br/>
+Use Case:<br/>
+Consider a gaming company that wants to use on nouns on Ethereum but to deploy their game onto Optimism or Arbitrum. This NFT grants its holders access to a special feature in a game however theres no way to access its owner without some other contract or system holding the NFT. Veryfi allows the contract to recognize the NFT holders on Ethereum and grant them similar access on the L2-based game without the need for any token transfers.</li>
+</ol>
+<p>How Veryfi Facilitates This:<br/>
+The system can verify if a particular Ethereum address holds the NFT and then grant access or benefits on another chain’s protocol or DApp based on this verification. This is explored in the docs</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.veryfi.xyz">
+<header class="source">
+<img class="site-icon" data-dominant-color="7EF7B6" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/a/a08a09314a21ab52d2538a7df4df3d10718c070f.png" width="500"/>
+<a href="https://docs.veryfi.xyz" rel="noopener nofollow ugc" target="_blank">docs.veryfi.xyz</a>
+</header>
+<article class="onebox-body">
+<div class="aspect-image" style="--aspect-ratio:690/362;"><img class="thumbnail" data-dominant-color="F7F9FB" height="362" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/504d68c851451bb36e866628d7d5fc6571779775_2_690x362.png" width="690"/></div>
+<h3><a href="https://docs.veryfi.xyz" rel="noopener nofollow ugc" target="_blank">Welcome to Veryfi</a></h3>
+<p>A single tool for every asset, on all chains</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+<ol start="2">
+<li>Proposals and Governance Across Chains<br/>
+Use Case:<br/>
+Decentralized projects often have governance tokens that allow holders to vote on proposals. As DeFi protocols expand to multiple chains, ensuring that token holders on all chains can participate in governance becomes crucial. Veryfi can allow votes to happen on other chains for holders of assets Ethereum or any EVM network.</li>
+</ol>
+<p>Specification<br/>
+The CrosschainLookup contract facilitates the process of verifying ownership of tokens across various blockchain networks. This includes NFTs, ERCs, staked tokens, or any other tokens that implement the balanceOf function. The contract works by interacting with the Morpheus oracle to fetch crosschain data about the user’s balance.</p>
+<p>A demo is currently on Sepolia and can be tried here<br/>
+veryfi.xyz</p>
+<p>Contracts are avilable at</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://sepolia.etherscan.io/address/0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9">
+<header class="source">
+<img class="site-icon" data-dominant-color="3C526A" height="32" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/3/32725d8f1489b1a88b95e30b8c7ddcb335273baf.png" width="32"/>
+<a href="https://sepolia.etherscan.io/address/0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9" rel="noopener nofollow ugc" target="_blank">Ethereum (ETH) Blockchain Explorer</a>
+</header>
+<article class="onebox-body">
+<div class="aspect-image" style="--aspect-ratio:101/70;"><img class="thumbnail" data-dominant-color="3D4A69" height="70" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/b/b10426e519efd2173c25223be086d35280cfd18c.png" width="101"/></div>
+<h3><a href="https://sepolia.etherscan.io/address/0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9" rel="noopener nofollow ugc" target="_blank">CrosschainLookup | Address 0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9 |...</a></h3>
+<p>The Contract Address 0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9 page allows users to view the source code, transactions, balances, and analytics for the contract address. Users can also interact and make transactions to the contract directly on...</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+<p>The methodology<br/>
+Veryfi and Nouns: Enabling Off-chain Access<br/>
+The Core Concept:<br/>
+Veryfi acts as a bridge, enabling cross-chain verification of assets. This means that the ownership or possession of a particular Noun (NFT) can be verified on one blockchain and then be used to grant access or benefits on another platform, even if that platform is off-chain.</p>
+<p>How It Works:<br/>
+Step 1: Verification of Ownership</p>
+<p>When a Nouns holder wishes to access an off-chain tool, game, or contract, the first step is to verify their ownership of the Noun.</p>
+<p>Using Veryfi, the platform can verify if a particular address on a blockchain (e.g., Ethereum) holds the specific Noun.<br/>
+Step 2: Granting Access<br/>
+Once Veryfi confirms the ownership of the Noun, the onchain contract will commit to the ownership using Scrys oracle and then the contract for the protocol can grant the user access to the tool, game, or contract based on Veryfis contract.<br/>
+This could be in the form of unlocking specific features, granting premium access, or any other benefits the platform wishes to provide.</p>
+<p>Practical Application: Gaming Scenario<br/>
+Scenario: Imagine a gaming company that has integrated blockchain technology. They’ve issued unique NFTs on the Optimism chain, granting special in-game abilities or characters. But since these are not on the same network theres no way to give these NFTs to holders.</p>
+<p>Process:<br/>
+A player, who is also a Nouns holder, wishes to access this game and use their special abilities or characters.<br/>
+When the player logs into the game, it prompts them for verification.<br/>
+The game, via Veryfi, checks if the player’s blockchain address indeed holds the Noun.<br/>
+Once verified, the game unlocks the special abilities or characters for that player.</p>
+<p>Benefits:<br/>
+Seamless User Experience: Nouns holders don’t need to go through complex processes or make blockchain transactions to prove their ownership.<br/>
+Flexibility: Veryfi’s methodology allows Nouns holders to enjoy their benefits across a wide range of platforms, not just those on-chain.<br/>
+Security: Since the user doesn’t need to transfer the Noun or engage in on-chain transactions, there’s no risk of asset loss.<br/>
+Broad Applications: Beyond gaming, this system can be used for any off-chain application, tool, or service that wishes to offer benefits based on Noun ownership.</p>
+<p>Implementation<br/>
+Details can be found here<br/>
+docs.veryfi.xyz</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://sepolia.etherscan.io/address/0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9">
+<header class="source">
+<img class="site-icon" data-dominant-color="3C526A" height="32" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/3/32725d8f1489b1a88b95e30b8c7ddcb335273baf.png" width="32"/>
+<a href="https://sepolia.etherscan.io/address/0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9" rel="noopener nofollow ugc" target="_blank">Ethereum (ETH) Blockchain Explorer</a>
+</header>
+<article class="onebox-body">
+<div class="aspect-image" style="--aspect-ratio:101/70;"><img class="thumbnail" data-dominant-color="3D4A69" height="70" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/b/b10426e519efd2173c25223be086d35280cfd18c.png" width="101"/></div>
+<h3><a href="https://sepolia.etherscan.io/address/0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9" rel="noopener nofollow ugc" target="_blank">CrosschainLookup | Address 0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9 |...</a></h3>
+<p>The Contract Address 0xb21931f28AfED2A4fa6Cf18e8802AEf58A7242E9 page allows users to view the source code, transactions, balances, and analytics for the contract address. Users can also interact and make transactions to the contract directly on...</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+<p>Temperature Check<br/>
+We would like to gather feedback from the community about this post and invite Nouns holders to discuss if this is interesting and how it could benefit the DAO as well the crypto space. This request allows me to keep building these tools, which so far have received 0 funding other than an OP grant, which is locked for 1y, and $5k from Optimism from RPGF. This project has been fully self funded as well as the entire oracle infrastucture including all the tools and contracts</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Create a unique Noun-vestment fund model</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Create a unique Noun-vestment fund model</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3808_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0x7d54</div>
+          <div class="post_content">
+<p><strong>Proposal</strong></p>
+<p>Create a unique ‘Noun-vestment’ fund model by (in the first instance) depositing 5k Ξ into Alchemix v2 and withdrawing a 2.5k Ξ (initially as alETH) no-liquidation, self-repaying loan to selectively invest in strong Ethereum ecosystem DeFi growth + income opportunities towards an ultimate goal of per-Noun DAO treasury stability or even expansion, all while not risking (outside of Alchemix smart contract risk) the original 5k Ξ capital.</p>
+<p><strong>Introduction</strong></p>
+<p>One potential self-critique of Nouns DAO is that treasury funds to date have been disbursed principally for i) brand recognition growth, ii) to support good causes, and iii) to fund operations, but not additionally – outside of a stETH position that earns approximately 5% APR – towards major capital growth.</p>
+<p>An idealized investment goal might be to offset or even exceed ongoing expenditures. Doing so would be a step towards per-Noun stability or expansion, respectively, of the DAO treasury.</p>
+<p>Without this, and with expected continued expenditures (which we all support), a risk is that as the per-Noun DAO treasury value decreases, perceived value for new daily Noun auctions could understandably lower, bringing in successively less new funding, leading to a negative feedback loop for the DAO.</p>
+<p>Yet, concerns with a more aggressive investment arm of the DAO are also understandable. Namely, i) taking shots at higher returns involves putting major capital at risk of loss, and ii) we could achieve investment growth in $ terms but still underperform Ξ, which is otherwise the core treasury holding and part of our Ethereum ecosystem ethos.</p>
+<p>The Alchemix DeFi protocol presents an opportunity to largely* eliminate these concerns while simultaneously investing aggressively for sustainable growth. Specifically, an initial Ξ balance is deposited to Alchemix and directed to an external yield-bearing smart contract, such as Yearn Finance’s yvWETH vault, an Aave aETH position, Lido’s stETH, or Rocket Pool’s rETH.</p>
+<p>*There would remain some risk of Alchemix (or Yearn, Aave, Lido, or Rocket Pool) smart contract exploit; while the smart contracts have been audited and the protocol is battle tested, such risk should never be considered truly zero.</p>
+<p>Up to 50% of the Ξ deposit balance can then be borrowed against the position in the form of the Alchemix synthetic asset alETH, which in turn can either be used to generate yield itself via Curve/Convex or be swapped to Ξ as a basis for making DeFi or other (e.g. NFTs) investments, or even for major off-chain purchases (which is not part of the current proposal).</p>
+<p>Meanwhile, 90% of the yield from the full deposit amount (10% of the yield represents revenue to Alchemix) is automatically applied towards paying off the borrowed alETH. Since the original deposit and alETH are both denominated in Ξ, there is no liquidation in the Alchemix model. As the loan self-repays, a depositor could either borrow corresponding additional amounts of alETH or they could withdraw proportional amounts of the original deposit.</p>
+<p>The depositor can also choose at any time to fully repay the remaining alETH loan balance to then be able to immediately withdraw the entire original deposit. If no alETH repayments are made outside of the Alchemix self-repaying process, the user will still eventually be able to withdraw their full original Ξ deposit, this will just require patience, with the amount of time required depending on the (variable) rate of yield on the underlying asset.</p>
+<p>Thus, Alchemix offers the perfect setup for a ‘noun-vestment’ fund or funds. The original capital is fully preserved and denominated in Ξ (and could still be formally or at least informally considered part of the Nouns DAO treasury), while providing opportunity for high growth + income investment strategies in the interim.</p>
+<p><strong>Long-term vision</strong></p>
+<p>One goal of this proposal is for the established fund to represent a proof-of-concept demonstration. If successful and if supported by the community, then additional Noun-vestment funds could subsequently be initiated, perhaps with different strategies and visions. For example, one fund could focus on the Curve ecosystem, another on small cap DeFi protocols, another on ‘real-yield’ DeFi protocols, another on the NFT gaming ecosystem, and more, all depending on community preferences and voting.</p>
+<p>Alternatively (or additionally), the original Noun-vestment fund could be expanded. That said, the below draft operational vision for this fund already includes an approach for organic expansion of the fund even while accelerating repayment of the Alchemix alETH loan in order to return the original 5k Ξ capital to the DAO ahead of the self-repayment schedule. Following loan repayment completion, the fund would begin sending this income directly to the DAO.</p>
+<p>Lessons learned from the first Noun-vestment fund would be used to enhance the operational manual for future funds. Potentially, some on-chain infrastructure for certain investment operations (e.g. decision making and execution) for certain types of Noun-vestment funds, could be built out, where possible.</p>
+<p>Beyond the ultimate goals of financial sustainability and growth, another benefit of this proposal is education. The draft operational guidelines below include multiple expectations for fund leaders to communicate with the community both regarding strategies, opportunities, and results. Recognizing that NFT and DeFi communities are still over-separated, this proposal provides a great opportunity for knowledge sharing across the Nounsverse.</p>
+<p><strong>Proposed operation of the first ‘Noun-vestment’ fund</strong></p>
+<p>Each guideline below is a first draft with the intention to spur community discussion, prior to the further development of a final draft proposal.</p>
+<p><em>1. Multi-signature wallet fund leadership: 3/5 or 4/7 setup.</em></p>
+<p>Prior to finalizing the official proposal, a multisig wallet (using the well-established Safe protocol) would need to be initialized with either 5 or 7 total possible signers (requiring 3 or 4 total signers for any transaction to be processed, respectively).</p>
+<p>It is critical that the multisig design be beyond reproach and have full community trust. Thus, for a 3/5 multisig setup, I would propose that Nounders fill 3 of the signer positions, if they are willing. For a 4/7 multisig, Nounders could represent 4 of the signers. The remaining signers should be others from the Nouns community with significant experience in crypto and DeFi, commitment to the Noun-vestment fund model experiment and to communicating with other signers to develop strategies and finalize decisions, and willingness to perform multisig responsibilities.</p>
+<p>I (0x7d54) volunteer as one of the signers and I would take responsibility for establishing structures for receiving community input on investment opportunities, providing updates on fund actions to the community, and regularly reporting on results (see below).</p>
+<p>The fund leadership structure for at least this initial Noun-vestment fund is organized around a multisig wallet rather than a more fully decentralized solution for several reasons. First, for investment effectiveness, the fund may sometimes need to act quickly on opportunities and otherwise should do so without pre-announcing intentions, to avoid being front-run. Second, there are significant design and development challenges, costs, and novel smart contract risks inherent in a truly decentralized framework for fund execution. Still, as discussed above this could be a long-term goal, which may be feasible for certain funds, depending on their specific approaches.</p>
+<p>All signers, when discussing potential investment opportunities for the fund, must clearly disclose to each other (and disclose publicly after any investment is made) any specific personal or related business holdings in that asset.</p>
+<p><em>2. Communication.</em></p>
+<p>The broader community should have a meaningful voice in the fund’s process, including but not limited to the presentation of investment ideas and strategies, supported by research. These discussions can and should happen in the open and could take place in various venues (including but not limited to Twitter, and with the approach evolving with the space over time).</p>
+<p>In addition to the Noun-vestment fund’s wallet address being public knowledge for activity tracking, the fund’s leadership should deliver informal updates to the community after every major transaction. These updates should include not only data on the action taken but also the vision/thesis behind the decision to take the action.</p>
+<p>Formal reports on asset holdings and values, investment returns, early loan repayments, income payments to the DAO, and comments on any evolution in the fund’s strategy should be prepared and delivered to the DAO and the broader community on a quarterly basis.</p>
+<p><em>3. General investment and growth strategy.</em></p>
+<p>Investments will be restricted to the L1 and L2 Ethereum ecosystem.</p>
+<p>Risk/reward investment approach = medium-aggressive. With this initial fund, we would aim for achieving strong gains in order to help demonstrate the potential of the broader Noun-vestment model. Doing so requires some risk-taking. Yet, we also need to simultaneously recognize the responsibility of this fund as the first implementation of this concept, with negative consequences for potential future implementations if this effort is unsuccessful (though, again, regardless, the original capital is always fully preserved and denominated in Ξ).</p>
+<p>Thus, this initial Noun-vestment fund iteration would take some aggressive, concentrated, high-risk/reward positions but including with investment in some more established projects that are considered significantly under-valued (in the context of the fund’s investment thesis).</p>
+<p>Prior to taking any position, all potential investments will be carefully considered in the context of their potential ability to substantially outperform Ξ on a selected target timeframe. Assets that are viewed as having the potential to outperform Ξ alongside an opportunity for realizing significant yield (income) in the meantime will be especially prized.</p>
+<p>At the point when a new investment is being considered, a maximum of 25% of fund value should be held in long-term locked (e.g. ve-token systems) and/or otherwise illiquid (e.g. small cap tokens with limited liquidity and longer-term investment horizons) assets. A new investment or strategy should not bring this value to &gt;25%.</p>
+<p>The fund should invest and apply its assets in multiple different protocols to spread smart contract exploit risk.</p>
+<p>On an annualized basis, 20% of the fund’s profit/income should be used to repay the alETH loan (after each such early repayment, the max amount of the original Ξ deposit should be withdrawn and returned to the Nouns DAO treasury). Once the loan is fully repaid and the entire original capital has been returned to the Nouns DAO treasury, then 20% of the fund’s annualized profit/income should be sent directly to the Nouns DAO treasury. The remaining 80% of the fund’s profit/income should be re-invested for continuing Noun-vestment fund growth.</p>
+<p><em>4. Miscellaneous.</em></p>
+<p>The DAO can request accelerated return of investment gains to the treasury or full dissolution of the fund at any time, based on formal vote.</p>
+<p><strong>Disclosure</strong></p>
+<p>The original author of this proposal (0x7d54) is a holder of $ALCX, $YFI, and other DeFi ecosystem tokens that could indirectly benefit from the discussion of and/or implementation of this strategy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3808_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0x7d54</div>
+          <div class="post_content">
+<p>I’ve received a few good feedback points, which I will summarize here:</p>
+<p>a. Suggestion to reduce the proof-of-concept fund amount from 5k Ξ to 500 Ξ.</p>
+<p>I should have better explained/justified the 5k Ξ amount in the original proposal. This amount was such both for it to feel worthwhile for the fund leaders who are donating their time for research, discussion, coordination, execution, and reporting, and also so that if the fund has very strong gains, it would make a big positive impact on the Nouns DAO treasury (and again, all with preservation of the original capital). However, if we emphasize that this is purely a first trial stage with following proposals for additional Ξ for this fund (and then potentially other, separate funds) once success is demonstrated, then likely we would still be able to recruit a motivated team of Nouners.</p>
+<p>b. Suggestion to not request Nounders to be the majority of the multisig, with plenty of other DeFi-experienced and sufficiently community-established Nouners (to have sufficient community trust and good multisig security) who could be involved in this capacity available.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3808_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0x7d54</div>
+          <div class="post_content">
+<p>A few other updates, both based on feedback/questions received and my own continued brainstorming. Eventually there will be a full new proposal incorporating all of this and other points, but for now I’m making record of it here.</p>
+<p>Also, I’ve created a twitter count to help represent this concept and to eventually (hopefully, if this moves forward!) be a center for communication about fund activities: <span class="mention">@nounvestment</span></p>
+<p>c. With respect to regulatory risk, the approach here is for Nounvestment Funds to be closed systems with the Nouns DAO treasury, i.e. focusing purely on per-Noun treasury stability/ expansion with returns being sent back to the DAO and the fund holdings being recallable to the DAO at any time, and NOT to ever perform any direct disbursements to Noun holders. Also, the multisig leaders of the funds would be volunteering their time and expertise out of belief in the long-term health in Nouns DAO (along with interest in education about investing in DeFi and the benefits of the community input and involvement in the process) and what all could be accomplished by the DAO under such an achievement. Thus, with respect to the ultimate approach, the these Funds would effectively be no different than the already-existing treasury holdings in stETH. They would just involve more active direct management relative to the passive stETH system.</p>
+<p>d. In line with the dual principles of transparency and education, a few more thoughts came to my mind, that could be specified in the proposal/ fund operations mandate. First, all multisig leaders must disclose all of their on-chain wallet addresses (on Ethereum L1 and L2s), including immediately with any updates. I’ll reiterate that all positions and potential conflicts of interest must be disclosed as potential investments are discussed; and of course any insider trading (e.g. front-running or counter-trading Nounvestment Fund trades) is forbidden and of course subject to individual-level legal action in most jurisdictions, even if not under ‘insider trading’ laws themselves depending on the country (it might fall under market manipulation laws, for example). Finally, I suggest that the multisig team operate two different in-group communication channels (their decision on what tech to use), one for buy/invest discussions and one for sell/unwind discussions. These chats will then be published (e.g. via screenshots) on a rolling basis, once active discussions on a particular investment idea (or selling an existing investment) are either completed or executed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2936_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">AndrewLaddusaw</div>
+          <div class="post_content">
+<p>There’s been some chatter about diversifying the treasury in the past, but it mostly goes the way of reducing risk. This proposal would diversify a little bit, but it seems like it would actually exacerbate the risk exposure for the DAO. For me, the volatility of ETH itself is more than enough of a bet already.</p>
+<p>All that being said, do you have any historical data or sample portfolios for the investments that you’d be proposing here?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3808_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0x7d54</div>
+          <div class="post_content">
+<p>Thank you for the discussion and questions!</p>
+<p>One of the innovations of this proposal relative to approaches that have been previously discussed in the use of Alchemix to preserve the full original capital (and denominated in Ξ) while simultaneously investing towards gains that would out-pace Ξ with half of the balance that can be borrowed as alETH and then swapped for Ξ. Even if the fund’s activities only match the performance of Ξ in $ terms, there is still a gain in total Ξ for the treasury because there is the 100% original capital that becomes re-available over time (or can be paid off early) plus the 50% borrowed amount. There is also a chance that the investment approach does very well and results in significant gain for the DAO. And, in case of total loss by the investment fund (unlikely), the original capital is still preserved (on a long-term horizon, which Nouns DAO has, while waiting for the self-repaying loan to complete).</p>
+<p>I personally think that there is also a critical conversation to be had re: the DAO only mainly passively holding ETH (plus some stETH exposure) and the impacts of this approach on the long-term strength of Nouns. That is, with DAO spending outflows and not a parallel, offsetting or potentially eclipsing investing growth initiative, there would be steadily decreasing per-Noun Ξ value, which may result in reduced prices realized at auction, leading to a downward spiral of resources, effectiveness, and opportunity for the DAO. In other words, there is risk in not taking action.</p>
+<p>In terms of historical examples or predicted rates of return, I wouldn’t feel comfortable framing it this way (I could share my investing/DeFi wallets and return histories, for example, but past results wouldn’t necessarily equal future ones, there are different dynamics involved in a team-based investing approach with a responsibility to a DAO and its community than an individual, and even then while my overall returns are strong, on some timeframes within it is not as pretty).</p>
+<p>Rather, it might be useful to discuss hypothetical investing approaches. My suggestion for the first Nounvestment Fund (with an eye towards a medium-aggressive overall approach, for reasons described in the original proposal above; further Funds could take different strategies) would be equal weight between two types of investments.</p>
+<p>The first being established protocols that the multisig team (with input from the community) feels might have an upcoming catalyst and/or might significantly increase in value based on the team’s market thesis/vision, on which there are ideally strong yield opportunities in the meantime. For example, maybe CRV, the governance token of Curve. Curve will soon release their own stablecoin, crvUSD. Maybe the team perceives this as a potential catalyst for the protocol. And maybe the team sees CRV as undervalued if they have a thesis of future capital inflow to DeFi. In the meantime, while waiting for the catalyst and/or the thesis to come about, we could earn ~30% APR on the CRV via Yearn Finance’s yCRV product (which is reversible via a yCRV/CRV pool). Note that this is purely an example, and that the above isn’t necessarily what I would advocate for (and I currently hold no CRV).</p>
+<p>Second, taking a handful of moonshot-type positions on smaller, emerging protocols. These investments are certainly more volatile, but identifying a high-quality idea that has potential product-market-fit led by a team that can execute and expand the offering over time, and then seeing that vision play out, can be highly, highly rewarding. The goal would be to invest in protocols that could theoretically achieve 20-50x gains if the vision plays out ideally. As part of the strategy, we expect some of these investments to individually lose significant value. Yet, if several or even one of this type of investments are hits (and obviously we would be putting a lot of research, thought, and discussion into this process) then the overall Fund itself is a huge success even irrespective of the other gains. Furthermore, for these types of investments the Fund could consider a standard strategy of taking half-size positions in any token of this type, and providing token-Ξ liquidity (which many emerging protocols incentive with emissions for substantial APR) to not only realize gains on the investment while waiting for the thesis to potentially play out, but then also be naturally scaling out of the position if/when the smallcap token increases in value (increasing the Ξ position of the liquidity pair via the use of impermanent loss as a beneficial strategy for the Fund).</p>
+<p>Again, all hypothetical at this point, but I hope that the discussion is helpful and illustrative (and part of the purpose of the fund would be to have these types of conversations with the community!).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2936_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">AndrewLaddusaw</div>
+          <div class="post_content">
+<p>Ok. I feel like I understand a little better what you’re proposing. My overall thought is this:</p>
+<p>Using CRV from the example above would see Nouns spotting this potential that aligns with our values and essentially being a VC investor in said protocol, and potentially several others, hoping that one would hit a 20-50x gain to make a profit.</p>
+<p>How I see the community working now would go something like this instead:</p>
+<p>CRV finds Nouns or someone from the Nouns community notices that the two protocols have some type of beneficial reason to work together. Someone writes a proposal to invest in CRV to further their mission and enhance the benefit to the community or the public at large or CRV writes a proposal to build something for Nouns that will help proliferate the meme.</p>
+<p>The first way is;</p>
+<ul>
+<li>speculative</li>
+<li>doesn’t directly help to achieve the goal of the DAO (proliferate the meme)</li>
+<li>passive for the community</li>
+<li>decided by a small, appointed group</li>
+</ul>
+<p>The second way is;</p>
+<ul>
+<li>purposeful</li>
+<li>must serve the goal or will fail as a proposal</li>
+<li>actively builds the community around the idea and project</li>
+<li>decided by the entire DAO</li>
+</ul>
+<p>I’m not a Nouner, so I can’t say whether or not something like this would pass or fail, but to me it doesn’t feel like the nounish way. This is coming from someone who works in the traditional investment business who loves the idea of only spending the ROI from the treasury.</p>
+<p>A couple other problems I have with this approach are much more serious and IMO would need to be addressed.</p>
+<ul>
+<li>a 20% stable ROI is not historically realistic in any market, especially one so young and volatile as L1 and L2 protocols.</li>
+<li>this just sounds super fishy…</li>
+</ul>
+<aside class="quote no-group" data-post="5" data-topic="2763" data-username="0x7d54">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://dub1.discourse-cdn.com/flex005/user_avatar/discourse.nouns.wtf/0x7d54/48/3808_2.png" width="24"/> 0x7d54:</div>
+<blockquote>
+<p>Even if the fund’s activities only match the performance of Ξ in $ terms, there is still a gain in total Ξ for the treasury because there is the 100% original capital that becomes re-available over time (or can be paid off early) plus the 50% borrowed amount.</p>
+</blockquote>
+</aside>
+<p>Both things sound like another Terra waiting to happen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3808_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0x7d54</div>
+          <div class="post_content">
+<p>Thank you for the additional discussion and questions!</p>
+<p>I will first address the issues you labelled as serious:</p>
+<ol>
+<li>
+<p>A stable 20% ROI is not historically realistic. I don’t disagree, at all. That said, this doesn’t mean that there aren’t opportunities to earn good yield on investments, that are not relatively safe given the inherent risk. For example, with the yCRV yield example that I provided above (again, all as part of a hypothetical Fund investment + DeFi scenario), Yearn Finance has set up a system whereby depositors effectively get a yield boost (in part based on the way that Yearn is maximizing the power of its entire deposit base) on top of already-decent yield from Curve for locked CRV which comes from the combination of fees that are collected from users processing trades on Curve plus plus Curve protocol emissions that are a defined part of their operational process. Furthermore, normally to obtain the full return from CRV it is necessary to lock the CRV for four years. Yet, Yearn has set up a system whereby the deposited yCRV gets that lock but is simultaneously sufficiently liquid for the amounts that our Funds would be trading (at least until they became massive) through a CRV/yCRV pool. Yearn has set all of this up to encourage and incentivize users to deposit their CRV into this system, because doing so so greatly benefits Yearn overall (it’s a win-win-win for yCRV depositors, Yearn, and depositors into Yearn’s standard Curve vaults, in fact). It would be part of the role of the multisig team (with input from the community) to identify such opportunities, assess their risk, and execute trades in and out of them.</p>
+</li>
+<li>
+<p>My description of the functionality of the Alchemix DeFi protocol was more elegant in the original proposal post, but this is very real, and not at all like Terra/Luna. The brilliant innovation of Alchemix is that users are able to borrow against their <em>future</em> yield (and in a synthetic asset of the same denomination of the original deposit, so that there is no liquidation). The users gets to spend or invest the 50% borrowed amount immediately, in various strategies/approaches (one which is the basis for the Nounvestment Fund proposal). In return, Alchemix keeps 10% of the yield that is earned from the original capital being deposited into a yield-bearing strategy (e.g. stETH). The other 90% of that yield is used to self-repay the loan, over time, until the full original deposit can be withdrawn (or the loan can be paid off early).</p>
+</li>
+</ol>
+<p>On the other points, your suggestion for deep relationships with specific proposals is great, and I’d love to see someone develop such initiatives!</p>
+<p>But the Nounvestment Fund concept can happen in parallel, and it is more scalable and has the opportunity to result in steady investment gains (all while preserving the full original capital).</p>
+<p>And I disagree wholly that the concept doesn’t help achieve the goal of the DAO to proliferate the Nouns ecosystem. It does so in two significant ways. One, through education and integration with DeFi and Ethereum ecosystem investing and activity. Two, because the underlying mission for this model is to provide treasury stability or even expansion for more effective and significant efforts to proliferate the Nouns ecosystem, in a sustainable way.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3723_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Mantis</div>
+          <div class="post_content">
+<p>Very glad this subject has been breached. Will this proposal go to vote, or are there other steps?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3808_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0x7d54</div>
+          <div class="post_content">
+<p>I do plan to eventually take this to a vote, but I’ve first been working to have expansive discussion about it with community members, incorporate feedback into the proposal, make sure that we have a great team in place, etc. I created a twitter account as a home for the idea and eventual fund happenings: <span class="mention">@nounvestment</span>   and I’ll be speaking on the Noun O’Clock twitter space next week on Tuesday, to introduce the idea and answer questions. And feel free to connect on twitter etc!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3808_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0x7d54</div>
+          <div class="post_content">
+<p>(the above reply didn’t properly thread to you for some reason)</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

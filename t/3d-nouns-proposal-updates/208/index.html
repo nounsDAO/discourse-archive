@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>3D nouns proposal updates</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">3D nouns proposal updates</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/6484_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Coralorca</div>
+          <div class="post_content">
+<p>Hi Everyone! We want to open a thread here for 3D nouns updates.</p>
+<p>First a personal update: I quit my normie job to dedicate myself 100% to the nouns ecosystem, NFTs and creative endeavours! I will officially be free on the 15th of October. Whenever I have time outside of the usual 9-5, I’m working on this.</p>
+<p>Same with Floyd (although he hasn’t resigned at his day job just YET, one more proposal and I bet he will haha): He has been spending a lot of time hacking away on the party nouns proposal which should be released very soon! This project was on a tight schedule and seemed more urgently needed than the 3D nouns. That’s a great step to make sure everyone gets a piece of noun and allowing us to build up a larger community.</p>
+<p>Regarding the 3D nouns project, we are still working on those two main issues:</p>
+<ul>
+<li>Having three.js combine accessories and bodies attributes on the fly. Creating the UV texture that is a result of that combination, not easy in 3D. We cannot manually make the 3915 (135 accessory * 29 bodies) combinations manually so we have to be smart about it.</li>
+<li>Making sure we have the right pipeline regarding how we proceed with animation and binding the skin to the skeleton. Ideally we want to have 3 animations that can be loaded on each model, despite the heads all being different and the “head bone” being at different heights. There are a few GLTF exporters and I want to test things to make sure we have the right pipeline.</li>
+</ul>
+<p>Once the pipeline is good and those two issues are solved, then we are pretty much on track and the progress will be more linear. It’s only about modelling and uploading. Over 140 nouns heads have been modelled so far.</p>
+<p>We are spending time trying things and sending models back and forth to understand what is the best way to build this. I’m confident that Floyd and I will get there.</p>
+<p>One thing that was lacking in our initial 3D nouns proposal was a timeline. We plan on finishing the work for this first version of 3D nouns by 11/14/21, which would put the project timeline at about 10 weeks. That’s our goal and we want to share it with you to make sure we are accountable.</p>
+<p>We have big, big plans for 3D nouns that we think will bring A LOT of fun to the community, and we cant wait to show you all! But first things first.</p>
+<p>Of course, always feel free to reach out on discord if you have any questions or ideas that you would like to implement.</p>
+<p>Thanks everyone!</p>
+<p>Coral and Floyd</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2524_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">seneca</div>
+          <div class="post_content">
+<p>Fantastic work you two! <img alt=":clap:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/clap.png?v=10" title=":clap:"/> <img alt=":clap:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/clap.png?v=10" title=":clap:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/249_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">9999</div>
+          <div class="post_content">
+<p>Thanks for the update and congrats on taking the leap from 9-5 to gm-gn.</p>
+<p>It’s frustrating to face technical challenges, but overcoming them is what makes projects like 3D Nouns stand out. The wow factor can only come after pulling your hair out sometimes and I know the whole community really appreciates your attention to technical and aesthetic detail in making all aspects be the best they can be.</p>
+<p>It’s really impressive what you’ve created already and look forward to seeing more in a few weeks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<blockquote>
+<p>First a personal update: I quit my normie job to dedicate myself 100% to the nouns ecosystem</p>
+</blockquote>
+<p>Love to see it!  Thanks for the update, really excited to see your work progress.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/6484_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Coralorca</div>
+          <div class="post_content">
+<p>Thanks everyone for the support!</p>
+<p>We are making progress! Floyd found a way to overlay the accessories on top of the body and I made a better pipeline for the animations and the models. We still need to figure out the binding process between the animated skeleton and the mesh skin. We are testing different scenarios: load all bodies and their respective textures OR load one body and apply different textures to it and load the different heads on the fly.<br/>
+Again its important to get the pipeline right before we upload hundreds of assets.<br/>
+In the mean time I keep modeling the remaining nouns heads on a daily - its relaxing <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:"/><br/>
+One more week to go at my regular job and then I am full time in this space. Floyd has also more time now that the party proposal is wrapped. So I expect we will get a lot done in the coming weeks and hopefully we can update the site soon to get everyone excited!</p>
+<p>Thanks, really is a blast to work with such a community and innovative project.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2440_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0xfloyd</div>
+          <div class="post_content">
+<p>Due to the nature of this project, the majority of the “visual” changes to the site will occur towards the end. In order to keep with the spirit of showing progress and keeping people up to date with what’s going on, I’m going to start posting weekly tweets showcasing different changes and features!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2440_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0xfloyd</div>
+          <div class="post_content">
+<p>Hey Everyone!<br/>
+We had originally given a launch date of 11/14 for 3D Nouns, however there’s still a few performance issues on the website side of things that I want to work out before I’m comfortable dropping the new site. These are mainly small issues that I believe can be resolved this week. As of now, we plan to do an initial site launch on 11/22! We then plan to spend the next few weeks after launch addressing any community feedback and adding in additional features that are suggested or currently in the works.<br/>
+We plan to tweet out a few more previews this week showing more of the site before launch, so be on the look out for those!<br/>
+Thanks everyone! Super excited to show everyone our work!</p>
+<ul>
+<li>Floyd</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/263_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">jad</div>
+          <div class="post_content">
+<p>Love the preview you shared on Twitter this week. Looking forward to seeing this go live. <img alt=":raised_hands:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/raised_hands.png?v=10" title=":raised_hands:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">BigshotKlim</div>
+          <div class="post_content">
+<p><span class="mention">@Coralorca</span> this project is amazing and I absolutely love what you are doing with the 2D to 3D design interpretation and animations. I want to continue our convo about incorporating the digital work with some physical goods. I think i may have figured out a way to do this conceptually, but lack the big head programming skills to get a demo going for now.  Love the updates and can’t wait to see where this goes. If anyone in the community has experience with AR markers I would love to chat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/6484_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Coralorca</div>
+          <div class="post_content">
+<p>Hi Klim, thanks for your support! Yes we are still building! We also want to incorporate AR later on so lets keep the discussion going.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/294_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">BigshotKlim</div>
+          <div class="post_content">
+<p>I’m here for all of this =) Looking forward to the updates and whenever you guys are ready just let me know Toys both Physical and Digital are our Jam and we all totally love the NOUNS</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/6484_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Coralorca</div>
+          <div class="post_content">
+<p>Time for a little update. Currently around 50% of the total 3D Nouns traits are available, and the remainder will be released in the following 2 weeks.</p>
+<p>After all traits are made available, we plan to release the ability to download your custom noun as a .gltf file (also looking into USDZ for AR) for free. Our goal is to make it easy for artists and developer to use the models for creative purposes.</p>
+<p>One thing we realized is the need for worlds and contexts to be build around the 3D nouns. We want to test them in our website and later port them to platforms like VRchat or the Sandbox (We will be talking with Animoca and the sandbox later in HK to figure this out). That might be another proposal we need to draft. We could package it with V2, where we would add motion and interaction to the characters and refine the overall look and mechanics of the web version.</p>
+<p>Floyd and I are both full time into this. We are very excited and are going to keep building on top of 3D nouns.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">CCUID</div>
+          <div class="post_content">
+<p>Hi! It seems that there hasn’t been an update on this project for a while, I was wondering if there’s traction on this project.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/6484_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Coralorca</div>
+          <div class="post_content">
+<p>Hi <span class="mention">@CCUID</span></p>
+<p>We have completed 3D nouns proposal <span class="hashtag">#2</span> early 2022, and all the traits are now available on <a href="http://www.3dnouns.com/" rel="noopener nofollow ugc">www.3Dnouns.com</a> to be downloaded.<br/>
+Some creators, such as Xanadu (<a href="https://twitter.com/thevoadz/status/1647531456154198016?s=20" rel="noopener nofollow ugc">https://twitter.com/thevoadz/status/1647531456154198016?s=20</a>) and game developer Samiam (<a href="https://twitter.com/samyam_youtube/status/1612464293991120896?s=20" rel="noopener nofollow ugc">https://twitter.com/samyam_youtube/status/1612464293991120896?s=20</a>) amongst a few, have used these assets to create their own projects.<br/>
+To extend the 3D Nouns world, I am planning on releasing more environment assets later on.</p>
+<p>We are also planning to release more updates for 3D Nouns in the future. Currently, we have 50 AR filters on Snapchat with a total of 750K plays, and a dozen filters on TikTok with a total of 300K plays, which brings the combined total to over a million. We will have more filters on TikTok and IG some these numbers will go up. We are in the top 5% lens creators on TikTok. Later on these animated 3D models will be released for everyone, so we will see more side proliferation I am sure.</p>
+<p>Additionally, we have an upcoming collaboration with the Sandbox that promises to be a fun project. For updates, be sure to follow me at <span class="mention">@coralorca</span> on twitter <a href="https://twitter.com/coralorca" rel="noopener nofollow ugc">https://twitter.com/coralorca</a></p>
+<p>Thanks</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/4124_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">bowlingseed</div>
+          <div class="post_content">
+<p>Hi <span class="mention">@CCUID</span>  - jumping in to support Coralorca and 0xFloyd to emphasize the value of the 3D Nouns project!</p>
+<p>As a Unity game developer building on Nouns, the 3D Nouns project is (by far) the <span class="hashtag">#1</span> most valuable proposal to ever be funded by NounsDAO. Without this project, it would have cost tens of thousands of dollars to create 3D characters for our iOS game, Nouns Bowling (<a href="https://nounsbowling.app" rel="noopener nofollow ugc">https://nounsbowling.app</a>)</p>
+<p>I think this foundational project will be even MORE important moving forward, and I am excited to see what Coralorca has in mind for the environment drop and Sandbox project. LFGame!</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

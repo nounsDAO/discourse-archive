@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Historic and Future Minting Emissions Offset - Request for Comment</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Historic and Future Minting Emissions Offset - Request for Comment</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">json</div>
+          <div class="post_content">
+<h2>
+<a class="anchor" href="#introduction-1" name="introduction-1"></a>Introduction</h2>
+<p>KlimaDAO proposes the DAO offset 1,000 tCO2 of on-chain carbon to remove NounsDAO’s historic and future Ethereum carbon footprint, and to amplify NounsDAO’s climate impact messages with a dedicated media partnership.</p>
+<p>Offsetting the 1,000 tCO2 footprint from this project will cost approximately $1,100 to $1,700 USD or Ξ0.82-1.27 based on current market rates.</p>
+<h2>
+<a class="anchor" href="#motivation-2" name="motivation-2"></a>Motivation</h2>
+<p>Using <a href="https://kylemcdonald.github.io/ethereum-emissions/" rel="noopener nofollow ugc">Kyle McDonald’s emissions estimates</a>, the Ethereum network has a carbon footprint of roughly ~18.1M tonnes. Now that the merge has taken place, Ethereum’s footprint looking forward is minimal. However, it’s important for the community as a whole to effectively quantify and take action for historical emissions. Doing so is a win for Ethereum, but also helps push investment and ideation into the growing ReFi (regenerative finance) ecosystem.</p>
+<p>The good news is that taking action on historic emissions is possible in a web3-native way, thanks to KlimaDAO’s development of DeFi rails for climate finance. The KlimaDAO team has developed expertise and unique technology to make the process of addressing historical emissions achievable for communities such as NounsDAO.</p>
+<h2>
+<a class="anchor" href="#methodology-3" name="methodology-3"></a>Methodology</h2>
+<p>To measure the carbon emissions of NounsDAO we have implemented the comprehensive emissions model developed by Kyle McDonald in the research paper: Ethereum Emissions: A Bottom-up Estimate which maps network energy usage to emissions factors.</p>
+<p>We then use <a href="https://carbon.fyi/" rel="noopener nofollow ugc">carbon.fyi</a> which is a tool that applies this methodology to calculate the emissions of defined contracts based on gas usage within specific blocks.</p>
+<h2>
+<a class="anchor" href="#scope-4" name="scope-4"></a>Scope</h2>
+<p>Known NounsDAO Ethereum contracts with carbon emissions quantified from carbon.fyi calculated on December 14th, 2022 (post merge). The total emissions from the NounsDAO contracts came out at 201.97 tCO2. KlimaDAO proposes to offset approximately five times emissions to date to ensure that NounsDAO maintains carbon neutrality for the foreseeable future.</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Contract Name</th>
+<th>Contract Address</th>
+<th>CO2 (Tonnes)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NounsToken</td>
+<td>0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03</td>
+<td>0.04</td>
+</tr>
+<tr>
+<td>NounsSeeder</td>
+<td>0xCC8a0FB5ab3C7132c1b2A0109142Fb112c4Ce515</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>NounsDescriptor</td>
+<td>0x0Cfdb3Ba1694c2bb2CFACB0339ad7b1Ae5932B63</td>
+<td>0.22</td>
+</tr>
+<tr>
+<td>NFTDescriptor</td>
+<td>0x0BBAd8c947210ab6284699605ce2a61780958264</td>
+<td>0.32</td>
+</tr>
+<tr>
+<td>NounsAuctionHouse</td>
+<td>0xF15a943787014461d94da08aD4040f79Cd7c124e</td>
+<td>0.32</td>
+</tr>
+<tr>
+<td>NounsNounsAuctionHouseProxy</td>
+<td>0x830BD73E4184ceF73443C15111a1DF14e495C706</td>
+<td>0.58</td>
+</tr>
+<tr>
+<td>NounsAuctionHouseProxyAdmin</td>
+<td>0xC1C119932d78aB9080862C5fcb964029f086401e</td>
+<td>10.44</td>
+</tr>
+<tr>
+<td>NounsDAOExecutor</td>
+<td>0x0BC3807Ec262cB779b38D65b38158acC3bfedE10</td>
+<td>14.70</td>
+</tr>
+<tr>
+<td>NounsDAOProxy</td>
+<td>0x6f3E6272A167e8AcCb32072d08E0957F9c79223d</td>
+<td>72.32</td>
+</tr>
+<tr>
+<td>NounsDAOLogicV1</td>
+<td>0xa43aFE317985726E4e194eb061Af77fbCb43F944</td>
+<td>102.93</td>
+</tr>
+<tr>
+<td></td>
+<td>Total</td>
+<td>201.97</td>
+</tr>
+</tbody>
+</table>
+</div><h2>
+<a class="anchor" href="#alternative-projects-5" name="alternative-projects-5"></a>Alternative Projects</h2>
+<p>Below are a number of projects of note, KlimaDAO can also help identify additional projects for consideration within tokenized carbon pools (BCT - Base Carbon Tonne, MCO2 - Moss, NCT - Nature Carbon Tonne).</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Project name</th>
+<th>Description</th>
+<th>Selective Retirement Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chao’er (BCT)</td>
+<td>The Inner Mongolia Chao’er Forest projects the once logging forest. The project is implemented in three forest farms under the jurisdiction of the Project owner, namely Dacongshan Forest Farm, Quansheng Forest Farm, and Taerqi Forest Farm.</td>
+<td>0x6362364a37f34d39a1f4993fb595dab4116daf0d</td>
+</tr>
+<tr>
+<td>Agrocortex (MCO2)</td>
+<td>The primary objective of the Agrocortex REDD+ Project is to avoid the unplanned deforestation (AUD) of the 186,219 ha project area, consisting of 100% Amazon rainforest. Over the next 30 years, this project will help reduce over 14 million tonnes of CO2 from entering the atmosphere.</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Pacajai (NCT)</td>
+<td>The objective of the Pacajai REDD+ Project is to protect nearly 166,000 hectares of biodiverse forest in the state of Pará in Brazil. The project is both VCS and Climate, Community &amp; Biodiversity certified.</td>
+<td>0x65d96f0d45606016e30c97ee039775de9722a7d2</td>
+</tr>
+<tr>
+<td>Rimba Raya (NCT)</td>
+<td>Located in Borneo’s southeast and stretching for almost 100 kilometers from North to South along the borders of the Tanjung Puting National Park, the Rimba Raya Reserve covers around 64,000 hectares. The project area is home to an array of endangered species, including the endangered Bornean Orangutan. Rimba Raya is certified under Verra’s carbon standard as well as its Climate, Community &amp; Biodiversity standard.</td>
+<td>0x62896f42cf1371b268db56e50d67c34f3eb1ad7a</td>
+</tr>
+</tbody>
+</table>
+</div><h2>
+<a class="anchor" href="#alternative-project-and-costs-6" name="alternative-project-and-costs-6"></a>Alternative project and costs</h2>
+<p>Below are two alternatives to give indicative pricing impacts compared to our recommended approach. As at Nov 22 2022:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Type</th>
+<th>Tonnes (CO2)</th>
+<th>Retirement Cost (USD)</th>
+<th>Retirement cost (ETH)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gujarat</td>
+<td>Renewable Energy</td>
+<td>1,000</td>
+<td>~$ 1,711.00</td>
+<td>~Ξ 1.28</td>
+</tr>
+<tr>
+<td>Rimba Raya</td>
+<td>Nature Based</td>
+<td>1,000</td>
+<td>~$ 1845.14</td>
+<td>~Ξ 1.38</td>
+</tr>
+</tbody>
+</table>
+</div><h2>
+<a class="anchor" href="#offsetting-and-trade-execution-7" name="offsetting-and-trade-execution-7"></a>Offsetting and trade execution</h2>
+<p>To offset the tCO2 footprint of NounsDAO the Klima Infinity portal can be used which supports selective retirement by project address. A representative of KlimaDAO can demonstrate specifics of how the tool can be used. Note also that tokens on the Polygon (MATIC) network will be required to purchase the offsets via the BCT and NCT pools using SushiSwap.</p>
+<h2>
+<a class="anchor" href="#case-study-8" name="case-study-8"></a>Case Study</h2>
+<p>As an example of previous partnerships, Polygon worked with KlimaDAO and retired $400,000 of carbon credits representing the entirety of the network’s CO2 debt since inception. Going forward Polygon will continue to build upon its Green Manifesto and become carbon negative.</p>
+<p>Achieving carbon neutrality was critical in Polygon securing key partnerships with notable brands including Starbucks and Meta whose mainstream users’ concerns were addressed by the action they took on climate change.</p>
+<p>You can take a deeper look at projects that have used KlimaDAO to offset carbon emissions transparently through our pledge dashboard.</p>
+<h2>
+<a class="anchor" href="#closing-9" name="closing-9"></a>Closing</h2>
+<p>KlimaDAO is looking forward to feedback from the NounsDAO community on this proposal and ways that we can partner together on tackling historical emissions. We appreciate Offsetra’s carbon.fyi for their work in developing a methodology for on-chain calculations and the countless stakeholders who have refined it over the past year.</p>
+<p>Furthermore, KlimaDAO hopes to create a deeper partnership with NounsDAO for their future endeavors through being a primary point of contact for on-chain, decentralized climate solutions.</p>
+<p>Thank you for your consideration.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

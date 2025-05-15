@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Proposal: Nouns Android app :robot:</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Proposal: Nouns Android app :robot:</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1375_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krishfish</div>
+          <div class="post_content">
+<p>Hey friends!</p>
+<p>The Nouns Collective is excited to share a draft of the Nouns Android app proposal. As always, we’d love your feedback.</p>
+<p>Check out the doc: <a href="https://docs.google.com/document/d/17YS2zAhUeo4x102_XdhbPR32MRFmY5yK_uqpbKsKQ6s/edit" rel="noopener nofollow ugc">Nouns: Explore, Create &amp; Play on Android</a></p>
+<p>I’ve also added the text from the doc below. We’re looking forward to hearing your thoughts and suggestions!</p>
+<p>Finally, just want to take a moment to thank this community for all the amazing support and kind words we’ve received for the Nouns iOS app. It makes us very happy to know that people are using it every day and loving the experience. Thank you! <img alt=":partying_face:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/partying_face.png?v=12" title=":partying_face:" width="20"/></p>
+<hr/>
+<h1>
+<a class="anchor" href="#nouns-collective-proposal-3-1" name="nouns-collective-proposal-3-1"></a>Nouns Collective proposal <span class="hashtag">#3</span>
+</h1>
+<h2>
+<a class="anchor" href="#nouns-explore-create-play-on-android-2" name="nouns-explore-create-play-on-android-2"></a>Nouns: Explore, Create &amp; Play on Android</h2>
+<p>[<em>draft - please share your feedback</em>]</p>
+<h3>
+<a class="anchor" href="#tldr-3" name="tldr-3"></a>tl;dr</h3>
+<p>Building on the momentum of the Nouns app for iOS, we are proposing to build an Android version of the app to bring Nouns to an even wider audience. Our goal is to create an app experience that as a minimum reaches parity with the iOS app. More importantly, we would like to explore and leverage the more open Android ecosystem to enable more powerful crypto functionality like connecting wallets to bid, buy and vote on various Nouns. Overall, we want the two apps to serve as a foundation on which developers can build features quickly and consistently across both platforms.</p>
+<h3>
+<a class="anchor" href="#android-app-4" name="android-app-4"></a>Android App</h3>
+<p>The Android app will support all the great features that were built into the iOS app:</p>
+<ul>
+<li>Receive rich push notifications at Noun o’clock</li>
+<li>Browse all on-chain Nouns along with their bid history and proposal activity</li>
+<li>View proposals that have been submitted to the Nouns DAO</li>
+<li>Create custom (off-chain) Nouns that can be shared on social media and used as a pfp or watch face</li>
+<li>Play with your custom Nouns, make them talk and repeat things, experiment with various voice changing effects</li>
+<li>Share video clips of talking Nouns across social platforms</li>
+<li>Add a widget to the home screen showing the Noun of the day</li>
+</ul>
+<h3>
+<a class="anchor" href="#whats-new-5" name="whats-new-5"></a>What’s new?</h3>
+<p>Given that Android is generally more open as a platform, we plan to explore ways for users to connect their wallet and interact with on-chain contracts. Our intention is to look for unique experiences that combine traditional mobile engagement such as rewards and storing these on-chain.</p>
+<ul>
+<li>Explore ways for users to connect their crypto wallet to the app</li>
+<li>Explore ways for wallet-connected users to receive tokens from the app that would be stored on-chain</li>
+<li>Explore feature gating (i.e. token gating) using in-app currency that would be stored on-chain</li>
+</ul>
+<h3>
+<a class="anchor" href="#technical-considerations-source-code-6" name="technical-considerations-source-code-6"></a>Technical Considerations + Source code</h3>
+<ul>
+<li>App will be built using Kotlin + <a href="https://kotlinlang.org/docs/native-overview.html" rel="noopener nofollow ugc">Kotlin Native</a> (used by Netflix, Shopify and GoPro) and will fetch data using The Graph API</li>
+<li>As part of developing the Android app, we would like to invest some time unifying parts of the iOS and Android codebases using Kotlin Native. This will increase code reuse between the two projects and will speed up the development of both apps in the future</li>
+<li>Target operating system will be Android 12 and above</li>
+<li>All code and assets will be open sourced. Our goal is to encourage others in the community to use these as inspiration for building more great Nounish things</li>
+</ul>
+<h3>
+<a class="anchor" href="#design-7" name="design-7"></a>Design</h3>
+<p>The product’s design aesthetic will follow the same system / guidelines / flavor that were used to build the Nouns iOS app. However, some work will need to be done to adapt those iOS-centric designs to feel native on Android. We will also be designing new exploratory functions like connecting wallets, displaying on-chain user data, etc.</p>
+<ul>
+<li>Update visual designs so that the overall UX and look-and-feel follow contemporary Android patterns and UI systems</li>
+<li>Share Figma file with the Nouns community to allow for comments and feedback</li>
+<li>Design high-fidelity mockups that detail the functional aspects of user flows</li>
+<li>In the spirit of open source, we will involve the Nouns community to participate and influence the app’s development in a number of key ways:
+<ul>
+<li>Open source the code via GitHub so that other developers can fork and contribute to the project</li>
+<li>Provide regular updates on design and development via Discord</li>
+<li>Start a public beta of the app for the Nouns community to participate in via the Play Console</li>
+</ul>
+</li>
+</ul>
+<h3>
+<a class="anchor" href="#nouns-ios-8" name="nouns-ios-8"></a>Nouns iOS <img alt=":heart:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/heart.png?v=12" title=":heart:" width="20"/>
+</h3>
+<p>The Nouns iOS app was launched on May 16, 2022 to some amazingly positive feedback. We hope to garner the same response on Android and bring Nouns to even more users.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/9xlXbZw7vJLSoTwStNmm4Y9tWSo.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/4/42d8c6ce0499553a1f25c1b8a1bff34763ee793c.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="9xlXbZw7vJLSoTwStNmm4Y9tWSo" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/42d8c6ce0499553a1f25c1b8a1bff34763ee793c_2_10x10.png" height="143" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/42d8c6ce0499553a1f25c1b8a1bff34763ee793c_2_466x143.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/42d8c6ce0499553a1f25c1b8a1bff34763ee793c_2_466x143.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/42d8c6ce0499553a1f25c1b8a1bff34763ee793c_2_699x214.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/42d8c6ce0499553a1f25c1b8a1bff34763ee793c_2_932x286.png 2x" width="466"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1178×360 42.4 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/ibINwSmIQOM87WV9SUml5UVVfp1.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/7/7f7a5cc30bfaa5b73d99deac7ff5ae9303a4c1d3.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="ibINwSmIQOM87WV9SUml5UVVfp1" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/7/7f7a5cc30bfaa5b73d99deac7ff5ae9303a4c1d3_2_10x10.png" height="119" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/7/7f7a5cc30bfaa5b73d99deac7ff5ae9303a4c1d3_2_525x119.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/7/7f7a5cc30bfaa5b73d99deac7ff5ae9303a4c1d3_2_525x119.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/7/7f7a5cc30bfaa5b73d99deac7ff5ae9303a4c1d3_2_787x178.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/7/7f7a5cc30bfaa5b73d99deac7ff5ae9303a4c1d3.png 2x" width="525"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1028×232 19.5 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/devJhNmcpTQaLtVADU0EncEqsdP.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/5/5cc0352d8fa0241ed8b333151b7041391f18c3b9.png" rel="noopener nofollow ugc" title="|249x355.00735450096516"><img alt="|249x355.00735450096516" data-base62-sha1="devJhNmcpTQaLtVADU0EncEqsdP" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/5cc0352d8fa0241ed8b333151b7041391f18c3b9_2_10x10.png" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/5cc0352d8fa0241ed8b333151b7041391f18c3b9_2_349x500.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/5cc0352d8fa0241ed8b333151b7041391f18c3b9_2_349x500.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/5cc0352d8fa0241ed8b333151b7041391f18c3b9_2_523x750.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/5/5cc0352d8fa0241ed8b333151b7041391f18c3b9.png 2x" width="349"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">|249x355.00735450096516</span><span class="informations">546×782 94.8 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/6C4XynqmzfgTxtIm9uSqxw7s2Tb.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/2/2e5b039f4951d7a887c883ce414a831cd082bc35.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="6C4XynqmzfgTxtIm9uSqxw7s2Tb" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/2e5b039f4951d7a887c883ce414a831cd082bc35_2_10x10.png" height="250" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/2e5b039f4951d7a887c883ce414a831cd082bc35_2_349x250.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/2e5b039f4951d7a887c883ce414a831cd082bc35_2_349x250.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/2e5b039f4951d7a887c883ce414a831cd082bc35_2_523x375.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/2e5b039f4951d7a887c883ce414a831cd082bc35_2_698x500.jpeg 2x" width="349"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1170×838 143 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/4ZD4KKfGjcPRvbGTRqKuEDiCPQj.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/2/23002ba3566913aadae968b94912885e874a6487.png" rel="noopener nofollow ugc" title="|1058.0869565217392x124"><img alt="|1058.0869565217392x124" data-base62-sha1="4ZD4KKfGjcPRvbGTRqKuEDiCPQj" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/23002ba3566913aadae968b94912885e874a6487_2_10x10.png" height="81" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/23002ba3566913aadae968b94912885e874a6487_2_690x81.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/23002ba3566913aadae968b94912885e874a6487_2_690x81.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/23002ba3566913aadae968b94912885e874a6487_2_1035x121.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/2/23002ba3566913aadae968b94912885e874a6487.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">|1058.0869565217392x124</span><span class="informations">1356×160 16.7 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/eMjar46Tj3h89NsqahKhoJT0nbv.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/6/67946b9429dd4b5263927afce5c8ca68cd361775.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="eMjar46Tj3h89NsqahKhoJT0nbv" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/67946b9429dd4b5263927afce5c8ca68cd361775_2_10x10.png" height="456" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/67946b9429dd4b5263927afce5c8ca68cd361775_2_280x456.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/67946b9429dd4b5263927afce5c8ca68cd361775_2_280x456.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/6/67946b9429dd4b5263927afce5c8ca68cd361775_2_420x684.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/6/67946b9429dd4b5263927afce5c8ca68cd361775.png 2x" width="280"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">546×889 265 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/iXxOJ1jJCSoQ2OTCXR0cyHabtcl.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/8/84e24669d96747c9a7ab095fb5af37874afae2d9.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="iXxOJ1jJCSoQ2OTCXR0cyHabtcl" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/84e24669d96747c9a7ab095fb5af37874afae2d9_2_10x10.png" height="344" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/84e24669d96747c9a7ab095fb5af37874afae2d9_2_322x344.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/84e24669d96747c9a7ab095fb5af37874afae2d9_2_322x344.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/84e24669d96747c9a7ab095fb5af37874afae2d9_2_483x516.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/8/84e24669d96747c9a7ab095fb5af37874afae2d9.png 2x" width="322"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">538×577 121 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/qANlCbnhZQ9cwEytyVQWj7LhkZy.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/b/ba6155be63fb858e7745e9ee8675d402079d1d80.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="qANlCbnhZQ9cwEytyVQWj7LhkZy" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/ba6155be63fb858e7745e9ee8675d402079d1d80_2_10x10.png" height="75" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/ba6155be63fb858e7745e9ee8675d402079d1d80_2_624x75.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/ba6155be63fb858e7745e9ee8675d402079d1d80_2_624x75.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/ba6155be63fb858e7745e9ee8675d402079d1d80_2_936x112.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/ba6155be63fb858e7745e9ee8675d402079d1d80_2_1248x150.png 2x" width="624"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1350×163 21.6 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h3>
+<a class="anchor" href="#ios-screenshots-9" name="ios-screenshots-9"></a>iOS Screenshots</h3>
+<p>The design aesthetic that we established with the iOS app will carry over to Android. Our intention is to create a custom Android app that feels native to that platform.</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/A9leuXDD99UYkeN80X9XZl2uVso.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/f/fd5c9e4a4801733aa13561dfce2cac26560cbe14.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="A9leuXDD99UYkeN80X9XZl2uVso" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/f/fd5c9e4a4801733aa13561dfce2cac26560cbe14_2_10x10.png" height="374" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/f/fd5c9e4a4801733aa13561dfce2cac26560cbe14_2_173x374.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/f/fd5c9e4a4801733aa13561dfce2cac26560cbe14_2_173x374.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/f/fd5c9e4a4801733aa13561dfce2cac26560cbe14_2_259x561.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/f/fd5c9e4a4801733aa13561dfce2cac26560cbe14_2_346x748.jpeg 2x" width="173"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">740×1600 202 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/vMMEKoiLCb7vp9lOWGBiFyY0BR2.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/d/dec7243c3a2094329a0465a4fc1ee401c456ca2c.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="vMMEKoiLCb7vp9lOWGBiFyY0BR2" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/dec7243c3a2094329a0465a4fc1ee401c456ca2c_2_10x10.png" height="374" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/dec7243c3a2094329a0465a4fc1ee401c456ca2c_2_173x374.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/dec7243c3a2094329a0465a4fc1ee401c456ca2c_2_173x374.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/dec7243c3a2094329a0465a4fc1ee401c456ca2c_2_259x561.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/dec7243c3a2094329a0465a4fc1ee401c456ca2c_2_346x748.jpeg 2x" width="173"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">740×1600 127 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/1fZUdyBw259dLRMyZRRoXCLw3c2.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/0/08d124a11a95ec957413682650a253e15b468ee6.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="1fZUdyBw259dLRMyZRRoXCLw3c2" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/08d124a11a95ec957413682650a253e15b468ee6_2_10x10.png" height="374" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/08d124a11a95ec957413682650a253e15b468ee6_2_173x374.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/08d124a11a95ec957413682650a253e15b468ee6_2_173x374.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/08d124a11a95ec957413682650a253e15b468ee6_2_259x561.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/08d124a11a95ec957413682650a253e15b468ee6_2_346x748.jpeg 2x" width="173"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">740×1600 124 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/uPYC7O9qz4BngEdkiU9DpxpBon1.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/d/d8215d18ffccbd2cfd96f107509c58a7e04328fb.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="uPYC7O9qz4BngEdkiU9DpxpBon1" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d8215d18ffccbd2cfd96f107509c58a7e04328fb_2_10x10.png" height="374" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d8215d18ffccbd2cfd96f107509c58a7e04328fb_2_173x374.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d8215d18ffccbd2cfd96f107509c58a7e04328fb_2_173x374.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d8215d18ffccbd2cfd96f107509c58a7e04328fb_2_259x561.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d8215d18ffccbd2cfd96f107509c58a7e04328fb_2_346x748.jpeg 2x" width="173"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">740×1600 215 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/iMrUqXmZ8c3XXaiVtwxycrKBbrg.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/8/83a13244b0e19793598847c9d3e5ef5101a6241e.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="iMrUqXmZ8c3XXaiVtwxycrKBbrg" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/83a13244b0e19793598847c9d3e5ef5101a6241e_2_10x10.png" height="374" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/83a13244b0e19793598847c9d3e5ef5101a6241e_2_173x374.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/83a13244b0e19793598847c9d3e5ef5101a6241e_2_173x374.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/83a13244b0e19793598847c9d3e5ef5101a6241e_2_259x561.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/8/83a13244b0e19793598847c9d3e5ef5101a6241e_2_346x748.jpeg 2x" width="173"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">740×1600 190 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/wwaruyEV5U9vTPLRHpl6myM9EqB.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/e/e3e8777ab0fa3a1a318667e65abad4bf1694ba09.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="wwaruyEV5U9vTPLRHpl6myM9EqB" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/e/e3e8777ab0fa3a1a318667e65abad4bf1694ba09_2_10x10.png" height="374" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/e/e3e8777ab0fa3a1a318667e65abad4bf1694ba09_2_173x374.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/e/e3e8777ab0fa3a1a318667e65abad4bf1694ba09_2_173x374.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/e/e3e8777ab0fa3a1a318667e65abad4bf1694ba09_2_259x561.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/e/e3e8777ab0fa3a1a318667e65abad4bf1694ba09_2_346x748.jpeg 2x" width="173"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">740×1600 154 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h3>
+<a class="anchor" href="#timeline-10" name="timeline-10"></a>Timeline</h3>
+<p>Concept, design and development is scoped to X months. [TBD - still working on the schedule]</p>
+<h3>
+<a class="anchor" href="#co-creation-and-beta-testing-11" name="co-creation-and-beta-testing-11"></a>Co-creation and beta testing</h3>
+<p>We love to build in public and plan to work closely with the Nouns community, through co-creation workshops and regular feedback loops via Discord. We will be running a beta test of the Android app to identify bugs early and other deficiencies with the aim of increasing build quality and level of polish before launch.</p>
+<h3>
+<a class="anchor" href="#team-12" name="team-12"></a>Team</h3>
+<p>The Nouns Collective is a liquid super team made up of friends building playful, useful and beautiful products with the crypto communities they love.</p>
+<p>We’re excited as ever to continue to dedicate our creative energies towards Nouns (our fav NFT project). Inspired by the Nouns DAO origin story, we assembled a dream team of experts to bring the Nouns mobile apps vision to life. Our goal is to make Nouns the best NFT app on every platform.</p>
+<p>Introducing the <strong>Nouns Collective</strong> team:</p>
+<p><strong>Rainman</strong>, the project lead, is an experienced founder and product leader. He has over 10 years of experience building world-class consumer apps. He’s the founder of an award-winning app studio that was acquired in 2016. There he launched several highly regarded apps including top-ranked iOS and Apple Watch apps featured in an Apple commercial and ranked <span class="hashtag">#1</span> in Health, another that ranked <span class="hashtag">#1</span> in Utilities, another that ranked <span class="hashtag">#1</span> in Education and another that ranked both <span class="hashtag">#1</span> in Utilities and <span class="hashtag">#2</span> overall. These apps have been downloaded by millions of people and have appeared in the New York Times and Wired Magazine.</p>
+<p><strong>Krish</strong> is a technical lead with over 15 years of experience building software products for humans. He’s the founder of a boutique dev agency that was acquired in 2020. His passion for product development is based on the belief that technology can be a driving force for positive change in the world. Career highlights include professional work in games, social media, ecommerce and fintech with companies like Shopify, Zynga, Bitmoji, Kobo and Questrade.</p>
+<p><strong>Shawn</strong> is a multidisciplinary designer with more than 14 years experience in user experience, research, and interface design. He’s built products for the NFL, Twitter, Humana, Deloitte; ran product at an AI startup; and worked on smaller e-commerce, fintech and crypto products. Shawn also has a background in computer animation, graphic design, and strategic foresight.</p>
+<p>​​<strong>Matt</strong> is a multidisciplinary researcher and designer with over a decade of experience in the field of product design. He specializes in human centered design, systems thinking, and various approaches to using design thinking and other frameworks/methods to solve complex problems for his clients. With a background in Industrial Design, Matt has built extensive expertise in digital design and customer research, using these skills to build digital products for clients like Google, Facebook, Autodesk, as well as a number of smaller crypto, fintech, and proptech startups.</p>
+<p><strong>Ziad</strong> is a Senior/Lead Mobile Software Engineer with a master’s degree in computer science, nearly 12 years of experience in end-to-end software development life cycle from architecture design, development, testing, and support. Ziad has built the most popular water tracker mobile app, <a href="https://apps.apple.com/us/app/waterminder-water-hydration-reminder-tracker/id653031147" rel="noopener nofollow ugc">Water Minder</a>. He’s worked on complex problems like integrating cross-platform features of the <a href="https://www.bosch-ebike.com/en/" rel="noopener nofollow ugc">eBike system at Robert Bosch</a> to turn the bike into a cutting-edge smart bike, built Android &amp; iOS apps for various clients such as <a href="https://www.kickstarter.com/projects/edyn/edyn-welcome-to-the-connected-garden" rel="noopener nofollow ugc">Edyn</a>, School Event Pay, <a href="https://whitetruffle.com/" rel="noopener nofollow ugc">whitetruffle</a>, Park Place, and <a href="https://parachute.live/" rel="noopener nofollow ugc">Parachute</a>.</p>
+<p><strong>Arslan</strong> is a former Lawyer and current Product Manager who sweats the details and is obsessed with user pain points/needs. He has extensive experience organizing and leading complex, multifaceted projects through his legal work and startup which he operated prior to his law career. Arslan has been a passionate crypto enthusiast since 2017 and has participated within the space in a multitude of ways ranging from ICOs to strategic planning.</p>
+<p><strong>Alex</strong> is a mobile developer with over 4 years of experience building software applications. His professional career began with building full-stack web apps and cross-platform mobile apps for a small consultancy. More recently, he’s been working at Shopify as a mobile developer with a heavy focus on Kotlin Native. He has a degree in mechanical engineering with a minor in computer science and spent multiple internships working in the automotive industry. His diverse experience has given him an appreciation and unique insight into the tech industry.</p>
+<h3>
+<a class="anchor" href="#compensation-13" name="compensation-13"></a>Compensation</h3>
+<p>We ask that the Nouns DAO fund the design &amp; development of this project. We also ask that they fund the maintenance and updating of the app for a period of 1 year. All code and designs will be open sourced and published on GitHub.</p>
+<ul>
+<li>175 ETH for design, dev, promotion and deployment of the Nouns Android app</li>
+<li>15 ETH for 1 year of maintenance and up to 4 app updates including bug fixes and feature enhancements as well as an update to support new Android versions.</li>
+<li>Payment to be made to the Nouns Collective multisig</li>
+</ul>
+<h3>
+<a class="anchor" href="#we-the-nouns-14" name="we-the-nouns-14"></a>We <img alt=":black_heart:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/black_heart.png?v=12" title=":black_heart:" width="20"/> the Nouns</h3>
+<p>Our unstated goal with every proposal is not just to proliferate Nounish memes but also to eventually become Nouns holders ourselves. Our long-term vision is to bring more builders into this community and to work with the DAO in a more foundational way. ⌐◨-◨</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3348_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krel</div>
+          <div class="post_content">
+<p>This is a no-brainer to support but 2 things:</p>
+<ol>
+<li>
+</li>
+</ol>
+<p>What if you first launched an android-ux-native copy of the ios app?</p>
+<p>Then explored any on-chain/wallet features later.</p>
+<p>I would split it up into 2 proposals, think that would be easier for the community to pass.</p>
+<ol start="2">
+<li>
+</li>
+</ol>
+<p>Do you need the eth to compensate the team? If not, i think you should consider asking for a noun or two as payment instead.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1375_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krishfish</div>
+          <div class="post_content">
+<p>Good questions:</p>
+<blockquote>
+<p>What if you first launched an android-ux-native copy of the ios app? Then explored any on-chain/wallet features later. I would split it up into 2 proposals, think that would be easier for the community to pass.</p>
+</blockquote>
+<p>Part of the reason to combine the two pieces of work is to continue to push the boundaries of crypto on mobile. Just like we did with the iOS app, we want to make a splash on Android as well. This is the stuff that excites our team and that we look forward to in a project.</p>
+<blockquote>
+<p>Do you need the eth to compensate the team? If not, i think you should consider asking for a noun or two as payment instead.</p>
+</blockquote>
+<p>Heh, that would be cool. Let me take it back and discuss with the team. I suspect at least a few people would expect to be compensated in ETH. Perhaps a split might make sense.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3348_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krel</div>
+          <div class="post_content">
+<blockquote>
+<p>What’s new?<br/>
+Given that Android is generally more open as a platform, we plan to explore ways for users to connect their wallet and interact with on-chain contracts. Our intention is to look for unique experiences that combine traditional mobile engagement such as rewards and storing these on-chain.</p>
+<ul>
+<li>Explore ways for users to connect their crypto wallet to the app</li>
+<li>Explore ways for wallet-connected users to receive tokens from the app that would be stored on-chain</li>
+<li>Explore feature gating (i.e. token gating) using in-app currency that would be stored on-chain</li>
+</ul>
+</blockquote>
+<p>If this is the part that excites the team (understandable!), and essentially the ulterior goal of the prop, I think it must be fleshed out in way more detail and be the centerpiece of the prop.</p>
+<p>Frankly, there are a lot of uncertainties/open questions around those bullet ideas:</p>
+<blockquote>
+<ul>
+<li>Explore ways for users to connect their crypto wallet to the app</li>
+</ul>
+</blockquote>
+<p>What’s new/interesting about this? Especially in the context of nouns?</p>
+<blockquote>
+<ul>
+<li>Explore ways for wallet-connected users to receive tokens from the app that would be stored on-chain</li>
+</ul>
+</blockquote>
+<p>This is an entire prop baked into a bullet point and scares me a bit tbh.</p>
+<blockquote>
+<ul>
+<li>Explore feature gating (i.e. token gating) using in-app currency that would be stored on-chain</li>
+</ul>
+</blockquote>
+<p>What are we gating, and why? (Speaking from experience, token-gating is such an obvious use case of NFTs that it’s often used without deep thought and consideration to the overall UX.)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2524_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">seneca</div>
+          <div class="post_content">
+<p>No brainer support given the success of the iOS app.</p>
+<p>Beyond the excitement of bringing the app to a new base, I love the potential integrations given the openness of the Android platform.</p>
+<p>My only feedback would be to make sure the “what’s new” is somewhat clear before going on-chain. As <span class="mention">@krel</span> mentioned, this is likely to be the centerpiece of the prop (I know it is for me). Maybe having the community go back and forth on what is worth pursuing may be a good idea if the team is not entirely sure. That said, I dread “design by consensus” so if the team feels otherwise, all for it as well.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3348_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krel</div>
+          <div class="post_content">
+<p>Agree with Seneca that design by consensus is worse, but maybe there’s an initial exploration phase attached to this prop where you figure out what you want to do via conversations with nouners? Im just skeptical to doing “crypto stuff” without a plan, especially if that’s not your forte.</p>
+<p>Alternatively, you might’ve built up so much trust capital via the iOS app that the community is willing to write you a “blank check”? That could certainly be true but my gut says nouners will require more to be convinced.</p>
+<p>Ultimately:</p>
+<ul>
+<li>(Not an Android user but) Id love an Android version, please build!</li>
+<li>Id love for you to explore crypto-centric integrations, as long as there is a plan attached</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1375_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krishfish</div>
+          <div class="post_content">
+<p>Thanks for the feedback. I’ll add some more details to that section to give you a better sense of what we’re thinking.</p>
+<p>One thing to mention is we’re looking at it both from the perspective of Nouners and normies <img alt=":blush:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/blush.png?v=12" title=":blush:" width="20"/>. Ultimately we don’t see the Nouns app as a Nouner admin tool as that would limit its users to people who own Nouns. So we’re trying to find ways of bringing new folks into the app and onboard them into crypto in a natural way. But also add some new experiences for people with Nouns, e.g. voting on proposals for example, which we’ve had some people ask for.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>can you comment a little more on the 175 ETH cost?  would you be able to port much of the work you did on the iOS app to the android app?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/3348_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krel</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="7" data-topic="1375" data-username="krishfish">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://dub1.discourse-cdn.com/flex005/user_avatar/discourse.nouns.wtf/krishfish/48/1375_2.png" width="24"/> krishfish:</div>
+<blockquote>
+<p>So we’re trying to find ways of bringing new folks into the app and onboard them into crypto in a natural way.</p>
+</blockquote>
+</aside>
+<p>Got it, thanks! What type of ideas has popped up in conversations already?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1375_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krishfish</div>
+          <div class="post_content">
+<blockquote>
+<p>What type of ideas has popped up in conversations already?</p>
+</blockquote>
+<p>Several governance features:</p>
+<ul>
+<li>Bid on a Noun</li>
+<li>Vote on proposals</li>
+<li>Delegate voting</li>
+</ul>
+<p>But also some community-focused ones like minting a created Noun and integrating FOMO Nouns.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">badguy</div>
+          <div class="post_content">
+<p>I don’t want to be a bad guy here but 175 eth is a bit overpriced. I think 50 eth for an android app is a market price especially since many features and design already have been implemented in iOS.</p>
+<p>again, I don’t want to be a bad guy here</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1157_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Benbodhi</div>
+          <div class="post_content">
+<p>You need to be a member for longer to edit/delete I believe.<br/>
+I was wondering… because this looks like an answer to my question on your post.<br/>
+Thank you for the detailed response nonetheless.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1375_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krishfish</div>
+          <div class="post_content">
+<aside class="quote group-Nowners" data-full="true" data-post="8" data-topic="1375" data-username="noun22">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://dub1.discourse-cdn.com/flex005/user_avatar/discourse.nouns.wtf/noun22/48/315_2.png" width="24"/> noun22:</div>
+<blockquote>
+<p>can you comment a little more on the 175 ETH cost? would you be able to port much of the work you did on the iOS app to the android app?</p>
+</blockquote>
+</aside>
+<p>Hey noun22. We built the iOS app in Swift and SwiftUI, and we’ll be building the Android app using Kotlin and Kotlin Native. As part of this proposal, we are allocating time to unify parts of the codebase which will make future development on both platforms easier, faster and cheaper. The area where we can leverage most of what we did on iOS is on the UI / UX side. We still need to modify the designs to follow Android patterns, but the engineering side is where most of the complexity is.</p>
+<p>We believe the team effort will be close to what was required for the iOS app, which is why we’re asking for just under what we asked for on proposal 6 (adjusted for the value of ETH).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1375_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krishfish</div>
+          <div class="post_content">
+<aside class="quote no-group" data-post="1" data-topic="1375" data-username="krishfish">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://dub1.discourse-cdn.com/flex005/user_avatar/discourse.nouns.wtf/krishfish/48/1375_2.png" width="24"/> krishfish:</div>
+<blockquote>
+<p>What’s new?</p>
+</blockquote>
+</aside>
+<p>I’ve updated this section in the attached doc. Would love to get feedback on these.</p>
+<h2><a class="anchor" href="#whats-new-1" name="whats-new-1"></a>What’s new?</h2>
+<p>Given that Android is generally more open as a platform, we plan to explore ways for users to connect their wallet and interact with on-chain contracts. Here are some ways we’re thinking about pushing the app forward. We’re looking for feedback on these ideas:</p>
+<ul>
+<li>Connect a crypto wallet to the app</li>
+<li>Perform governance activities such as bidding on and settling a Noun, voting on proposals and delegating votes</li>
+<li>Mint created Nouns as NFTs</li>
+<li>Store off-chain Noun creations in the user’s crypto wallet
+<ul>
+<li>We would like to use the user’s wallet for storing user-generated content so that they can take it with them (i.e. no centralized server)</li>
+</ul>
+</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>hey, thanks for getting back to me.  i have spoken to several dao members about this proposal and i’ll summarize their feedback for you here</p>
+<p>feedback i have received from DAO members is that we paid substantially over market for the iOS app - and i don’t really have a problem with that, given the quality of the team and their early dedication to the Nouns project</p>
+<p>but i think paying a similar price for a port is kinda stretching it, especially given the comments of this anon:</p>
+<aside class="quote no-group" data-full="true" data-post="11" data-topic="1375" data-username="badguy">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://avatars.discourse-cdn.com/v4/letter/b/4491bb/48.png" width="24"/> badguy:</div>
+<blockquote>
+<p>I don’t want to be a bad guy here but 175 eth is a bit overpriced. I think 50 eth for an android app is a market price especially since many features and design already have been implemented in iOS.</p>
+<p>again, I don’t want to be a bad guy here</p>
+</blockquote>
+</aside>
+<p>i would be excited to have a port to android that doesnt involve re-engineering the entire app and adding all those new android-native features</p>
+<p>one DAO member also mentioned to me that Prop 6 was to deliver an open source iOS app - which to my knowledge has not yet been delivered - and he strongly feels that we should get the chance to review your code/work before their next prop</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1375_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">krishfish</div>
+          <div class="post_content">
+<p>Since it’s been brought up a couple times, just want to say that we are focussed on open sourcing the iOS app. We’re planning to hold a session for developers once it’s available, which should be in the next week or so. More details to follow.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/400_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Oni</div>
+          <div class="post_content">
+<p>hi all,</p>
+<p>how have you identified a cost for this proposal without knowing how many months it will take? this is a bit concerning as while the iOS app is really great, timeline is the one area where the team missed the mark (~8 months vs. 4 months estimated)</p>
+<p>what was the thought process around not using kotlin initially with iOS app?</p>
+<p>I also agree with 22 that it feels pricey and we should have a further breakdown of costs or roles with 7 team members. design being the biggest area of opportunity to leverage from iOS efforts. you mentioned “exploring” some new features, but a more firm feature list is needed to accurately build timeline, cost, and so the dao can be confident in what will be delivered.</p>
+<p>looking forward to seeing the open sourced iOS app!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2524_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">seneca</div>
+          <div class="post_content">
+<p>As someone who was in the mobile dev biz for years, I really don’t think 175 ETH for such a high caliber team of 7 folks is “overpriced”. Given the success of the iOS app, we’d be shooting ourselves in the foot by not continuing to fund folks like the Nouns Collective.</p>
+<p>Also, telling these guys to build using cross-platform vs native is akin to telling any visual artist what tools to work with. Specially if the aim of the suggestion is to cut cost (!). I don’t think we should be in the business of telling builders how to go about doing the work they propose.</p>
+<p>All that said, I do agree with feedback re: open sourcing first, timelines and potential feature set. I’d like to see a rough timeline for this next proposal’s deliverables + a flexible but focused set of ideas for the features that would be included given Android openness. To the latter point, I don’t think the Android app should be geared towards nouners themselves (i.e. bidding, voting, delegating) but rather newbies to the space (e.g minting a syntethic noun).</p>
+<p>Personally, fully supportive of the proposal!</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

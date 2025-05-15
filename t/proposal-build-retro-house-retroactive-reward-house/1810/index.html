@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Proposal: Build Retro House — Retroactive Reward House</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Proposal: Build Retro House — Retroactive Reward House</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1331_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">vectordao</div>
+          <div class="post_content">
+<h1>
+<a class="anchor" href="#context-1" name="context-1"></a>Context</h1>
+<p>We credit our motivation to existing posts and discussions in the Nouns community from <a href="/t/retro-house-retroactive-reward-house/1757">Noun 40</a> and <a href="/t/retroactive-impact-rewards/884">Seneca</a>. As prop builders ourselves (<a href="https://nouns.wtf/vote/87">Prop 87</a>: Vector DAO x NYC NFT), we are very much in agreement and believe that closing the loop on the incentive structure / feedback look would accelerate builder momentum and accountability.</p>
+<p>As 142 <a href="https://discord.com/channels/849745721544146955/873197966373052426/998326364870561932" rel="noopener nofollow ugc">and others have pointed out</a>, we hope that this will also serve as mechanism for Nouners to reflect on the kind of props and types of builders who have the most likelihood of succeeding, and improve the DAO’s funding decisions over time.</p>
+<h1>
+<a class="anchor" href="#build-proposal-2" name="build-proposal-2"></a>Build Proposal</h1>
+<p>Retro House aims to reward a defined number of ETH per quarter to a set of the most impactful on-chain props ranked by Nouner voting. To do this, we will build an app and contract that will be able to execute retro rewards as permissionlessly as possible.</p>
+<p><strong>How it works:</strong></p>
+<ol>
+<li>A new round of retro rewards is triggered quarterly by submitting a proposal to Nouns DAO to fund new prizes.</li>
+<li>All passed proposals are automatically entered into the Retro House as voting options.</li>
+<li>Builders of the props can submit progress updates at any time to help Nouners better understand the impact of their prop.</li>
+<li>Nouners use the Retro House app to read progress updates from props – which offers sorting and filtering by date, funding amount, last updated, etc.</li>
+<li>Right before quarter end, a ten day voting period is started during which Nouners vote on what they consider to be the most impactful props. Each get 10 votes / noun.</li>
+<li>Upon voting close, we will distribute payment to winning props. During this first round, we will manually verify all addresses and resolve any disputes that might arise.</li>
+</ol>
+<p><strong>Rough wireframes below</strong></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/pPodcwSeEKYsVhPWfLbBI6FoQdk.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/b/b50580d8e1165a41b7de49b64e2b2cd9d1401a9a.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="pPodcwSeEKYsVhPWfLbBI6FoQdk" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/b50580d8e1165a41b7de49b64e2b2cd9d1401a9a_2_10x10.png" height="440" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/b50580d8e1165a41b7de49b64e2b2cd9d1401a9a_2_690x440.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/b50580d8e1165a41b7de49b64e2b2cd9d1401a9a_2_690x440.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/b50580d8e1165a41b7de49b64e2b2cd9d1401a9a_2_1035x660.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/b50580d8e1165a41b7de49b64e2b2cd9d1401a9a_2_1380x880.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">2880×1838 336 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/2Tz1YccM6mI9XrZWDqOBFNY2zO8.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/1/144c4e0a6e5936a2cbfcfea4337585d7a746c300.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="2Tz1YccM6mI9XrZWDqOBFNY2zO8" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/144c4e0a6e5936a2cbfcfea4337585d7a746c300_2_10x10.png" height="440" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/144c4e0a6e5936a2cbfcfea4337585d7a746c300_2_690x440.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/144c4e0a6e5936a2cbfcfea4337585d7a746c300_2_690x440.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/144c4e0a6e5936a2cbfcfea4337585d7a746c300_2_1035x660.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/1/144c4e0a6e5936a2cbfcfea4337585d7a746c300_2_1380x880.jpeg 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1920×1225 178 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p><strong>Details:</strong></p>
+<ul>
+<li>We’ll working with Maty (discussing right now) to follow up with prop builders to encourage them to submit progress updates</li>
+<li>For each prop, any address that proposed the prop, or received funds from the prop can submit updates</li>
+<li>Proposals are eligible to win multiple times, though past winners will be marked marked as having won, for visibility during future rounds of retro rewards.</li>
+<li>Retro House team will verify winning prop addresses, to resolve potential dead addresses and disputes where multiple addresses involved in a proposal. If funds are not claimed after 120 days, then funds are sent back to Nouns DAO.<br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/s9EdYbd82Zs9AiKAjCKwmZ6rvJK.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/c/c554173d096a8d905094d338921840c1c3ff1cf8.png" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="s9EdYbd82Zs9AiKAjCKwmZ6rvJK" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/c554173d096a8d905094d338921840c1c3ff1cf8_2_10x10.png" height="266" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/c554173d096a8d905094d338921840c1c3ff1cf8_2_690x266.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/c554173d096a8d905094d338921840c1c3ff1cf8_2_690x266.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/c554173d096a8d905094d338921840c1c3ff1cf8_2_1035x399.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/c554173d096a8d905094d338921840c1c3ff1cf8_2_1380x532.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1566×604 19.7 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div>
+</li>
+</ul>
+<p><strong>Looking ahead</strong></p>
+<p>This proposal’s goal is to build the minimum necessary application to run a successful retro reward round to prove out the idea, which means we’ll be running the fund disbursement process manually via a multisig, which gives us the opportunity to resolve any potential edge cases.</p>
+<p>If this round is successful, we will submit a second proposal to build a contract that will codify the voting, fund disbursement, and dispute resolution so that the entire Retro House can become a permissionless and open source protocol, much like where <a href="https://nouns.wtf/vote/105">Prop House is headed</a>. This will ensure the longevity of the project, and allow any nounish community to leverage Retro House to fund their projects.</p>
+<h1>
+<a class="anchor" href="#timeline-3" name="timeline-3"></a>Timeline</h1>
+<p>The best projects are shipped quickly and then observed in the wild on impact. In order for Retro House to run quarterly, we are aiming to ship the application in ~6 weeks so that funds can be disbursed by the end of Q3 deadline (September). In order to expedite what would be normally a much longer build, we will be staffing the project only with senior talent.</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Activity</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7/28 – 8/11</td>
+<td>Product design &amp; technical scoping</td>
+<td>Design complete</td>
+</tr>
+<tr>
+<td>8/11 – 9/1</td>
+<td>Development</td>
+<td>v0 site ready for community testing</td>
+</tr>
+<tr>
+<td>9/1 – 9/8</td>
+<td>Testing, revisions</td>
+<td>Site shipped</td>
+</tr>
+</tbody>
+</table>
+</div><div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Weeks</th>
+<th>Activity</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9/8 – 9/18</td>
+<td>Builders update their page with progress report</td>
+<td>A large % of builders update their project page</td>
+</tr>
+<tr>
+<td>9/19 – 9/25</td>
+<td>Nouner voting period</td>
+<td>A ranked list of projects is produced</td>
+</tr>
+<tr>
+<td>9/26 – 9/30</td>
+<td>Disburse rewards to winners</td>
+<td>All winners are paid</td>
+</tr>
+</tbody>
+</table>
+</div><h1>
+<a class="anchor" href="#budget-4" name="budget-4"></a>Budget</h1>
+<p>We are requesting funding for Q3 Retro House, a 2 months of development and building budget, as well as 1 month of operations for the initial round.</p>
+<p><strong>Q3 Retro House reward: 800 ETH</strong><br/>
+ETH prizes will be distributed in a top-heavy format of 25% for the most voted proposal (e.g. 200 ETH in this case), 25% for the next two (100 ETH each), 25% for the next 4 (50 ETH each), 25% for the next 8 (25 ETH each). For future quarters, our team will lead the process to take feedback from the community, offer different options, and drive consensus on the next version of rewards and tiers.</p>
+<p><strong>Design and development: 145 ETH</strong><br/>
+We’ve assembled a team of senior talent so we can move quickly to get this app built and round funded by end of Q3, in order to start a quarterly cadence for retro reward.</p>
+<p><strong>Round 1 Operations: 20 ETH</strong><br/>
+Payment operations &amp; dispute/fraud resolution<br/>
+Community management &amp; builder outreach</p>
+<p><strong>Further note</strong><br/>
+we will permanently recuse ourselves from being eligible to receive retro rewards on this proposal in order to avoid any potential conflicts of interest that might arise.  Any other props build by Vector would be otherwise eligible as normal.<br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/nkeXS8Dq9m4iE2qNxGJwnrSnnMw.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/a/a37bc094b5b2e47ba74782b27d8d75bcc05ed024.jpeg" rel="noopener nofollow ugc" title="image"><img alt="image" data-base62-sha1="nkeXS8Dq9m4iE2qNxGJwnrSnnMw" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a37bc094b5b2e47ba74782b27d8d75bcc05ed024_2_10x10.png" height="424" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a37bc094b5b2e47ba74782b27d8d75bcc05ed024_2_690x424.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a37bc094b5b2e47ba74782b27d8d75bcc05ed024_2_690x424.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a37bc094b5b2e47ba74782b27d8d75bcc05ed024_2_1035x636.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/a/a37bc094b5b2e47ba74782b27d8d75bcc05ed024.jpeg 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">image</span><span class="informations">1320×812 52.2 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h1>
+<a class="anchor" href="#team-5" name="team-5"></a>Team</h1>
+<p>Vector will be driving the design and development of this project. We’re a collective of designers and developers who’ve done dozens of project in crypto, and recently built prop 87 for nouns. We’ve also enlisted trusted members of the community as collaborators to do community outreach, and to act as signers of the multisig.</p>
+<p>We’d also like to give credit to Noun40 &amp; Seneca for seeding this idea, and Noun40 for further sponsoring and advising us on this proposal.</p>
+<p><strong>Design and development: Vector</strong></p>
+<ul>
+<li>Overall project lead: Charlie Feng</li>
+<li>Design: Yitong Zhang</li>
+<li>Engineering: (TBA in 1-2 days)</li>
+<li>Engineering: (TBA in 1-2 days)</li>
+</ul>
+<p><strong>Operations</strong></p>
+<ul>
+<li>Community: (In discussion with Maty)</li>
+<li>Payments, verification and disputes: Charlie Feng</li>
+</ul>
+<p><strong>Multisig signers:</strong></p>
+<ul>
+<li>Yitong: yitong.eth</li>
+<li>Charlie: charliefeng.eth</li>
+<li>Noun40: noun40.eth</li>
+<li>Jacob: jacob.eth</li>
+<li>Seneca: signer.seneca.eth</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/436_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">sernoadz</div>
+          <div class="post_content">
+<p>I think the concept is great, but also curious if a whole app is necessary for the first round.</p>
+<p>Couldn’t we do this now with Maty’s data and just promote it a bit, announce to the prop builders about upcoming retroactive rewards round and have the builders submit more info to Maty which we can then gather up in a simple website with the content formatted and designed for easier consumption. Then we do a coordinape round like we do for the Nouncil for voting. Once the voting is over, then we distribute the rewards.</p>
+<p>I’m all for automating things and making the process more streamlined, but I feel like 145 ETH for design/development sounds a bit high off the bat, when a POC round can be done with tools that already exists today.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/2524_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">seneca</div>
+          <div class="post_content">
+<p>Love the idea. I think it’s a worthwhile experiment towards finding a viable path to rewarding (and therefore retaining) builders.</p>
+<p>I’d like to highlight that the core difference between this and Prop House is that one looks to reward looking back in time while the other looks ahead. Presumably, this directs product development in two different paths. As such, and especially due to the targeted use case, I think a solid implementation by reputable and competent builders is a great step forward for the DAO.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/400_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Oni</div>
+          <div class="post_content">
+<p>agree that over time product roadmaps could lead to different paths of development/iteration, but is there enough similarity at a high level that we should be considering the prop house product (code base/front end) as the starting point for this initiative?</p>
+<p>does this need to be designed &amp; dev’ed from scratch? they both rank/stack a list of entries that are then browsed on &amp; voted by the community. the operations/multi-sig has the payments flow detached from the product for v1</p>
+<p>regardless, I do support Vector DAO going after this initiative</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/842_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun40</div>
+          <div class="post_content">
+<p>I guess I would challenge this view by asking if prop house would have been the same experiment if we had a google form (to submit props) + google sheet (for voters to view submissions) + coordinape to vote and distribute funds. It would have been <em>functionally</em> roughly the same, but I suspect it would have attracted much less attention and participation b/c it doesn’t make the whole experience visual, cohesive, and easy to use/understand as did otherwise.</p>
+<p>I’m also reminded by the fact that <a href="https://nouns.wtf/vote/63">prop 63</a> (impact rewards) had exactly this suggested mechanic (form submissions → spreadsheet compilation → coordinape round) and even with a 100 ETH reward pool, it failed to gather much mindshare from the community, for many reasons but including I believe that the set of disparate / ugly tools not exactly built for this purpose didn’t get the community excited about the whole endeavor and made it feel like a back office HR chore.</p>
+<p>We should build something that is delightful / beautiful / attention-grabbing, and something that leads the community (even outsiders) to <em>want</em> to come look at the props, and the builders to <em>want</em> to submit updates (maybe because they want to see their prop presented magnificently), and finally the nouners to <em>want</em> to spend lots of time reviewing prop updates and ultimately voting.</p>
+<p>IMO it would be a shame if we were to run this 800 ETH experiment but not invest 165 ETH for a best in class product experience to give it the best / full shot.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>Again, love this initiative very much! Just not quite understanding why this isn’t a Prop House feature?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/842_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun40</div>
+          <div class="post_content">
+<p>I think this is a fair question.</p>
+<p>My view (weakly held on this topic) is that trying to merge it into Prop House in its current form can be quite confusing in a two ways:</p>
+<ol>
+<li>PH is forward looking and frequent in its rounds, RH is backward looking and infrequent in its rounds.</li>
+<li>PH is kind of an L2 for proposals (proof of concept like props or smaller props get funded through PH and comes to the L1 on-chain nouns dao later) as opposed to RH which from the onset is focusing on the L1 props. Essentially, the prop object has a confusing different meaning.</li>
+</ol>
+<p>Both of these things might be just temporary. Maybe we support larger and larger prop houses and effectively on-chain gov is just about how much funding we push to PH (not really funding builder props on chain) so <span class="hashtag">#2</span> becomes irrelevant. Maybe ppl expand their understanding of PH’s role over time and <span class="hashtag">#1</span> becomes a non-issue.</p>
+<p>However, in its current form, it would take some time to evolve or incur a fair amount of brand association confusion for PH to just add RH as a feature would be my gut.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>Thanks for elaborating! Some follow up thoughts:</p>
+<ul>
+<li>Seems like an underlying question is whether RH needs to have a distinct brand. My current gut feeling is that short term it doesn’t need a strong independent brand, and long term if we want to strengthen the brand so RH attracts more builders to Nouns, we can “refactor” RH out of PH</li>
+<li>Frequency diff doesn’t seem to significantly impact the decision IMO</li>
+<li>Prop object confusion: I agree they are different in essence, however don’t think it’s a significant problem, since the voters are Nouners who should understand the nature of the RH props being a “retrospective prop” on L1 props; and if I’m wrong and this is a problem still seems like a good idea to start doing this under PH and refactoring RH out if this pain arises</li>
+<li>PH is about to become an on-chain protocol, and when that happens I think it’ll make even more sense to just reuse it rather than build a separate thing, so I suggest we “get by” on current PH and reconsider when the protocol is out</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/169_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">solimander</div>
+          <div class="post_content">
+<p>This is a great idea and I support its exploration via a proof of concept. This exploratory implementation and rewards round could go a long way to inform the DAO on what works and what doesn’t. Longer term, I see retroactive rewards falling under the Prop House umbrella.</p>
+<aside class="quote no-group" data-post="1" data-topic="1810" data-username="vectordao">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://dub1.discourse-cdn.com/flex005/user_avatar/discourse.nouns.wtf/vectordao/48/1331_2.png" width="24"/> vectordao:</div>
+<blockquote>
+<p>If this round is successful, we will submit a second proposal to build a contract that will codify the voting, fund disbursement, and dispute resolution so that the entire Retro House can become a permissionless and open source protocol, much like where <a href="https://nouns.wtf/vote/105">Prop House is headed </a>. This will ensure the longevity of the project, and allow any nounish community to leverage Retro House to fund their projects.</p>
+</blockquote>
+</aside>
+<p>Related to this paragraph, the Prop House protocol will be flexible enough to support retroactive rewards funding, making this largely a duplicate effort.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/436_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">sernoadz</div>
+          <div class="post_content">
+<p>I think that’s exactly it. We already have a great working model for gathering up submissions and voting with Prop House. So a fork of Prop House would be a great start. Or even a new product but just leveraging a similar UI, which is exactly what the wireframe displayed looks like.</p>
+<p>What I had in mind was to take Maty’s data that he’ll collect and display it nicely in a website that others can view. there are some easy ways using Notion API to do this. And it can still look appealing and get the community excited for it.</p>
+<p>I guess I’m just challenging a little because it feels really similar to Prop House already, and if there isn’t any major differences, why should the DAO spend an extra 145 ETH? Sounds excessive for what the product is.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1331_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">vectordao</div>
+          <div class="post_content">
+<p>Thanks for chiming in everyone! Really appreciate the robust discussion here.</p>
+<p>It’s true that in the beginning, Retro House (RH) shares some similarity with Prop House (PH), and as such we’ve been talking to Seneca (who has agreed to be on the multisig) and will be leveraging as much of learnings from Prop House as possible – potentially directly using some of the code where relevant (voting, ranking, etc). Overall, a lot of our thoughts mirrors this earlier post:</p>
+<aside class="quote group-Nounders" data-post="3" data-topic="1810" data-username="seneca">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" class="avatar" height="24" loading="lazy" src="https://dub1.discourse-cdn.com/flex005/user_avatar/discourse.nouns.wtf/seneca/48/2524_2.png" width="24"/> seneca:</div>
+<blockquote>
+<p>I’d like to highlight that the core difference between this and Prop House is that one looks to reward looking back in time while the other looks ahead. Presumably, this directs product development in two different paths. As such, and especially due to the targeted use case, I think a solid implementation by reputable and competent builders is a great step forward for the DAO.</p>
+</blockquote>
+</aside>
+<p>In our view, RH &amp; PH have diverging goals over time:</p>
+<p>PH: Faster ways of funding a wide range of initiatives. Optimizes for speed, variety, and experimentation.</p>
+<p>RH: Deliberate process to reward high impact. Optimizes for multi-round builders, impact assessment, and better long term decision making for the DAO.</p>
+<p>And as such, even if there’s some overlap between the product to start with, we believe it’s in the best interest of the DAO to fund independent initiatives who can iterate and build quality products that can specifically target the use cases of each.</p>
+<p>As for us, we’re here as long term builders of the Nouns community (hence recusing ourselves to Retro Rewards for this project in perpetuity). We see all of this as Nounish public goods in the long run, so we’re not attached to brand and can very well see this as being part of the Prop House umbrella in the long run. The main thing we are optimizing for is having the funding and independence to move quickly because we believe that the best way to build products is to launch quickly and iterating based on usage.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/842_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun40</div>
+          <div class="post_content">
+<p>After having digested this a bit, I think the crux of the debate is about whether we think the product / protocol visions of PH and RH are different enough that it would be better to separate the two products and allow for independent thinking and execution by another competent team to explore the canvas of what RH could be OR we think their visions are too overlapping such that it would mostly be confusing and a waste and would be better to leverage the existing brand, audience, and team to execute RH within PH.</p>
+<p>Despite the fact that I’m a huge PH fan, I believe thinking of RH as just an added “feature” or “round” to PH could limit important exploration of what it could be. We didn’t quite understand the full potential of what PH needed to grow into when we first funded PH. I think there’s a chance that that’s the case with RH as well given that it’s a new realm of incentive mechanism (retroactive rewards vs funding for building) we’re not quite familiar with.</p>
+<p>Note, this doesn’t mean I think the two products necessarily will or should diverge in their vision. It’s possible that PH naturally starts supporting retro rounds for past PH props and that expansion of scope happens quickly and without much confusion or dilution of the original concept, and at that point we could consider if it’s just pointless to keep a separate RH house just for on-chain props when PH is already doing retro rounds well for PH props. In that case, we could consider merging the two products or just merging the protocols and have two front ends for on-chain prop retro rounds. But it just feels to me that we might be signing up for under-exploring from a blank canvas what RH could be if we mandate it from the beginning to fit into the PH box.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/436_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">sernoadz</div>
+          <div class="post_content">
+<p>Couldn’t type in <strong><span class="hashtag-raw">#nouner-general</span></strong> but I agree with what <span class="mention">@Oni</span> is saying.</p>
+<blockquote>
+<p>i also dont think retro funding will necessarily to rely on exposure the same way prop house does – in those cases we are trying to get as many new people/ideas onboarded into that round. With retro funding we will always have a set / static list of proposals already there for consideration</p>
+</blockquote>
+<p>I believe that if a team has completed a proposal and they’re successful, there is high incentive for them to go and give updates since they would want to be considered for the Retroactive Rewards.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1331_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">vectordao</div>
+          <div class="post_content">
+<p>Chiming in with a quick update here: given nouners signaling hesitation and the overlap with Prop House raodmap, we think the best approach would be to run retro rewards as a program within Prop House for the time being.  As such, we’ll withdraw this proposal to build a stand alone Retro House for now.</p>
+<p>Overall, we really appreciate everyone chiming in on this proposal. While it’s unfortunate that we couldn’t get to a wider consensus, our team is still excited to build some meaningful software in the nouns ecosystem, so will be cooking up other ideas for the future.</p>
+<p>Until then, <img alt=":v:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/v.png?v=12" title=":v:" width="20"/></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

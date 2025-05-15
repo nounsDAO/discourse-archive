@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Proposal: Nouns Floor Token</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Proposal: Nouns Floor Token</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/938_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">andy8052</div>
+          <div class="post_content">
+<h1>
+<a class="anchor" href="#tldr-1" name="tldr-1"></a>TLDR:</h1>
+<ul>
+<li>Create a vault on v2 of <a href="https://fractional.art/" rel="noopener nofollow ugc">Fractional</a> where Noun owners can deposit Nouns to get $NOUNS tokens (token pegged to Nouns floor)</li>
+<li>Nouns inside of the vault can have their votes delegated to another address</li>
+<li>Noun owners can borrow $NOUNS against their Noun</li>
+</ul>
+<h1>
+<a class="anchor" href="#overview-2" name="overview-2"></a>Overview</h1>
+<p>The Floor Nouns Vault will allow for any Noun holder to trustlessly mint $NOUNS tokens through depositing them into a Floor Swap pool and borrowing against their nouns. At its core, the vault will offer the ability to deposit a Noun and get back 0.975 $NOUNS tokens and withdraw Nouns (when available for floor swaps) for 1.025 $NOUNS tokens.</p>
+<p>Alongside this, $NOUNS owners will be able to vote on delegates for deposited Nouns. When borrowing against your Noun, you will be able to still maintain voting power personally.</p>
+<h2>
+<a class="anchor" href="#floor-swaps-3" name="floor-swaps-3"></a>Floor Swaps</h2>
+<p>Much like NFTX, users can swap 1 Noun for 0.975 $NOUNS tokens. A user can also swap 1.025 $NOUNS for the Noun (when available for floor swaps) of their choosing (since we do not really care about rarity). All fees here are sent to $NOUNS/ETH LPs.</p>
+<p>$NOUNS tokens will have one vote in the core contracts and that will be on changing the delegate for all nouns in the vault. This will allow for all major governance to be abstracted outside of the floor vault contracts. To start, I would propose that the nounders are the initial delegate while a more robust governance structure is made for the floor nouns.</p>
+<h2>
+<a class="anchor" href="#noun-borrowing-4" name="noun-borrowing-4"></a>Noun Borrowing</h2>
+<p>Users can borrow $NOUNS against their Noun. When borrowing against your Noun, you will have control over where your Nouns’ votes are delegated (each borrowing position will be its own contract). Users can borrow up to 0.975 $NOUNS. When a user’s debt reaches 0.975 $NOUNS, the Noun moves from being protected for the owner to being available for Floor Swaps. In exchange for being able to borrow against your Noun, there is an interest rate charged in $NOUNS tokens. The interest rate here will be managed in combination with Nouns governance and Fractional governance. It is anticipated that at the start, NounsDAO will want Fractional to play a larger role in ironing out the system and slowly Fractional can be removed from any interest management needs if so desired.</p>
+<p>In order to withdraw your Noun you must pay back any amount you borrowed plus any accrued interest.</p>
+<h2>
+<a class="anchor" href="#nounsparty-optionalstretch-goal-5" name="nounsparty-optionalstretch-goal-5"></a>Nouns.party (optional/stretch goal)</h2>
+<p>An upgrade to the nouns.party site and contracts to instead move all won Nouns in the vault and distribute $NOUNS to all participants.</p>
+<h2>
+<a class="anchor" href="#vault-ownership-6" name="vault-ownership-6"></a>Vault Ownership</h2>
+<p>Due to the flexibility of Fractional v2, we will be able to give NounsDAO governance managerial control (should it be desired) of this vault. This will allow for DAO governance to handle upgrades, fees and any other changes needed without Fractional’s approval. Again, we can make this ownership very flexible as there could be some benefits for NounsDAO to offload some work/governance to Fractional.</p>
+<h2>
+<a class="anchor" href="#risks-7" name="risks-7"></a>Risks</h2>
+<p>For NounsDAO the risks are minimal assuming most normal circumstances. There could be a world where more than 50% of Nouns were deposited into the floor vault and one user accumulated the majority vote of $NOUNS. Without users withdrawing their claimable Nouns you could theoretically 51% attack the DAO with only 26% of voting power earned. In practice I do not believe this is a feasible risk. On a smaller scale, this system could reduce friction to create onchain votes and potentially cause a level of governance bloat.</p>
+<h2>
+<a class="anchor" href="#fees-8" name="fees-8"></a>Fees</h2>
+<p>I propose we allocate a fee switch (like a <a href="https://zine.zora.co/zora-v3" rel="noopener nofollow ugc">ZORF</a>) which would split potential fees to Fractional and NounsDAO. The fee switch would stay off and require both parties’ sign-off before being turned on.</p>
+<h2>
+<a class="anchor" href="#goalsmilestones-9" name="goalsmilestones-9"></a>Goals/Milestones</h2>
+<ol>
+<li>3-5 week development timeline post the launch of Fractional v2</li>
+<li>Standalone website to interact with the system</li>
+<li>Support on fractional.art to interact with the system</li>
+<li>Basic governance portal to vote on delegates</li>
+</ol>
+<h3>
+<a class="anchor" href="#stretch-goals-10" name="stretch-goals-10"></a>Stretch Goals</h3>
+<ol>
+<li>More robust subDAO governance for $NOUNS</li>
+<li>Lock a $NOUNS token to mint a derivative Noun NFT for increased ownership feel</li>
+</ol>
+<h2>
+<a class="anchor" href="#team-11" name="team-11"></a>Team</h2>
+<p>The Fractional team is currently 20 strong and excited to work on this vault.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/248_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">anounymous</div>
+          <div class="post_content">
+<p>hi andy &amp; welcome! can you clarify what the ask is here? (also, fwiw interested to learn more about frac v2 if you have the bandwidth</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>Perhaps a way to mitigate the 51% attack is to limit the percentage of total Nouns that can be in a single vault, and if that limit is reached, any new Noun that’s fractionalized starts a brand new vault, so the delegation power is distributed among multiple accounts?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/939_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">verb-e</div>
+          <div class="post_content">
+<p>More broadly, it could be nice for a Nowner to be able to decide if to join a current vault or not. E.g. maybe the DAO would want to take a Noun it owns and fractionalize it in its own vault to create an ERC20 to be used to reward community contributors, and only them, so in a way they have their own subDAO.</p>
+<p>Thinking out loud here… curious for other people’s thoughts on this.</p>
+<p><span class="mention">@andy8052</span> thanks for bringing such a great opportunity to the community!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">willprice</div>
+          <div class="post_content">
+<p>I think this sits in a great place in trade-off space.</p>
+<ul>
+<li>fractional ownership without sacrificing governance power</li>
+<li>liquidity without sacrificing ownership of a specific noun</li>
+<li>an elegant liquidation mechanism</li>
+<li>incentives for liquidity providers</li>
+<li>treasury funds are not placed at risk</li>
+</ul>
+<p>Some questions:</p>
+<ul>
+<li>how can we bootstrap sufficiently deep liquidity to make this useful? Can the DAO help?</li>
+<li>where do we expect NOUNFLOOR to trade relative to the floor price of a Noun?</li>
+<li>is Fractional requesting compensation in either ETH or Noun terms?</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/842_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun40</div>
+          <div class="post_content">
+<p>Any updates here <span class="mention">@andy8052</span>? Eagerly awaiting this prop.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Proposal: NIP-1 Dynamic Quroum</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Proposal: NIP-1 Dynamic Quroum</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/248_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">anounymous</div>
+          <div class="post_content">
+<p>[This replaces the previous post on statically increasing Quroum requirements; it is intended to spark discussion on optimal parametrization of the consensus curve before going on chain]</p>
+<h1>
+<a class="anchor" href="#nip-1-dynamic-vote-quorum-1" name="nip-1-dynamic-vote-quorum-1"></a>NIP-1: Dynamic Vote Quorum</h1>
+<h2>
+<a class="anchor" href="#simple-summary-2" name="simple-summary-2"></a>Simple Summary</h2>
+<p>A dynamic quorum that adjusts as a function of for/against votes, allowing uncontested proposals to pass at a minimum defined quorum, while requiring higher assurance on contested proposals.</p>
+<h2>
+<a class="anchor" href="#abstract-3" name="abstract-3"></a>Abstract</h2>
+<p>This NIP proposes an update to the <code>NounsDAOLogicV1</code> contract that replaces the static <code>proposal.quorumVotes</code> with a dynamic quorum that adjusts based on the amount of opposition.</p>
+<p>TODO: Decide on curve (linear, exponential, etc.)</p>
+<p>Sample Quorum Calculation:</p>
+<pre><code class="lang-auto">x = for_votes / (for_votes + against_votes)
+if (x &lt;= 0.5) {
+    return failed
+}
+
+min_quorum_bps = 1000
+max_quorum_bps = 5000
+quorum_bps = ((max_quorum_bps - min_quorum_bps) * (1 - x)) + min_quorum_bps
+quorum = (quorum_bps * total_supply) / 10000
+
+return for_votes &gt;= quorum
+</code></pre>
+<h2>
+<a class="anchor" href="#motivation-4" name="motivation-4"></a>Motivation</h2>
+<p>This is a step towards decentralization, offering improved security and partial mitigation of risks associated with vote accumulation by individual members, while keeping friction low for routine governance tasks.</p>
+<p>A dynamic quorum integrates some aspects of optimistic governance (low friction on uncontroversial or ‘procedural’ proposals) by allowing uncontested proposals to pass at the current 10% quorum, while requiring higher assurance on contested proposals as a function of turnout/dissent.</p>
+<p>//</p>
+<p>[Note: min_quorum_bps + max_quorum_bps &lt;= 10000]</p>
+<p>using  above function gives the following quorum minimums at given consensus thresholds-<br/>
+(Consensus, Quorum) : (100%, 10%), (75%, 20%), (50%, 30%)</p>
+<p>(consensus = for votes / (for + against votes)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/497_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">4156</div>
+          <div class="post_content">
+<p>thanks for sharing this. nounders had a preliminary discussion about it this morning, and our main feedback is that we think all governance protocol changes should undergo a formal audit before being executed. so 100% we should explore, model, and debate the cryptoeconomic consequences of this kind of change, and intuitively it is an interesting and probably good idea, but before thinking about putting it on-chain it will require a substantial amount of diligence. just want to make clear to everyone that even though it might look the same, this is not the same flavor of proposal as funding a coloring book etc. due to the long tail catastrophic risks of getting it wrong. solimander also mentioned that it might be a good first use-case for the proposal diligence committee</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/248_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">anounymous</div>
+          <div class="post_content">
+<p>thx 4156- reiterating from discord that I agree wholeheartedly with all of this and that I hope we can work out an efficient, conscientious paradigm for updating contracts.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

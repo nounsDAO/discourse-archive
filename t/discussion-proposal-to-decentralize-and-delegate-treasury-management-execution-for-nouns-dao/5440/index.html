@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>[Discussion] Proposal to Decentralize and Delegate Treasury Management &amp; Execution for Nouns DAO</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">[Discussion] Proposal to Decentralize and Delegate Treasury Management &amp; Execution for Nouns DAO</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/7501_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">king.rethink</div>
+          <div class="post_content">
+<h1><a class="anchor" href="#introduction-1" name="introduction-1"></a>Introduction</h1>
+<p>Hi NounsDAO community, I’m King from <a href="https://www.rethink.finance/" rel="noopener nofollow ugc">Rethink Finance</a>.</p>
+<p>We are an asset management infrastructure provider working with and building on top of <strong>Safe Custody Contract, Gnosis Roles Modifier,</strong> and <strong>Open Zeppelin Governor</strong>, to make decentralized and delegated asset management more accessible and power the transition to decentralized and non-custodial asset management.</p>
+<h1><a class="anchor" href="#tldr-2" name="tldr-2"></a>TL;DR</h1>
+<p>For DAOs like NounsDAO running a multi-sig, it’s a known fact that the process is not only annoying/operationally complex (because you need to coordinate at multiple people for every single action) but also not fully decentralized and will likely be regulated as CASP based on MiCA.</p>
+<p>Here’s how we can make DAO treasury management more decentralized, non-custodial, and efficient:</p>
+<p><img alt=":point_right:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/point_right.png?v=12" title=":point_right:" width="20"/> Delegated scoped permissions (governed by DAO token / NFTs or even multi-sig) for a manager in charge of executing certain transactions on behalf of the DAO</p>
+<p><img alt=":point_right:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/point_right.png?v=12" title=":point_right:" width="20"/> Ability to add direct governance execution of transactions or interactions with any protocol (governed by DAO token / NFTs)</p>
+<p><img alt=":point_right:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/point_right.png?v=12" title=":point_right:" width="20"/> Connections with pro asset managers currently managing over $50m in DeFi (mostly for the DAO’s idle assets)</p>
+<p><img alt=":point_right:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/point_right.png?v=12" title=":point_right:" width="20"/> Ability to connect the community with additional capital if you choose to run your own generic strategy</p>
+<h1><a class="anchor" href="#summary-3" name="summary-3"></a>Summary</h1>
+<p>This post is a temperature check for the Nouns DAO &amp; community. We would like to initiate discussion and find ways to make NounsDAO’s treasury management execution more decentralized and efficient. Status quo is <em>multi-sig</em>. This is not only highly operationally complex (every transaction needs multiple signers, often at the same time), but also not fully decentralized and might even be facing regulatory risks (as CASP based on MiCA).</p>
+<p>We are presenting 2 complementary but independent solutions:</p>
+<ul>
+<li>Decentralized Treasury Management</li>
+<li>Delegated Asset Management</li>
+</ul>
+<h1><a class="anchor" href="#details-4" name="details-4"></a>Details</h1>
+<h2><a class="anchor" href="#decentralized-treasury-management-5" name="decentralized-treasury-management-5"></a>Decentralized Treasury Management</h2>
+<ol>
+<li>Rethink Finance would partner with the Nouns community, to offer decentralized treasury management infrastructure governed by Noun NFTs.</li>
+<li>Noun NFT holders above minimum threshold (TBD) may create proposals on allocating community resources.</li>
+<li>Noun NFT holders may vote on proposals themselves, or choose to delegate their voting power to trusted delegates (with the possibility to revoke delegation at any time).</li>
+</ol>
+<h2><a class="anchor" href="#delegated-asset-management-6" name="delegated-asset-management-6"></a>Delegated Asset Management</h2>
+<ol>
+<li>Rethink Finance would partner with the Nouns community, to offer its members the infrastructure to spin up multiple on-chain investment vehicles (OIVs).</li>
+<li>Noun NFT holders may choose to deposit idle assets from the community treasury to OIVs to achieve common goals, while isolating risk.</li>
+<li>OIVs may have managers who may execute any transaction (any asset and any protocol on EVM) on behalf of OIV, if they have been granted scoped delegated permissions to do so.</li>
+<li>OIVs may be fully governed by Noun NFTs (NFT holders may create proposals or delegate voting power to trusted delegates, delegate scoped permissions, and approve valuation methods for OIV positions).</li>
+<li>Deposits and redemptions into OIVs are flexible and settled by a manager or through governance. Deposits into OIVs may be open to the wider community or gated by a whitelist.</li>
+<li>OIV managers may earn fees (performance, management, deposit, or redemption fees) for their service.</li>
+</ol>
+<h1><a class="anchor" href="#background-7" name="background-7"></a>Background</h1>
+<p>Rethink is a layer that operates on top of Gnosis Safe contract structure, essentially operating as micro DAOs for depositors, where they delegate permissions to the asset managers.</p>
+<p><img alt=":point_right:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/point_right.png?v=12" title=":point_right:" width="20"/> Deployers create the fund strategies that people deposit into in the first place.</p>
+<p><img alt=":point_right:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/point_right.png?v=12" title=":point_right:" width="20"/> Managers then can make changes to said fund structure, within the parameters agreed upon by depositors.</p>
+<p>We are utilizing the technology used by Gnosis, Arbitrum, Aave, Lido, ENS and Balancer to manage/execute treasury, making it more flexible for large-scale utility and adoption, and making it available to DAOs at large. We are presently talking onboarding with Sushi, Frax Finance, Radiant Capital, Umami/Bonsai DAO, etc, with already <strong>$1M+ AUM</strong>.</p>
+<p>If NounsDAO seeks professional asset management, we have a professional asset manager in our network, <strong>Evan Morris (ex-Harvard, ex-Strix Leviathan, <a href="https://www.linkedin.com/in/ebmorris/" rel="noopener nofollow ugc">LinkedIn</a>)</strong>, who is interested in running custom strategies for the NounsDAO treasury. He focuses on generating yield through diversified delta-neutral strategies, market-making, and aligning exposure with your strategic goals.</p>
+<p>Rethink would provide a non-custodial environment, ensuring you remain the owner of your assets while maintaining full control over delegated permissions for the manager.</p>
+<p><em>We would love to have NounsDAO as one of our pioneer adopters and help power the transition to decentralized, trustless, delegated, non-custodial asset management.</em></p>
+<p>Here are our key resources:</p>
+<ul>
+<li>Website: <a href="https://www.rethink.finance/" rel="noopener nofollow ugc">https://www.rethink.finance/</a></li>
+<li>Docs: <a class="inline-onebox" href="https://docs.rethink.finance/rethink.finance" rel="noopener nofollow ugc">Overview | rethink.finance</a></li>
+<li>Calendar: <a class="inline-onebox" href="https://cal.com/rethink.finance/30min" rel="noopener nofollow ugc">Demo | rethink.finance | Cal.com</a></li>
+</ul>
+<p>Please let us know your thoughts and feedback on this so we can move forward with a formalized proposal to be voted upon by the DAO.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/419_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">joelcares</div>
+          <div class="post_content">
+<p>Nouns DAO runs on a fork of Compound Governance, we already have decentralized treasury management.</p>
+<p>We’ve also traditionally been resistant to investment structures and yield generation. Similar proposals haven’t passed, instead preferring proposals that speak to the creative spirit of Nouns.</p>
+<p>Looking through the DAO’s prior proposals will give you a better sense of where Nouns DAO is at.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.nouns.camp/?tab=proposals">
+<header class="source">
+<img class="site-icon" data-dominant-color="C88E17" height="192" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/4/409a77ceec12e2e7f13f35222be898dc8f181909.png" width="192"/>
+<a href="https://www.nouns.camp/?tab=proposals" rel="noopener nofollow ugc" target="_blank">nouns.camp</a>
+</header>
+<article class="onebox-body">
+<img class="thumbnail onebox-avatar" data-dominant-color="F6EDDA" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/c/cdd64dfa687729806477ab57742af869ee890901_2_500x500.png" width="500"/>
+<h3><a href="https://www.nouns.camp/?tab=proposals" rel="noopener nofollow ugc" target="_blank">Nouns Camp</a></h3>
+<p>A Nouns governance client</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

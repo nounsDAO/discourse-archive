@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Noun ritual sacrifice ie ragequit</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Noun ritual sacrifice ie ragequit</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/248_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">anounymous</div>
+          <div class="post_content">
+<p><strong>ragequit()</strong> is a consequential piece of infrastructure that DAO participants may see in a range of ways, so maybe its worthwhile to outline a simple mechanic and have a discussion:</p>
+<p>the ragequit disbursement (rd) function is necessarily recursive in its simplest equitable form would look something like this:</p>
+<p>rd(day+1) = rd(day) * nc(day+1) + rd(day)</p>
+<p>where</p>
+<p>“days” are settlement-delineated<br/>
+nc = % Change to Treasury from post settlement balance to EOD<br/>
+rd(day0) = Noun Auction Price<br/>
+daymin (first calculation)= Noun Auction settlement day + 1<br/>
+daymax (last calculation)= ‘current’ day - 1</p>
+<p>this version of things evenly assigns the day’s debits/credits to the Treasury to Nouns according to their % interest in the Treasury as of that day, and then rolls that amount forward as their new disbursable value/equity exposure to the next day’s transactions.</p>
+<p>notable characteristics of this calculation:</p>
+<ul>
+<li>
+<p>Provides <strong>defensibly fair (&amp; arbitrage-free) protection</strong> from a perceived DAO deviation from a participant’s interests incl. 51% attacks. Requires a fair amount of vigilance to be effective.</p>
+</li>
+<li>
+<p>A Noun’s disbursable value is  <strong>not directly diluted or enriched by future auctions</strong> or secondary market sales.</p>
+</li>
+<li>
+<p>Each Noun’s disbursable value is <strong>evenly exposed to the financial consequences of DAO actions</strong> throughout their natural lives. Net credits (eg Treasury investment returns) are also disbursable in this model.</p>
+</li>
+<li>
+<p>Outside of gas &amp; <strong>emotional distress</strong>, there are no <em>direct</em> disincentives to send this transaction. If in future certain DAO expenses were deducted immediately from Auction proceeds this would act effectively as a penalty on frivolous/intemperate bidding.</p>
+</li>
+<li>
+<p><strong>Not a first line of defense</strong> for vetting Proposals of subtle/dormant threats such as possible deferred liabilities to the DAO/Foundation etc.</p>
+</li>
+<li>
+<p><strong>Treasury balance is subjected to sudden sharp reductions</strong>, which the DAO will have to be mindful of when budgeting</p>
+</li>
+</ul>
+<p>some questions.</p>
+<ul>
+<li>
+<p>Is there consensus that this is a good idea in principle?</p>
+</li>
+<li>
+<p>How practically is this added as a valid Treasury interaction? To what extent can it be forked &amp; how many developer hours are needed?</p>
+</li>
+<li>
+<p>It’s an assumption of this post that the returned Noun’s would be burnt. Are there alternatives?</p>
+</li>
+<li>
+<p>Is it desirable that fractional interest be ragequittable (possibly in exchange for suspended voting rights and a regular interest payment)?</p>
+</li>
+<li>
+<p>Add present disbursable value (weight in ETH) to Noun profile page?</p>
+</li>
+</ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/4087_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0xDigitalOil</div>
+          <div class="post_content">
+<p>Interesting that this never got a discourse response. Sensible.</p>
+<p>What ever came of this besides <span class="mention">@verb-e</span> mentioning it in the ragequite writeup?</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

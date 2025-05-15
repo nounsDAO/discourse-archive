@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Idea: Auctioning the Rights to Design Nouns</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Idea: Auctioning the Rights to Design Nouns</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">maxcwolff</div>
+          <div class="post_content">
+<p>This thread proposes the idea of auctioning off the rights to set the next Nouns design. Currently, every day’s Noun is a randomly chosen composition of a static set of heads, bodies, and backgrounds. While this mechanic could possibly be a fun one-off experiment to implement on Nouns itself (sell the right to design a new head or body), I think the idea can only be fully explored in a Noun fork.</p>
+<p><em>Aesthetic</em></p>
+<p>Enforcing a consistent visual theme across these user-designed NFTs presents a challenge. One approach would be to use an SVG smart contract that enforces that every design includes Nouns glasses. Another is to informally encourage incorporating Nouns glasses in some way. Allowing artists to use off-chain art (eg: IPFS links) affords more accessibility and flexibility than pixel art. Instead of a profile picture NFT collection, this fork may more closely resemble a collection of 1/1 NFTs from different artists.</p>
+<p><em>Mechanism</em></p>
+<p>This protocol would have two auctions, one for the daily (perhaps weekly?) Nouns-like NFT, and the other for the time slots. Time slots are NFTs that can be burned and redeemed for the rights to pick the design of the Nouns-like NFT. Selling time slots faster than the rate of Nouns-like mints creates a market for unused time slots, and could help designers plan their mints better.</p>
+<p>The ETH proceeds from the time slot would go directly to the treasury. Instead of a regular daily auction, the mechanism could be something fancy like a <a href="https://www.paradigm.xyz/2022/01/constant-rate-issuance-sales-protocol" rel="noopener nofollow ugc">CRISP</a>-style continuous auction, perhaps even using the length of the queue of designs as an input to the pricing algorithm.</p>
+<p>The auction for the Nouns-like daily NFT would function mostly the same as the regular Nouns auction. Instead of sending the auction proceeds to the treasury, the proceeds could instead be sent to the person who designed the NFT (minus a cut for the DAO). That way, the designer could recoup the cost of buying the time slot, and it gives designers an economic incentive to participate.</p>
+<p><em>Treasury</em></p>
+<p>This Nouns DAO fork could withhold some time slot NFTs for itself, in addition to collecting an ETH treasury from the auctions. That way, the DAO could give the time slots to high-value artists to make designs. In general, the treasury should be spent to expand the social reach of the collection, and kick off a flywheel of good designs driving attention and high bids, which would drive more good designs.</p>
+<p>Just like Lil Nouns, this project could formalize its relationship with Nouns by contributing some fraction of its mints back to Nouns.</p>
+<p><em>Conclusion</em></p>
+<p>We are still in the first innings of exploring Nouns mechanisms and CC0. Mechanism experiments outside the DAO have an asymmetric upside to reach more people and drive value back to Nouns, as exemplified by Lil Nouns. I think this idea is also best explored in a Nouns fork, though maybe the learnings could be merged upstream someday.</p>
+<p>I’d love to hear any feedback that folks have about this idea!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">maxcwolff</div>
+          <div class="post_content">
+<p>forgot to mention, spoke with jon at vector dao and he was interested in doing some kind of a collaboration, getting some of their artists involved with this if it were to come to fruition.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/248_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">anounymous</div>
+          <div class="post_content">
+<p>I think in principle this is super interesting &amp; would love to see a protocol that enforces ongoing curation of new traits etc.  seems basically impossible to do in a fully permissionless way, though. What happens if someone submits a trait that they do not have legal rights to, for example?<br/>
+Ultimately new trait designs may need to be approved by the DAO, which maybe doesn’t derail what is most interesting about the idea? Actually Koans DAO forked Nouns several months back which this same idea, though i don’t think they have a forced auction cadence.<br/>
+best of luck!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1391_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">tony</div>
+          <div class="post_content">
+<p>As a general rule I think we should rapidly explore the design space around the mechanisms because we won’t really know what works until we try it. All for this.</p>
+<p>The aesthetic part seems most challenging but maybe it’s okay to just see what happens. Like you said, you’d either want to let anything go (ipfs link) or have a native ruleset (e.g. assemble from preselected components, export from a custom creation tool). I favor anything goes as long as the worst case scenario isn’t an existential risk for NounsDAO. Have you given that any thought?</p>
+<p>My intuition is there are a few categories of bad art:</p>
+<ol>
+<li>scamming like plagiarism/theft</li>
+<li>griefing like inappropriate content (e.g. gore)</li>
+</ol>
+<p>Only scamming has an economic incentive so I’m less worried about the griefing. Might just be something to accept as possible. It’s risky for the scammer because they have to pay for the slot and if there’s social consensus that it’s stolen work, there’s a greater likelihood they lose money on the scam.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>A no-code development platform “Nouns Maker (tentative)” that allows anyone across the world (even non-engineers) to build a DAO</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">A no-code development platform “Nouns Maker (tentative)” that allows anyone across the world (even non-engineers) to build a DAO</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/950_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">paji.eth</div>
+          <div class="post_content">
+<p>Hi, I’m paji.eth, one of the Japanese volunteer members who were fascinated by the potential of Nouns to transform society in the future.</p>
+<p>We have been introducing Nouns, which capture the essence of DAO, through video commentaries and blogs in Japanese, to spread awareness of Nouns to as many Japanese people as possible. (We have also spoken about this many times at events where we speak).</p>
+<pre><code class="lang-auto">https://www.youtube.com/watch?v=P6leaU30uOg
+https://voicy.jp/channel/2834/302612
+https://alis.to/kanerin/articles/K5x8wzmNVEkZ
+</code></pre>
+<p>I am writing to you, the Nounders and Nouns NFT holders, in hopes that you will give your hearty support to the project we are planning.</p>
+
+A no-code development platform “Nouns Maker (tentative)” that allows anyone across the world (even non-engineers) to build a DAO.
+<p>We envision a service like a crowdfunding website, where project owners can launch a Nouns-style DAO by project or theme.</p>
+<p>e.g. Services for project owners who wish to utilize Nouns’ NFT governance voting mechanism to manage community treasuries and send funds for activities including various genres and themes: IP business, online communities, activities including activation of depopulated areas, landmine clearance, environmental issues, humanitarian aid, etc.</p>
+<p>Step1. Implement a sample project with measures to solve one or more of the current issues in the original Nouns on smart contracts (see below for details).</p>
+<p>Step2. Launch the above pilot project, provide feedback to the original Nouns on the findings from running the actual service, and make improvements if any issues are found.</p>
+<p>Step3. If it is deemed possible to apply and expand to projects in various genres and themes as a DAO in steps 1 and 2, we will start working on the development and launching of the no-code platform “Nouns Maker (tentative),” which will allow anyone in the world (even non-engineers) to create a DAO.</p>
+
+Through our research of the original Nouns community (Discord/Discourse/vote/Twitter), analysis of the source code, and with the support of Komorebi88, the first Japanese Nouns NFT collector running the Nouns community for Japan, we have positioned the following issues and potential improvement that we have found in the original Nouns.
+<p><strong>1. Improvement in the speed of deciding where to use the treasury.</strong><br/>
+Issue: Since the number of NFTs required for the resolution of proposals is not proportional to the amount of ETH required, the resolution cannot be made speedily when the number of Treasury Wallet funds or NFT holders increases. Even for the most minor costs, such as a proposed budget of 2ETH (less than 0.1% of the total supply), it requires at least 10% of the NFT holders to approve the proposal, which makes it difficult to conduct initial trials that can be implemented without much cost.</p>
+<p>Improvement proposal: Proposed budget/Treasury = Budget rate = If this rate is 0.1%, we will require 1% approval of the holders. In addition, by keeping the 20% rule of the original Nouns as an upper limit, when there is a project that requires a large budget (over 1,000 ETH for example), the majority of votes of 20% of the holders will be required while allowing a more flexible execution for lower budgets.</p>
+<p>e.g.<br/>
+Proposed budget / Budget rate / Required rate of approval<br/>
+1ETH / 0.1% / 0.5%<br/>
+10ETH / 1.0% / 5.0%<br/>
+15ETH / 1.5% / 7.5%<br/>
+20ETH / 2.0% / 10%<br/>
+50ETH / 5.0% / 10%<br/>
+100ETH / 10% / 10%<br/>
+*When the total treasury is 1,000 ETH</p>
+<p><strong>2. Improvement of DAO proposal submission threshold.</strong><br/>
+Issue: The number of Nouns required to submit a proposal is proportional to the supply of Nouns, which means when the number of Nouns increases, it becomes too difficult to submit a proposal to DAO. For example, if there are 1,825 Nouns 5 years later, 9 Nouns will be required to submit proposals.</p>
+<p>Currently: Any Noun owner may submit a proposal to the DAO so long as they meet the minimum threshold of 0.5% of the total NOUN supply (1 NOUN until Noun <span class="hashtag">#200</span>) is required to submit proposals.</p>
+<p>Improvement proposal: Allowing proposal submissions with 1 Nouns NFT. (related proposal: <a class="inline-onebox" href="https://nouns.wtf/vote/15">Nouns DAO</a> )</p>
+<p><strong>3. Setting a penalty for not participating in DAO.</strong><br/>
+Issue: The presence of a holder who does not participate in the DAO at all increases the difficulty of approval and lowers the enthusiasm of the community. Also, we would like to include an automatic adjustment feature to prepare for a number of Nouns NFTs being lost or stolen, which possibly will result in the ballots not working.</p>
+<p>Currently: No penalty</p>
+<p>Improvement proposal: Any NFT holder that has not performed a single DAO-related transaction for 100 days will be banished from the DAO. Subtract from the total Nouns supply in the calculation of the required threshold of affirmative votes.</p>
+<p>In order to verify the above, we will conduct an experiment with the proposed improvements for one or more of these items attached to this pilot project.</p>
+<p>Also, to generate a certain level of response, we are working with CryptoNinja, one of the most popular DAO communities in Japan with 17,000 members, and expect to attract a constant number of people who want to become a holder. We already developed a generative tool with Nouns-like pixel art as below and are working hard to produce the parts.</p>
+<pre><code class="lang-auto">Official website: https://en.ninja-dao.com/ 
+Official Discord: https://discord.gg/djVHNWnvkW 
+Generative tool: https://ninja-dao-tools.com/nouns/preview 
+Sample image: https://i.gyazo.com/5e2ca8b5b41e599b7f8acc300aeaae78.mp4 
+</code></pre>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/9JB5kmyPhEAj9U1XhmfQr4Vd1HP.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/443b19374b15c928b50a605189f085790fbca709.png" rel="noopener nofollow ugc" title="unknown"><img alt="unknown" data-base62-sha1="9JB5kmyPhEAj9U1XhmfQr4Vd1HP" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/443b19374b15c928b50a605189f085790fbca709_2_10x10.png" height="460" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/443b19374b15c928b50a605189f085790fbca709.png" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">unknown</span><span class="informations">960×640 5.96 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>We aim to launch a Step 1 sample project as early as early summer 2022.</p>
+<p>We would appreciate a grant of 10ETH for Step1. Whether we receive a grant or not, we would like to proceed with this project only with our own resources, but we hope to develop it into a better project in cooperation and collaboration with Nounders and NFT holders of the original Nouns, whom we respect, and to return the knowledge gained from the project to the original Nouns as useful feedback.</p>
+<p>If there are any Nounders who are willing to be deeply involved in this project, please let us know.</p>
+<p>We would appreciate your frank opinions and encouragement.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/647_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">kiyo1973</div>
+          <div class="post_content">
+<p>It’s a nice project.<br/>
+I also participate in the Japanese community at kiyohito1973. I want you to realize it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/1089_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">DH_amiyoko</div>
+          <div class="post_content">
+<p>Hi.<br/>
+My name is DH.</p>
+<p>I am a member of NounsDAOJAPAN.</p>
+<p>We will do our best to develop into NounsMaker.</p>
+<p>CryptoNinjaDAO, NounsDAO made me realize that it was a very simple thing that existed in the closed bird cage, and that the cage door was so simple that you could just open it and live freely. Because I got it</p>
+<p>I agree with you, thank you.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/248_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">anounymous</div>
+          <div class="post_content">
+<p>hi paji and welcome to Nouns! Couldn’t be more thrilled about the dynamism of the Japan faction <img alt=":heart_eyes:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/heart_eyes.png?v=12" title=":heart_eyes:" width="20"/><br/>
+The core idea here seems to be developing a tool which would make it easy to fork the Nouns protocol, add new art and potentially tweak governance parameters as you outline in your improvement suggestions. Is that right? Seems like an exciting and useful idea if so.</p>
+<p>If you are suggesting we consider making the ‘improvement suggestions’ changes to Nouns itself I have a couple comments:</p>
+<ol>
+<li>
+<p><strong>1. Improvement in the speed of deciding where to use the treasury.</strong><br/>
+<em>Currently Quorum is a fixed 10% of supply (not aware of any “20%” rule), though there are tentative plans to move to a Variable Quorum with an aim to increase consensus assurances around more disputed proposals. see: <a class="inline-onebox" href="/t/proposal-nip-1-dynamic-quroum/562">Proposal: NIP-1 Dynamic Quroum</a><br/>
+Generally I think the idea of parametrizing the Quorum calculation (and possible the Voting Period) by Eth tx size is a good one, and we would only need to be mindful of transactions that contain other logic that could be a potential security risk (proposals that contain more complex tx would likely default to most stringent parameters until they can be safely analyzed)</em></p>
+</li>
+<li>
+<p><strong>Improvement of DAO proposal submission threshold.</strong><br/>
+<em>without upgrading the protocol the lowest possible threshold is 1BPS which would = 1 Noun for the 1st 1000 Days. This change can be submitted via a simple proposal (it has been done three times already, here is an example: <a class="inline-onebox" href="https://nouns.wtf/vote/37">Nouns DAO</a>).The idea of fixing the proposal threshold at 1 Noun is very interesting and would probably require some discussion/thought among DAO members before receiving majority approval, though am not sure.  In the meantime I think 1000 separate “validators” (setProposalThresholdBPS(1) is a great place to start!</em></p>
+</li>
+<li>
+<p><strong>Setting a penalty for not participating in DAO.</strong><br/>
+<em>Wow! I talk about penalties for non-participation sometimes but my thinking is nowhere near this bold <img alt=":clap:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/clap.png?v=12" title=":clap:" width="20"/>  A possible (alternative) approach is to provide rewards in the form of Governance stipends (Eth rewards for voting &amp; successful proposals) along with thoughtfully designed penalties for thoughtless/malicious proposals (requiring proposals to include a deposit which the DAO can keep if they find the proposal to be careless or predatory). Severely bad proposals could in some cases be grounds for “banishment” as you put it. This way participation can be strongly encouraged while avoiding an environment where members feel their investment/potential role in the dao is consistently at risk. Thoughts?</em></p>
+</li>
+</ol>
+<p>Thanks again for bringing these ideas. The growth of the Japan group has been amazing to watch. Since the proposed Dao-maker will require some technical skill to complete, can you give us a sense of who will be building and their past development (coding) experience?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/950_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">paji.eth</div>
+          <div class="post_content">
+<p>Thank you so much for your thoughtful reply!</p>
+<p>Firstly, let me introduce myself a bit more.</p>
+<p>I am a former engineer and three-time serial entrepreneur with over 50 website and app development projects under my belt. Currently the co-founder and COO of Tokyo Otaku Mode, which brings Japanese anime culture to the world, and a member of the Otaku Coin Association, which does experiments in the blockchain field. We have our own engineering team, but we also have a lot of experience in developing dApps, websites, and apps with excellent development partners.</p>
+<p>Our recent products.</p>
+<pre><code class="lang-auto">https://otakumode.com/ EC
+https://otaku-coin.com/ A group of companies in the Japanese content industry
+https://isekai-anime.xyz/ New anime-style NFT collection
+https://www.iconee.io/ for NFT PFPs *Japanese only
+https://niji.so/ for fanart NFTs *Japanese only
+</code></pre>
+<p>Although the full specification for “Nouns Maker” is not finalized, and the development may be a difficult process, we believe that our team can make it happen by examining the issues and expanding from the step 1 pilot project “CryptoNinja Nouns,” based on the original Nouns.<br/>
+Each of the values of the proposed improvements in 1-3 are tentative, and we hope to verify the appropriate values in the step 1 pilot project “CryptoNinja Nouns” and decide whether to make them variable or fixed in “Nouns Maker”. There is a possibility that we would want to add more different variables. What we want to do is to be able to create Nouns-like DAOs for various genres and themes with no code, so we plan to make the smart contract for the character generation part modifiable.</p>
+<p>I hope this answers your questions. We appreciate your support and encouragement!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/950_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">paji.eth</div>
+          <div class="post_content">
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/dCEcgY8SLCekAVM3M3cb3dbFGrT.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/5/5f7aadca8917714b20e69d7e005375d5ac144b71.jpeg" rel="noopener nofollow ugc" title="スクリーンショット 2022-04-21 14.00.55"><img alt="スクリーンショット 2022-04-21 14.00.55" data-base62-sha1="dCEcgY8SLCekAVM3M3cb3dbFGrT" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/5f7aadca8917714b20e69d7e005375d5ac144b71_2_10x10.png" height="431" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/5f7aadca8917714b20e69d7e005375d5ac144b71_2_690x431.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/5f7aadca8917714b20e69d7e005375d5ac144b71_2_690x431.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/5f7aadca8917714b20e69d7e005375d5ac144b71_2_1035x646.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/5/5f7aadca8917714b20e69d7e005375d5ac144b71_2_1380x862.jpeg 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">スクリーンショット 2022-04-21 14.00.55</span><span class="informations">2880×1800 217 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/950_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">paji.eth</div>
+          <div class="post_content">
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/nHTiYyKwXfsxv3FD0NvElRiBonu.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/a/a62829633fe3d9031b9b7b7b51e6e573a5e840a8.jpeg" rel="noopener nofollow ugc" title="FS81Lh8aQAEaLPa"><img alt="FS81Lh8aQAEaLPa" data-base62-sha1="nHTiYyKwXfsxv3FD0NvElRiBonu" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a62829633fe3d9031b9b7b7b51e6e573a5e840a8_2_10x10.png" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a62829633fe3d9031b9b7b7b51e6e573a5e840a8_2_500x500.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a62829633fe3d9031b9b7b7b51e6e573a5e840a8_2_500x500.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/a/a62829633fe3d9031b9b7b7b51e6e573a5e840a8_2_750x750.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/a/a62829633fe3d9031b9b7b7b51e6e573a5e840a8.jpeg 2x" width="500"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename">FS81Lh8aQAEaLPa</span><span class="informations">960×960 94.1 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

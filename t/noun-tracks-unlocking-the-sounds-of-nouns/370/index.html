@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Noun Tracks - Unlocking the Sounds of Nouns</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Noun Tracks - Unlocking the Sounds of Nouns</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/851_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">joshuafisher</div>
+          <div class="post_content">
+<h1>
+<a class="anchor" href="#noun-tracks-unlocking-the-sounds-of-nouns-1" name="noun-tracks-unlocking-the-sounds-of-nouns-1"></a>Noun Tracks - Unlocking the Sounds of Nouns</h1>
+<p>Authors: Arpeggi Labs, Nate Fox &amp; Joshua Fisher.</p>
+<h2>
+<a class="anchor" href="#tldr-2" name="tldr-2"></a><strong>TL;DR</strong>
+</h2>
+<p>Noun Tracks are the fully on-chain 1:1 CC0 theme songs of a Noun created using Arpeggi Labs’ on-chain DAW with samples and patterns performed and written by Nate Fox.</p>
+<p>Together we will develop and launch Noun Tracks.  These NFT’s are claimable for Nouners plus all the tools will be public and sounds will be compeletely CC0 for the community to enjoy.</p>
+<h2>
+<a class="anchor" href="#how-3" name="how-3"></a><strong>How?</strong>
+</h2>
+<h3>
+<a class="anchor" href="#part-1-the-noun-track-stack-4" name="part-1-the-noun-track-stack-4"></a>Part 1 - The Noun Track Stack</h3>
+<p>Nouns have a stack of visual characteristics that make them unique, with Noun Tracks now they have their own sounds too!</p>
+<p>Noun Tracks contain a 1:1 sonic representation of every layer of a Noun.</p>
+<p>Each visible layer of the Noun corresponds to a unique component of the song:</p>
+<p><strong>Layer 1 - Backgrounds (2)</strong> - Key, either Major or Minor.</p>
+<pre><code class="lang-auto">Key_Background {
+    boolean major;
+} 
+</code></pre>
+<p><strong>Layer 2 - Bodies (30)</strong> - Chord Progressions containing unique Bass &amp; Harmony patterns and samples. These correspond to the “body” of the song.</p>
+<pre><code class="lang-auto">ChordProgression_Bodies {
+	Pattern bass;
+	Pattern harmony;
+	Sample bassSample;
+    Sample harmonySample;
+}	
+</code></pre>
+<p><strong>Layer 3 - Accessories (137)</strong> - Drum Loops containing unique snare, hat, percussion and kick patterns and samples. These provide a nice “accessory” to the other melodic components to the song.</p>
+<pre><code class="lang-auto">DrumLoop_Accessory {
+    Pattern kick.
+    Pattern snare;
+    Pattern hat;
+    Pattern perc;
+    Sample kickSample;
+    Sample snareSample; 
+    Sample hatSample;
+    Sample percSample;
+}
+</code></pre>
+<p><strong>Layer 4 - Heads (234)</strong> - Lead Sample and Sound Effects. 234 Sample + Sound Effect combinations give each Noun.<br/>
+These custom Lead Samples plus fun FX Sample moments give each Noun Track a distinctive personality. For example, Nouns with the shark head will have a shark chomp sound effect!</p>
+<pre><code class="lang-auto">FX_Heads {
+    Sample lead;	
+    Pattern fx;
+    Sample fxSample;
+} 
+</code></pre>
+<p><strong>Layer 5 - Glasses (21 patterns)</strong> - Lead Pattern, aka the musical notation of the Lead Sample produced by Nate.</p>
+<pre><code class="lang-auto">Lead_Glasses {
+	Pattern lead;
+}
+</code></pre>
+<h3>
+<a class="anchor" href="#part-2-construction-of-a-noun-track-5" name="part-2-construction-of-a-noun-track-5"></a>Part 2 - Construction of a Noun Track</h3>
+<p>Once an auction is settled and a new Noun appears a new Noun Track is created and minted!</p>
+<p>Using a custom “Noun Track Creation Contract” Arpeggi will pull the correspoding Samples and Patterns from the current Nouns features to create each days Noun Track.</p>
+<p><strong>Example Noun Track</strong><br/>
+<img alt="" data-base62-sha1="l1b4rciqNLPaSLKItvC2qCQJ2dY" height="368" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/934fc25f251b9b5e8bba9eb5dce86dfd344f5f02.png" width="657"/></p>
+<p> <iframe allowfullscreen="" data-original-href="https://vimeo.com/647873210" frameborder="0" height="360" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation" seamless="seamless" src="https://player.vimeo.com/video/647873210?h=f383571ffa&amp;app_id=122963" width="640"></iframe>
+</p>
+<br/>
+<pre><code class="lang-auto">Noun_Track {
+	Key_Background key;
+    ChordProgression_Bodies chords;
+    DrumLoop_Accessory drums;
+    FX_Heads fx;
+    Lead_Glasses lead;
+}
+</code></pre>
+<p><strong>Additional Noun Tracks Samples</strong><br/>
+<img alt="" data-base62-sha1="hPCXO04xYbKF2wCfcMUPIG7bcGV" height="368" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/7cfaff31fbd97b8cd4afdecca0cb2922546f3bed.png" width="657"/></p>
+<p> <iframe allowfullscreen="" data-original-href="https://vimeo.com/647873573" frameborder="0" height="360" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation" seamless="seamless" src="https://player.vimeo.com/video/647873573?h=2d74e86881&amp;app_id=122963" width="640"></iframe>
+<br/>
+<br/></p>
+<p><img alt="" data-base62-sha1="iFV7yJhKHnrBDSOarLgVfGmQjCa" height="368" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/82e44346710f97da93dfb479dc8c182b2f320a4a.png" width="657"/></p>
+<p> <iframe allowfullscreen="" data-original-href="https://vimeo.com/647873417" frameborder="0" height="360" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation" seamless="seamless" src="https://player.vimeo.com/video/647873417?h=965124a1c3&amp;app_id=122963" width="640"></iframe>
+</p>
+<p>(*please note that this was created using a BETA Version of Arpeggi Nouns where Percussion field was used or FX.  The final version will have greater flexibility)</p>
+<h3>
+<a class="anchor" href="#part-3-minting-distribution-6" name="part-3-minting-distribution-6"></a>Part 3 - Minting &amp; Distribution</h3>
+<p>Every Noun has a corresponding Noun Track that can be claimed by the Noun owner. A Nouner simply connects the wallet to NounTracks.wtf and they can claim their corresponding Noun Track.</p>
+<p>In addtion to the NFT being minted the Noun Track will be simultaneously uploaded w/ it’s Noun artwork to the traditional music DSP’s and platforms. Using a platform such as Revelator’s on-chain IP rights management system the royalties generated will be split between NounsDAO, the Nouner, and the creators at 33.3% each.</p>
+<p>Don’t worry if you don’t own a Noun. All tools are public and the music is CC0 so feel free to have some fun!</p>
+<h2>
+<a class="anchor" href="#who-7" name="who-7"></a>Who:</h2>
+<p>Apreggi Studios: Creators of the world’s first on-chain music creation platform.<br/>
+<a class="onebox" href="http://arpeggi.io" rel="noopener nofollow ugc" target="_blank">arpeggi.io</a></p><aside class="onebox allowlistedgeneric" data-onebox-src="https://medium.com/@arpeggilabs/arpeggi-studio-4bf465348d51">
+<header class="source">
+<a href="https://medium.com/@arpeggilabs/arpeggi-studio-4bf465348d51" rel="noopener nofollow ugc" target="_blank" title="07:24PM - 24 October 2021">Medium – 24 Oct 21</a>
+</header>
+<article class="onebox-body">
+<div class="aspect-image" style="--aspect-ratio:640/360;"><img class="thumbnail" height="360" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/3431c9a46b437ea030d5ce5315833b69a76bb1ce.jpeg" width="640"/></div>
+<h3><a href="https://medium.com/@arpeggilabs/arpeggi-studio-4bf465348d51" rel="noopener nofollow ugc" target="_blank">Arpeggi Studio</a></h3>
+<p>The First On-Chain Music Creation Platform</p>
+<p>
+<span class="label1">Reading time: 5 min read</span>
+</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+<p>Nate Fox: Grammy awarded producer and songwriter who has worked with artists ranging from Chance The Rapper to Randy Newman.</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://artists.spotify.com/songwriter/0uZyVM4hASpRCJgEUr6iIs">
+<header class="source">
+<a href="https://artists.spotify.com/songwriter/0uZyVM4hASpRCJgEUr6iIs" rel="noopener nofollow ugc" target="_blank">artists.spotify.com</a>
+</header>
+<article class="onebox-body">
+<img class="thumbnail onebox-avatar" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/d7e28aea001d9c35b32a1afd0cee9f915d0ae1ac_2_10x10.png" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/d7e28aea001d9c35b32a1afd0cee9f915d0ae1ac_2_500x500.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/d7e28aea001d9c35b32a1afd0cee9f915d0ae1ac_2_500x500.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/d7e28aea001d9c35b32a1afd0cee9f915d0ae1ac_2_750x750.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/d7e28aea001d9c35b32a1afd0cee9f915d0ae1ac_2_1000x1000.jpeg 2x" width="500"/>
+<h3><a href="https://artists.spotify.com/songwriter/0uZyVM4hASpRCJgEUr6iIs" rel="noopener nofollow ugc" target="_blank">Nate Fox is a songwriter</a></h3>
+<p>Nate Fox has written songs performed by Chance the Rapper, Joey Purp, and more. Check out what they've worked on.</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://music.apple.com/us/playlist/nate-fox-behind-the-boards/pl.84c458559b35469c9f7a88361ff959f5">
+<header class="source">
+<img class="site-icon" height="32" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/5916a9d806e6b421e5494971c2a9515e00109722.png" width="32"/>
+<a href="https://music.apple.com/us/playlist/nate-fox-behind-the-boards/pl.84c458559b35469c9f7a88361ff959f5" rel="noopener nofollow ugc" target="_blank">Apple Music</a>
+</header>
+<article class="onebox-body">
+<div class="aspect-image" style="--aspect-ratio:690/362;"><img class="thumbnail" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/58dc8fb0a06e7c6db459d320618b10051e6dd038_2_10x10.png" height="362" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/58dc8fb0a06e7c6db459d320618b10051e6dd038_2_690x362.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/58dc8fb0a06e7c6db459d320618b10051e6dd038_2_690x362.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/1X/58dc8fb0a06e7c6db459d320618b10051e6dd038_2_1035x543.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/1X/58dc8fb0a06e7c6db459d320618b10051e6dd038.jpeg 2x" width="690"/></div>
+<h3><a href="https://music.apple.com/us/playlist/nate-fox-behind-the-boards/pl.84c458559b35469c9f7a88361ff959f5" rel="noopener nofollow ugc" target="_blank">Nate Fox: Behind the Boards</a></h3>
+<p>Playlist · 35 Songs</p>
+</article>
+<div class="onebox-metadata">
+</div>
+<div style="clear: both"></div>
+</aside>
+<p>Joshua Fisher: Creative manager, SharkDAO member, Noun Prop Builder and Web3 enthusiast.</p>
+<h2>
+<a class="anchor" href="#costs-8" name="costs-8"></a>Costs:</h2>
+<p>We’ve broken down the cost into 2 Phases, with Phase one being paid a portion up front and portion upon launch. Phase 2 will be paid upon completion of Phase 1 in order to Launch. For avoidance of confusion Phase 2 would be paid before the backend of Phase 1.</p>
+<p><strong>Phase 1</strong><br/>
+40E - Music Creation: Nate will personally record and produce the sessions at his studio in Los Angeles creating all the custom sounds himself and with musicians in his network.<br/>
+20 upfront, 20 wen mint</p>
+<p>30E - Arpeggi Music Platform: Arpeggi Labs will build a custom DAW that can be used by Nate, and the public after launch, to store the Samples and Patters used to generative daily Noun Tracks and put them on-chain.<br/>
+20 upfront, 10 wen mint</p>
+<p>10E - Project Management: Josh developed the idea, organized the parties and will continue to see the project through development, launch and beyond.<br/>
+5 upfront, 5 wen mint</p>
+<p><strong>Phase 2</strong><br/>
+10E - Smart Contract Development (Solidity): Arpeggi Labs will implement the Solidity smart contract that allows Noun holders to mint Noun Tracks.</p>
+<p>5E - Front End Development: Arpeggi Labs can build the site that allows for minting with connected wallet.</p>
+<p>5E - Other Costs: Projected gas fees for uploading Samples and Airdropping Nouners.</p>
+<h2>
+<a class="anchor" href="#timeline-9" name="timeline-9"></a>Timeline:</h2>
+<p>We’re already hard at work as you can see and once this is approved Nate can continue creating and refining the Samples and Patterns and begin programming the tracks w/ Arpeggi.</p>
+<p>We are targeting a launch in 8 weeks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/88_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">skilift.eth</div>
+          <div class="post_content">
+<p>This is so cool, really love what you’ve put together here! The different music layers corresponding to different noun attributes allows endless possibilities - really cool <img alt=":+1:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/+1.png?v=10" title=":+1:"/></p>
+<p>one question: is the audio stored on-chain?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/302_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">0xNeil</div>
+          <div class="post_content">
+<p>Love it. This is a brilliant use of the on chain DAW and a perfect fit for Nouns. Music activations in blockchain are lagging, this will be another example of Nouns innovation in hindsight I’m sure.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/303_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">UtilityMaxi</div>
+          <div class="post_content">
+<p>Yes - all audio will be stored 100% on chain! You can read more about Arpeggi’s on-chain tooling here: <a class="inline-onebox" href="https://artforall.io/score/arpeggi/0xd614e3b775b94794ea16a7843f31a56c36edcb09" rel="noopener nofollow ugc">AFA 100/100 • Arpeggi Genesis Studio Pass - Arpeggi | ART FOR ALL</a></p>
+<p>Let us know if you have any more questions, and please stop-by in the Discord (<a class="inline-onebox" href="https://discord.gg/yAVN9w2mZF" rel="noopener nofollow ugc">Arpeggi Labs</a>) any time!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/303_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">UtilityMaxi</div>
+          <div class="post_content">
+<p>Thanks 0xNeil! Super excited to bring this to Nouns <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/88_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">skilift.eth</div>
+          <div class="post_content">
+<p>this is pretty much the only thing i wanted to know <img alt=":blush:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/blush.png?v=10" title=":blush:"/></p>
+<p>really excited to see this come to fruition. joshua and i spoke about this idea a little while back and i just love it. can’t wait!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/88_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">skilift.eth</div>
+          <div class="post_content">
+<p>Also, I see this was clearly presented in the TL;DR at the top right in front of my face <img alt=":see_no_evil:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/see_no_evil.png?v=10" title=":see_no_evil:"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>Beyond cool - I had never considered the idea that the Noun art could be translated into sound!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/330_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">iamdelpiero</div>
+          <div class="post_content">
+<p>Love this idea! Very curious to listen to The Sound of Nouns</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/363_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Ryolion</div>
+          <div class="post_content">
+<p>I like this suggestion a lot.<br/>
+By the way, I’m sure Arpeggi Studio will be updated repeatedly to add features (octaves, note types) and improvements.<br/>
+Will Sound of Nouns support those updates in the future?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/851_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">joshuafisher</div>
+          <div class="post_content">
+<p>Thanks!  The virtuous cycle in action.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/851_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">joshuafisher</div>
+          <div class="post_content">
+<p>Can’t wait for you to hear them too!  Thanks!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/851_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">joshuafisher</div>
+          <div class="post_content">
+<p>Don’t want to speak for Arpeggi or Nate on specifics but they have discussed a lot of ways to make this special and include new features.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/363_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">Ryolion</div>
+          <div class="post_content">
+<p>Okay!<br/>
+I’m currently working on a song with arpeggiated discords, so if you have any interesting ideas in the future, can I share them?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/248_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">anounymous</div>
+          <div class="post_content">
+<p>what is the functionality being added to the Arpeggi platform which the grant will be subsidizing?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>Hey, just saw this proposal go live on chain.  This is quite a capital outlaw so I wanted to get some more details on what the DAO is getting for its ETH.  Can you guys go a little more into detail on the use of funds, the timing of Phase 1 and 2, and if you guys plan to take any efforts to promote the project once it’s finished.</p>
+<p>I think this is a very cool concept, but this is a lot of capital and the timing is somewhat unclear so I need some more details before I would be able for vote in favor of this.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/397_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">lp_wagmi</div>
+          <div class="post_content">
+<p>Hi noun22, this is lp_wagmi cofounder of Arpeggi. Great question! Happy to dive in to use of funds and timing from the Arpeggi side of things. For the 30E going towards Arpeggi Music Platform this is compensation for the time and resources for us to develop a Nouns Specific Generative DAW.</p>
+<p>Our current DAW, Arpeggi Studio, is the first and only fully on chain music creation platform. We’re proud to have received an AFA on-chain score of 100/100 and will strive to maintain this standard in our future projects, Nouns included. Storing music on Ethereum is a technical challenge and required us to engineer a new music storage format from the ground up. This new format, the .arp, is very specific to Arpeggi and tightly coupled with the features of our DAW.</p>
+<p>A Nountrack is quite different from the existing songs and functionality of Arpeggi Studio. Instead of a fully creative DAW, the Nountrack DAW will be generative. This requires development of an entirely new user interface and an overhaul of the underlying song format to be Nouns specific.</p>
+<p>Our team is currently sprinting towards the next version of Arpeggi Studio, so pulling resources from our main project into Nouns will be costly, but well worth it. We feel confident in completing the required tools for Phase 1 within two weeks of proposal approval. We can work on the smart contract and front-end website in parallel to the DAW, so I’d estimate completion of both phases in three weeks total. For ‘Other-Costs’ this will primarily go towards storing the samples on-chain. As efficient as our storage mechanism is, we’ll have a big library of Nouns specific samples to put on-chain that will cost a significant amount of Gas to store. We are happy to return any leftover ETH from this cost back to the Nouns DAO after storing.</p>
+<p>We’re extremely excited by the opportunity to contribute to the Nouns community and legacy and will aim to maintain the high standard that you all have set for us. We’ll be doing tons of promotion around the initiative, both in its development and after its launch. We have a wide network within the web3 musician community and are looking forward to introducing them to the Nouns <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:"/></p>
+<p>Hope this helps!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/248_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">anounymous</div>
+          <div class="post_content">
+<p>hi lp_wagmi,<br/>
+thanks for the addtl context! really is an ambitious project &amp; i do think adding sample-based music production to Ethereum has enormous cultural value.</p>
+<p>if I am understanding correctly the custom interface will allow a producer to fluidly interchange between larger banks of patterns (eg 256+ ‘A’ to ‘C’ patterns) in order to audit different combinations of sequences. is that more or less the idea? Is front-end ability to upload custom samples/banks part of this upgrade as well?</p>
+<p>also, curious what future platform upgrades might look like; are there plans for more sound design/synthesis flexibility or modularity? i can imagine there is a need to keep the control file as small as possible just interested in long-term vision.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/397_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">lp_wagmi</div>
+          <div class="post_content">
+<p>Hi anonymous,<br/>
+Awesome question. The idea is to build a generative DAW that would allow you to create a number of patterns (A,B,C etc.) for each instrument. These patterns would then be generatively pieced together to create full tracks. This would be the tool that Nate Fox would use to create the Noun Tracks and would also be publicly usable to others who’d like to try their hand at generative layer based music. We’re thinking of it in the same way you might have a Noun generator, where you could independently draw a number of Heads, Bodies, Glasses etc and then randomly piece them together to create your own Nouns, but for music <img alt=":slight_smile:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:"/>.</p>
+<p>We have a ton of DAW upgrades coming to V2 of Arpeggi Studio that would be included in this generative Nouns DAW. Some of these include user sample upload, unlimited instrument patterns, loop remixing, and more. On-chain sound synthesis with VST’s or plugins is definitely something we hope to integrate in the near future, we’d love for users to be able to create their own sounds fully on chain.<br/>
+Hope this helps!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/{size}.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">JimmyBouqets</div>
+          <div class="post_content">
+<p>hey all this is Nate Fox here! im available to answer any questions people may have about the music side of things <img alt=":smiley:" class="emoji" src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=10" title=":smiley:"/> Just to give everyone a note on my involvement here, I have been active in the creation of music for the past 20 years and the number one thing thats always kept me interested is innovation. in any sense. sometimes thats been in cases of helping a unique voice like lorine chia identify a sound that fits to her tone and as far as helping big artists navigate their huge pool of songs to identify the best overal package. Just doing a thing that hasnt been done is already a huge intrigue to me, but this is specifically special for me. When i first really entered the profesional music world executives would always ask me in the meetings…whats next? I had two answers, 1.bands will come back in a strong way along with musicallity in music (what an idea right!? crazy i had to say that to music execs) and 2. artists will find a new way to make art outside of the constructs they have provided. they always have and will. I would always use the idea of napster to streaming to explain. but still, i couldnt have imagined web3 and all its possibilities. I am by no means a master of tech or understand the world of finance to a comparable degree, BUT I do believe this is a big part of something much greater. As i learn these new on chain programs like Arpeggi i think its important to note that just like the start of any daw (pro tools, abelton, fruity loops) the tech doesnt immiedietly cooporate with the creation. which is where the special part of this project comes in. the ability to adapt and create in new ways via the current tech OR to work WITH the developers to develope the tech to be more creative. either way i see that as a huge win and look forward to Nouns involvement in ideas and concepts.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

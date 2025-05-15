@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Proposal: FOMO v2</title>
+    <link rel="stylesheet" href="../../../archived.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="title-span">
+        <a href="../../../">
+          <img src="../../../images/logo.svg" height="40" alt="Nouns - NounsDAO and Nouns Community" id="site-logo" />
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+    <div class="archive-span">Archive 15/05/2025.</div>
+    <h1 class="topic-title">Proposal: FOMO v2</h1>
+            <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/509_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">n.g</div>
+          <div class="post_content">
+<p>FOMO is an essential project in the nouns ecosystem and some may say it’s now even one of the core of the Nouns Protocol as it makes people gather, play together, and have great emotions. Together. When the great noun is minted, when the great noun is missed.</p>
+<p>Noun O’Clock and FOMO make nouns community stronger and I want to push it forward with better Fomo. So when people jump from nouns.wtf to fomonouns.wtf they will see the great thing and have a great experience and not leave with the question “what is going on here?”</p>
+<p><em>The ideas on how the v2 might look like:</em><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/uXCQrmh9pZnKA30MB6ryW1T38Jx.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/d/d8feb59643a28833da4c9883d6028626d6cc8bdf.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="uXCQrmh9pZnKA30MB6ryW1T38Jx" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d8feb59643a28833da4c9883d6028626d6cc8bdf_2_10x10.png" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d8feb59643a28833da4c9883d6028626d6cc8bdf_2_640x500.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d8feb59643a28833da4c9883d6028626d6cc8bdf_2_640x500.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d8feb59643a28833da4c9883d6028626d6cc8bdf_2_960x750.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/d/d8feb59643a28833da4c9883d6028626d6cc8bdf.png 2x" width="640"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1222×954 85.3 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<p>I plan to take on and improve these parts of the Fomo:</p>
+<h2>
+<a class="anchor" href="#mint-logic-clarification-1" name="mint-logic-clarification-1"></a>Mint Logic Clarification</h2>
+<p>First of all, do you know what is this for:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/1qXJVAOiFUJHdPGZ6tEhMVSZ0E7.jpeg?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/0/0a0e740c74d4749181f9dd4543528c44c2d8708f.jpeg" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="1qXJVAOiFUJHdPGZ6tEhMVSZ0E7" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/0a0e740c74d4749181f9dd4543528c44c2d8708f_2_10x10.png" height="378" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/0a0e740c74d4749181f9dd4543528c44c2d8708f_2_690x378.jpeg" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/0a0e740c74d4749181f9dd4543528c44c2d8708f_2_690x378.jpeg, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/0a0e740c74d4749181f9dd4543528c44c2d8708f_2_1035x567.jpeg 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/0/0a0e740c74d4749181f9dd4543528c44c2d8708f_2_1380x756.jpeg 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">2880×1580 170 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+I didn’t know till the moment I opened the code and checked the class name. I have asked several people and they also didn’t know what it’s for. But this is one of the core things and shows how far we are from deciding to mint the noun. In other words, the more this bar is full, the closer we are to deciding to mint a noun:</p>
+<p><img alt="" data-base62-sha1="yR1iucMckOf8kjvjNQ38Lk1Id59" height="130" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/f/f448400eadf7b593e42997a47eacafb30d28db63.png" width="450"/><br/>
+Not intuitive, right?</p>
+<p>This needs an update because many people don’t understand how Fomo <em>actually</em> works. How many more votes are needed to mint a noun, why noun isn’t minting(question you have when you see many positive votes, for example), or it was saying “Attempting to mint a noun” and it didn’t happen, and other things that happen during gameplay. These questions appear in Discord again and again.</p>
+<p>I plan to rework all that, make it intuitive and proactively explain what is happening in real-time, so everyone will understand what is needed or why something didn’t happen.</p>
+<h2>
+<a class="anchor" href="#what-is-fomo-2" name="what-is-fomo-2"></a>What is FOMO</h2>
+<p>The Nouns concept is extremely hard to grasp for all newcomers and Fomo Nouns is 3x harder. I want to improve that, at least, push it to the same level.</p>
+<p>Many people who open the Fomo website first time hardly get any idea what it is and what it’s for. There is a description, but it doesn’t do a great job if the person isn’t familiar with nouns infrastructure, or doesn’t want to get deep in FAQs and docs.</p>
+<p>The first explanatory headline we see is:<br/>
+<strong>“CAST YOUR VOTE, PICK THE NOUN, RELIEVE FOMO.”</strong><br/>
+Which explains what is happening, but do you actually get it?</p>
+<p>What about:<br/>
+<strong>“HERE WE DECIDE HOW NEXT NOUN WILL LOOK LIKE”</strong><br/>
+Bit better, right?</p>
+<p>I plan to rework the whole description to make it easier to understand what is happening on Fomo and how it’s happening. To work with an artist and create several illustrations to explain the process in fast to grasp<br/>
+form. So you could go through the description and get it.</p>
+<h2>
+<a class="anchor" href="#notifications-3" name="notifications-3"></a>Notifications</h2>
+<p>Fomo happens in different and bit unpredictable time. Notifications help take you to vote at the right time.</p>
+<p>There are already mobile apps with a good selection of notifications and there is a Noun O’Clock Discord bot. But what if someone simply wants to have a notification on Fomo start on his PC without any other apps? We will provide that.</p>
+<p>Tired to wait while bid wars will end? Click the button and be notified when Fomo starts.</p>
+<p><em>Some ideation on what it might look like:</em><br/>
+<div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/ahUFXcqZjGFgJxrp4BgM5VC3flv.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/4/481c24eed44b2418c325bffb1ef1f836942125d9.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="ahUFXcqZjGFgJxrp4BgM5VC3flv" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/481c24eed44b2418c325bffb1ef1f836942125d9_2_10x10.png" height="494" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/481c24eed44b2418c325bffb1ef1f836942125d9_2_690x494.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/481c24eed44b2418c325bffb1ef1f836942125d9_2_690x494.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/481c24eed44b2418c325bffb1ef1f836942125d9_2_1035x741.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/4/481c24eed44b2418c325bffb1ef1f836942125d9_2_1380x988.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1402×1005 41.6 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div></p>
+<h2>
+<a class="anchor" href="#ui-refresh-4" name="ui-refresh-4"></a>UI Refresh</h2>
+<p>FOMO is the only project that links from the main nouns.wtf site, and it looks like a good MVP product, which it is. But it’s now part of the “main” nouns infrastructure and requires more care, to be on par with the main site.</p>
+<p>I plan to update the Fomo UI and take it on the same level as nouns.wtf website. Make it as close to noun brand as possible, so the transition from nouns.wtf will be fluid, but keep the Fomo uniqueness in making it as fun as possible. So expect some colours, fires and confetti’s.</p>
+<h2>
+<a class="anchor" href="#real-time-rarity-5" name="real-time-rarity-5"></a>Real-Time Rarity</h2>
+<p>We want to mint nouns that look good. But that is unique too. Imagine we mint a noun where we have head, body and accessory the first time, feels rare, right? That’s why I want to build real-time statistics that will show how rare are the current noun parts among minted nouns.</p>
+<p>Like that:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/pBGJYNbgIAUBekkAEtmrVrJ3A9w.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/b/b37903f4b19066084596a0569600e0547682b7f6.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="pBGJYNbgIAUBekkAEtmrVrJ3A9w" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/b37903f4b19066084596a0569600e0547682b7f6_2_10x10.png" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/b37903f4b19066084596a0569600e0547682b7f6_2_534x500.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/b/b37903f4b19066084596a0569600e0547682b7f6_2_534x500.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/b/b37903f4b19066084596a0569600e0547682b7f6.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/b/b37903f4b19066084596a0569600e0547682b7f6.png 2x" width="534"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">597×558 32.3 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<em>This is preliminary idea on what it might look like</em></p>
+<h2>
+<a class="anchor" href="#chat-6" name="chat-6"></a>Chat</h2>
+<p>We want Fomo to be as social as possible and that’s why I want to include chat, one of the most asked features, so you could have fun while waiting for the next noun to appear.</p>
+<p>I plan to implement a custom chat tailored to the Fomo gameplay. So with a push of a button, you can send to chat a previous noun that we all just missed to grieve it. Or the one you think everyone should vote on and explain why. So no more taking screenshots and then sending them to the chat. All are built-in. And other great features to make it fast and fun.</p>
+<p>Some ideation on what it might look like:</p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/uvUfbnmPojUBHGh76lD4xiyzpEQ.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/d/d5dc8ee3e94ef45e6ec1bfce5d63ed657a21e450.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="uvUfbnmPojUBHGh76lD4xiyzpEQ" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d5dc8ee3e94ef45e6ec1bfce5d63ed657a21e450_2_10x10.png" height="469" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d5dc8ee3e94ef45e6ec1bfce5d63ed657a21e450_2_690x469.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d5dc8ee3e94ef45e6ec1bfce5d63ed657a21e450_2_690x469.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d5dc8ee3e94ef45e6ec1bfce5d63ed657a21e450_2_1035x703.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/d/d5dc8ee3e94ef45e6ec1bfce5d63ed657a21e450_2_1380x938.png 2x" width="690"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1402×954 115 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<em>Idea 1</em></p>
+<p><div class="lightbox-wrapper"><a class="lightbox" data-download-href="/uploads/short-url/5JyyXU0HEWlshMZxwsEFtpx5w39.png?dl=1" href="https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/2/283139ba887a22c0dcba753eddb3a9244d0565cb.png" rel="noopener nofollow ugc" title=""><img alt="" data-base62-sha1="5JyyXU0HEWlshMZxwsEFtpx5w39" data-small-upload="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/283139ba887a22c0dcba753eddb3a9244d0565cb_2_10x10.png" height="500" src="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/283139ba887a22c0dcba753eddb3a9244d0565cb_2_584x500.png" srcset="https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/283139ba887a22c0dcba753eddb3a9244d0565cb_2_584x500.png, https://europe1.discourse-cdn.com/flex005/uploads/nouns/optimized/2X/2/283139ba887a22c0dcba753eddb3a9244d0565cb_2_876x750.png 1.5x, https://europe1.discourse-cdn.com/flex005/uploads/nouns/original/2X/2/283139ba887a22c0dcba753eddb3a9244d0565cb.png 2x" width="584"/><div class="meta">
+<svg aria-hidden="true" class="fa d-icon d-icon-far-image svg-icon"><use href="#far-image"></use></svg><span class="filename"></span><span class="informations">1011×865 118 KB</span><svg aria-hidden="true" class="fa d-icon d-icon-discourse-expand svg-icon"><use href="#discourse-expand"></use></svg>
+</div></a></div><br/>
+<em>Idea 2</em></p>
+<p>With the layouts above you always have the voting in reach, always accessible. That won’t be possible to have if we brought the Fomo in Discord chat for example, as messages will push the voting message up in the feed above the viewable window, and people will need to scroll up every time lots of new messages appear; this most likely will lead to vote failure due to time constraints and problems with buttons shifting when you wanna press hit(as we don’t click as fast as we may think and we need to think if we want to vote Yes or No).</p>
+<h2>
+<a class="anchor" href="#japanese-7" name="japanese-7"></a>Japanese</h2>
+<p>As we know, most of Fomo players are based in North America and when Noun O’Clock time reaches the NA night time Fomo participation drops immensely. As a way to keep it more alive and expand its player base, I plan to internationalise Fomo into Japanese. So it’ll be zero barrier to participating for our Japanese community.</p>
+<h2>
+<a class="anchor" href="#other-8" name="other-8"></a>Other</h2>
+<p>As part of other good features I plan to implement:</p>
+<h3>
+<a class="anchor" href="#what-nouns-were-minted-by-fomo-9" name="what-nouns-were-minted-by-fomo-9"></a>What nouns were minted by Fomo</h3>
+<p>A track record of all nouns that were minted through<br/>
+Fomo. This way we have a good history and all newcomers may see now participation in Fomo play a big role in forming the DAO nouns look.</p>
+<h3>
+<a class="anchor" href="#audio-10" name="audio-10"></a>Audio</h3>
+<p>To make it easier to keep on fast-changing nouns during gameplay I want to add an optional audio signal, to let you know when the new noun is available for voting.</p>
+<p>.</p>
+<p>And this is just one of the several core things that might be done and make Fomo better. Our community is always rich in ideas and many things could be added to Fomo to make it better. Have rewards for active players? All-day fomo? So many things and I’m all into</p>
+<h2>
+<a class="anchor" href="#who-is-behind-this-11" name="who-is-behind-this-11"></a>Who is behind this</h2>
+<p><a href="https://twitter.com/nikitago_" rel="noopener nofollow ugc">@ng</a>. I have created the <a href="https://fomonouns.app" rel="noopener nofollow ugc">Fomo iOS and Android mobile apps</a> with the help of Small Grants funding. Created <a href="https://mostwantednouns.netlify.app/" rel="noopener nofollow ugc">Most Wanted Nouns</a> and have been doing other small things here and there. I hold a CS bachelor’s degree and have worked creating mobile apps, and building web applications in my free time. In the nouniverse, I also created <a href="https://nounsneednames.wtf/" rel="noopener nofollow ugc">NounsNeedNames</a> (that I sadly had to put on hold due to lack of time. <em>but check nouns before 214 there</em>)</p>
+<h2>
+<a class="anchor" href="#funding-12" name="funding-12"></a>Funding</h2>
+<p>The funding request is 46.420 ETH to make life all outlined updates and allow ng spend more time doing nounish projects and things.</p>
+<p>Funding also includes payments for the Japanese translator and artist that will be involved.</p>
+<h2>
+<a class="anchor" href="#timeline-13" name="timeline-13"></a>Timeline</h2>
+<p>4 months.</p>
+<p>And I’ll be involved for 6 months after the main development in supporting mode fixing the bugs and fine-tuning things. Other big features additions will be funded with different proposal.</p>
+<h2>
+<a class="anchor" href="#project-ethos-and-me-14" name="project-ethos-and-me-14"></a>Project Ethos and Me</h2>
+<p>The project code is open sourced under GNU GPLv3 with all code shared on GitHub and will continue to be so.</p>
+<p>As I personally haven’t been initially involved in creating Fomo and jumped on later I will be in the role of a contributor in a true open-source manner implementing things that then will be reviewed and merged for the best of Fomo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/509_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">n.g</div>
+          <div class="post_content">
+<p>Also wanted to add some notes, as I have mentioned in the proposal, I have created the Fomo mobile apps on iOS and Android, or more precisely speaking, beta versions of Fomo apps. I spent quite some time thinking about Fomo while creating the mobile apps proposal and while working on the beta apps. Though the proposal for full-scale mobile apps didn’t happen due to a bit of lack of interest from nouners (you can get into history on that in <a href="/t/proposal-fomo-nouns-android-ios-mobile-apps/809">this discourse post</a>), I have found myself left with a big amount of thoughts and ideas on how to make the Fomo better. And this proposal is the direct result of that (though, it was after 9999 spent some time to get my attention to the web fomo. Don’t know if he actually likes what I finally proposing here, but I hope it’ll be net positive in the end).</p>
+<p>In the future, I plan to spend some of my time on Fomo mobile apps, but it mainly will be in support mode with some small additions here and there, and tiny compared to the time spend on web dev, as I decided to wait till apps get bigger user base before actively getting back to them(you can read more on that in <a href="/t/proposal-fomo-nouns-android-ios-mobile-apps/809/17">this post</a>)</p>
+<p>Would really love to hear everyone’s thoughts here</p>
+<p>Love nounish, love fomo <img alt=":white_heart:" class="emoji" height="20" loading="lazy" src="https://emoji.discourse-cdn.com/twitter/white_heart.png?v=12" title=":white_heart:" width="20"/></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/509_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">n.g</div>
+          <div class="post_content">
+<p>After getting more feedback from nouners on different parts of the proposal and given how events around noun o’clock and fomo started evolving, we got into the idea of me being funded from Small Grants to work on most vital updates, while I do more fine-tuning of the futures list of v2 Fomo.</p>
+<p>I propose taking on the following parts:</p>
+<ul>
+<li>Rework titles/texts and progress bars so it’ll be more clear what is happening during gameplay. Proactively help players better understand the state of gameplay(for example, show how many more YES votes are needed to reach consensus)</li>
+<li>Make noun base, voting buttons, NavBar and other parts of the UI more fresh and interestingly looking</li>
+<li>Update the look of the “waiting” state of the Fomo (while the auction is running)</li>
+<li>Update different parts of Fomo description texts to help firstcomers better understand Fomo<br/>
+This will make Fomo feel and look better, and in meantime allow me to create a better “roadmap” for the next things Fomo and go on-chain more solidly for funding bigger updates.</li>
+</ul>
+<p>For the proposed updates I’m asking for SG funds of 9.69 ETH.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/315_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">noun22</div>
+          <div class="post_content">
+<p>let’s do it!  Small Grants is excited to fund this.  FOMO has been incredible for the DAO and expanding it and improving it is a no brainer!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="post_container">
+        <div class="avatar_container">
+          <img src="../../../images/509_2.png" class="avatar" />
+        </div>
+        <div class="post">
+          <div class="user_name">n.g</div>
+          <div class="post_content">
+<p>Thanks, <span class="mention">@noun22</span> and SG group for funding this!<br/>
+Great updates coming!</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>
