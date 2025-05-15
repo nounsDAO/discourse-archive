@@ -2,4 +2,6 @@
 
 Archived content of https://discourse.nouns.wtf
 
-Archived using https://github.com/kitsandkats/ArchiveDiscourse
+html version archived using https://github.com/kitsandkats/ArchiveDiscourse
+
+markdown version archived using https://github.com/c0mmando/discourse-to-github-archiver
